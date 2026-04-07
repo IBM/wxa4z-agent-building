@@ -10,10 +10,10 @@
       
       
       
-        <link rel="prev" href="../login-adk/">
+        <link rel="prev" href="../multi-agent-test-db2/">
       
       
-        <link rel="next" href="../04-import-tools/">
+        <link rel="next" href="../multi-agent-ipl-collab/">
       
       
         
@@ -24,7 +24,7 @@
     
     
       
-        <title>Create connection - IBM wxa4z Agent Builder Lab Guide</title>
+        <title>Enable zRAG Agent collaboration - IBM wxa4z Agent Builder Lab Guide</title>
       
     
     
@@ -155,11 +155,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#create-agent-connection-and-configure-credentials" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -192,7 +187,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Create connection
+              Enable zRAG Agent collaboration
             
           </span>
         </div>
@@ -448,19 +443,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../03-create-connection/" class="md-nav__link">
         
   
   
@@ -476,7 +462,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -566,18 +551,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -598,7 +585,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -669,10 +656,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../multi-agent-zrag-collab/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -688,6 +682,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -772,8 +767,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -790,66 +783,106 @@
 
 
 
-<div><h1 id="create-agent-connection-and-configure-credentials">Create agent connection and configure credentials<a class="headerlink" href="#create-agent-connection-and-configure-credentials" title="Permanent link">#</a></h1>
-<p>Within the <strong>Custom-Agent-Builder</strong> directory on Linux, you should see a <code>zosmf_connection.yaml</code> file. With watsonx Orchestrate and the ADK, connections provide a way to associate vearious tools together and assigning credentials needed for the tools to access external services on behalf of the agent. In this Lab, the tools you will use are focused on calling z/OSMF APIs to your zD&amp;T zOS image in order to issue various commands and retrieve system details. The first step in deploying your agent is to create a connection to your zOS environment for the tools to use. </p>
+  <h1>Enable zRAG Agent collaboration</h1>
+
+<div><h3 id="enabling-zrag-agent-collaboration">Enabling <code>zRAG Agent</code> collaboration<a class="headerlink" href="#enabling-zrag-agent-collaboration" title="Permanent link">#</a></h3>
+<p>In the previous sub-section, you successfully tested the execution and behavior of your tool using a hard-coded Db2 for z/OS command. </p>
+<p>Now you will enable a workflow where the user can tell the agent what information they'd like to view, and then the agent will retrieve the relevant command to then pass to the tool as input. To accomplish this, you will be leveraging the <code>zRAG Agent</code> for agent collaboration. The zRAG Agent is one of the <strong>pre-built Agents supported with watsonx Assistant for Z.</strong></p>
+<p><strong>For the purpose of this lab, the zRAG Agent was already deployed to your environment.</strong></p>
 <ol>
 <li>
-<p>Open the <code>zosmf_connection.yaml</code> file by typing the following within your <strong>Custom-Agent-Builder</strong> directory on Linux:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>nano zosmf_connection.yaml
-</span></code></pre></div>
+<p>In the <strong>Agents</strong> section of the Agent builder screen, click <strong>Add agent</strong>. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/build13.png" data-desc-position="bottom"><img alt="" src="../_attachments/build13.png" width="50%"></a></p>
 </li>
 <li>
-<p>Once you're viewing the file, <strong>replace</strong> <code>&lt;public-ip&gt;</code> in the <code>server_url</code> variable with the <strong>public IP of your zD&amp;T environment</strong> that you recorded earlier. </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/linux7.png" data-desc-position="bottom"><img alt="" src="../_attachments/linux7.png"></a></p>
+<p>Then select <strong>Local instance</strong> as you already deployed your <strong>zRAG Agent</strong>. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/build14.png" data-desc-position="bottom"><img alt="" src="../_attachments/build14.png" width="50%"></a></p>
+</li>
+<li>
+<p>From the list, select the <strong>zRAG Agent</strong> and click <strong>Add to agent</strong>. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/build15.png" data-desc-position="bottom"><img alt="" src="../_attachments/build15.png" width="50%"></a></p>
+</li>
+<li>
+<p>Once done, you should now see your <strong>zRAG Agent</strong> added as a collaborator to your <strong>z/OS Helper Agent</strong>. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/build16.png" data-desc-position="bottom"><img alt="" src="../_attachments/build16.png" width="50%"></a></p>
+</li>
+<li>
+<p>Next, scroll back down to the <strong>Instructions</strong> text field, and modify the instructions. </p>
+<p>In your existing instructions, the last section you had previously added was:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>When the user asks to "get db2 details", use the "db2Command" tool, passing the "-DISPLAY GROUP" command as input. Then return the full output back to the user. 
+</span></code></pre></div>
+<p>This was used to hard-code the input command to the tool. Instead, <strong>replace that section with the following</strong>:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>If the user asks to get or display information about Db2, call the "zRAG Agent" collaborator agent, passing the user's exact query to the agent. Wait until the zRAG Agent finishes generating a response, then return the exact response back to the user. Then extract the relevant command from the output and display it back to the user. Ensure that every Db2 command begins with "-", i.e. "-DISPLAY GROUP". THEN, pass that command as input to the "db2Command" tool. Wait until the full output is returned, then return the full output back to the user in a pretty, structured, line-by-line format. DISPLAY THE OUTPUT EXACTLY AS THE TOOL RETURNS IT WITH LINE BREAKS.    
+</span></code></pre></div>
+<p>Now, the full set of agent <strong>Instructions</strong> should look like the following:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>You are going to run various Db2 for z/OS commands using the tools you have available to issue DISPLAY commands via TSO/E REST API’s and return the command output back to the user. You will print out to the user what command you’re issuing and the full output of the command in a pretty format. ALWAYS INCLUDE THE FULL OUTPUT OF EACH COMMAND. 
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>DO NOT GUESS. DO NOT SPECULATE. ONLY USE THE INFORMATION RETURNED FROM RUNNING YOUR TOOLS
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>If the user asks to get or display information about Db2, call the "zRAG Agent" collaborator agent, passing the user's exact query to the agent. Wait until the zRAG Agent finishes generating a response, then return the exact response back to the user. Then extract the relevant command from the output and display it back to the user. Ensure that every Db2 command begins with "-", i.e. "-DISPLAY GROUP". THEN, pass that command as input to the "db2Command" tool. Wait until the full output is returned, then return the full output back to the user in a pretty, structured, line-by-line format. DISPLAY THE OUTPUT EXACTLY AS THE TOOL RETURNS IT WITH LINE BREAKS.    
+</span></code></pre></div>
+<p>These new set of <strong>Instructions</strong> will enable dynamic command input mapping. The tool execution would follow the below flow:</p>
+<ul>
+<li>The user asks the <strong>z/OS Helper Agent</strong> to display certain information from the Db2 for z/OS subsystem.</li>
+<li>The Agent then retrieves the relevant command by routing the query to the <strong>zRAG Agent</strong>.</li>
+<li>The <strong>zRAG Agent</strong> then uses it's available tools to search the back-end watsonx Assistant for Z RAG documentation and return a response including the relevant command the user inquired about. </li>
+<li>Once the command is determined, the <strong>z/OS Helper Agent</strong> will pass that command as input to the <strong>db2Command</strong> tool to execute the command via the <strong>DSN TSO/E</strong> interface. </li>
+<li>Full output is returned back to the end-user. </li>
+</ul>
+</li>
+<li>
+<p>Now, test the new flow by click on the Agent Chat in the right-side of the screen and prompt the agent. </p>
+<p>Previously, you had hard-coded the <code>-DISPLAY GROUP</code> command as input to the tool. Now let's see what happens if we instead tell the agent what we want to retrieve and allow it to determine the command on its own. </p>
+<p>Prompt the agent with the following query:
+</p><div class="highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>display information about my Db2 subsystem catalog and function levels 
+</span></code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/build17.png" data-desc-position="bottom"><img alt="" src="../_attachments/build17.png" width="50%"></a></p>
+<p><strong>NOTE:</strong> You may need to restart the conversation....</p>
+</li>
+<li>
+<p>View the full output of the response. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/build18.png" data-desc-position="bottom"><img alt="" src="../_attachments/build18.png" width="50%"></a></p>
+<p>Notice the command that was issued and the full response - it should be similar to the previous query when "-DISPLAY GROUP" was hard-coded. </p>
+</li>
+<li>
+<p>At the top of the response, click on <strong>Show reasoning</strong>. </p>
+<p>You should see that there were three steps executed:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/build19.png" data-desc-position="bottom"><img alt="" src="../_attachments/build19.png" width="50%"></a></p>
+<p><strong>Step 1:</strong> Expanding Step 1, you should see the following:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/build20.png" data-desc-position="bottom"><img alt="" src="../_attachments/build20.png" width="50%"></a></p>
+<p>The <strong>z/OS Helper Agent</strong> first sent the user's query to it's collaborator agent (<strong>zRAG Agent</strong>).</p>
+<p><strong>Step 2:</strong> The <strong>zRAG Agent</strong> then invoked its <strong>zrag_retriever</strong> tool with the same query in order to search the zRAG database for the relevant information and return the corresponding Db2 for z/OS command. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/build21.png" data-desc-position="bottom"><img alt="" src="../_attachments/build21.png" width="50%"></a></p>
+<p><strong>Step 3:</strong> The retrieved command is then passed as input to the <strong>db2Command</strong> tool to execute the same exact command as you previously hard-coded. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/build22.png" data-desc-position="bottom"><img alt="" src="../_attachments/build22.png" width="50%"></a></p>
+<p>Then the output of the command is returned back to the user. 
+9. Lets test some more example queries. </p>
+<p>Now, prompt the agent with the following:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>display all my Db2 for z/OS bufferpools
+</span></code></pre></div>
+<p>Once the full query is completed, you should see something like the following:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/build23.png" data-desc-position="bottom"><img alt="" src="../_attachments/build23.png" width="50%"></a></p>
+<p>We can see that the retrieved command was <code>-DISPLAY BUFFERPOOL</code> and the output is returned. </p>
+<p>Similarly to before, expand the <strong>Show reasoning</strong> steps to review the flow.</p>
+</li>
+<li>
+<p>Test another agent prompt:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Display all defined databases
+</span></code></pre></div>
+<p>The output should look similar to what's shown below:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/build24.png" data-desc-position="bottom"><img alt="" src="../_attachments/build24.png" width="50%"></a></p>
+<p>For that query, the agent determined that the <code>-DISPLAY DATABASE(*)</code> command was the appropriate command to use.</p>
+</li>
+<li>
+<p>Lastly, test the following prompt:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>display information regarding the status and configuration of DDF
+</span></code></pre></div>
+<p>The output should look similar to what's shown below:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/build25.png" data-desc-position="bottom"><img alt="" src="../_attachments/build25.png" width="50%"></a></p>
+<p>For that query, the agent determined that the <code>-DISPLAY DDF</code> command was the appropriate command to use. </p>
 </li>
 </ol>
-<p><em>This must be done for the <code>server_url</code> variable in both the draft AND live sections of the file.</em></p>
-<ol start="3">
-<li>
-<p>Make sure to save the file after modifying it.</p>
-<p>To save the file, press <strong>Ctrl+S</strong> to save the file.</p>
-<p>Then exit from the editor view by clicking <strong>Ctrl+X</strong>.</p>
-</li>
-<li>
-<p>Now you can import the connection to your ADK environment.</p>
-<p>Once back at the command-line, issue the following command to import the connection:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>orchestrate connections import --file zosmf_connection.yaml
-</span></code></pre></div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/linux8.png" data-desc-position="bottom"><img alt="" src="../_attachments/linux8.png"></a></p>
-</li>
-<li>
-<p>Verify the connection was successfully imported by running the following command at the Linux command-line:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>orchestrate connections list
-</span></code></pre></div>
-<p>In the output of the command, notice that your new connection is listed with <em>app-id</em> <strong>zosmf</strong> and that the Credentials have not yet been set (as shown below).</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/linux9.png" data-desc-position="bottom"><img alt="" src="../_attachments/linux9.png"></a></p>
-<p><strong>Note</strong>: <em>you may need to scroll to the top of the connections list.</em></p>
-<p>You will next set your connection credentials.</p>
-</li>
-<li>
-<p>The connection credentials you provide will later be used to authenticate tools to access your environment's z/OSMF APIs. </p>
-<p>Credentials hold the values used to authorize against external services. In the case of your previously created connection, you configured it with kind: basic which enforces username and password credentials (i.e. the username and password used by the z/OS IBMUSER ID).</p>
-<p>To set your connection credentials for the <strong>draft</strong> environment, enter the following command in the Linux command-line, replacing <code>&lt;your-passphrase&gt;</code> with the value of the RACF Passphrase you set earlier for <strong>IBMUSER</strong>.</p>
-<div class="highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>orchestrate connections set-credentials --app-id zosmf --env draft --username 'IBMUSER' --password '&lt;your-passphrase&gt;'
-</span></code></pre></div>
-<p>For example:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>orchestrate connections set-credentials --app-id zosmf --env draft --username 'IBMUSER' --password 'YOUR PASSWORD PHRASE'
-</span></code></pre></div>
-</li>
-<li>
-<p>Next, set your connection credentials for the <strong>live</strong> environment by issuing the same command as above, but replace <code>--env draft</code> with <code>--env live</code>. </p>
-</li>
-</ol>
-<p>You should see a <code>Credentials successfully set...</code> message.</p>
-<ol start="8">
-<li>
-<p>Now re-verify the connection with your newly set credentails by entering the following command:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>orchestrate connections list
-</span></code></pre></div>
-<p>You should now see that your previous <code>zosmf</code> connection now has credentials set, as shown below:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/linux10.png" data-desc-position="bottom"><img alt="" src="../_attachments/linux10.png"></a></p>
-</li>
-</ol></div>
+<p><strong><em>Congratulations! You've successfully set up an agent collaboration use case and tested it. If time allows, continue testing other types of queries or altering the instructions</em></strong>. </p></div>
 
 
 
@@ -879,7 +912,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../login-adk/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Log into ADK">
+          <a href="../multi-agent-test-db2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Test db2Command tool">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -889,20 +922,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Log into ADK
+                Test db2Command tool
               </div>
             </div>
           </a>
         
         
           
-          <a href="../04-import-tools/" class="md-footer__link md-footer__link--next" aria-label="Next: Import tools">
+          <a href="../multi-agent-ipl-collab/" class="md-footer__link md-footer__link--next" aria-label="Next: Enable IPL Validator Agent collaboration">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Import tools
+                Enable IPL Validator Agent collaboration
               </div>
             </div>
             <div class="md-footer__button md-icon">

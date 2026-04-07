@@ -10,10 +10,8 @@
       
       
       
-        <link rel="prev" href="../login-adk/">
       
-      
-        <link rel="next" href="../04-import-tools/">
+        <link rel="next" href="../setup-zdt/">
       
       
         
@@ -24,7 +22,7 @@
     
     
       
-        <title>Create connection - IBM wxa4z Agent Builder Lab Guide</title>
+        <title>Retrieve watsonx Orchestrate connection details - IBM wxa4z Agent Builder Lab Guide</title>
       
     
     
@@ -156,7 +154,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#create-agent-connection-and-configure-credentials" class="md-skip">
+        <a href="#logging-into-watsonx-orchestrate-and-retrieving-connection-details" class="md-skip">
           Skip to content
         </a>
       
@@ -192,7 +190,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Create connection
+              Retrieve watsonx Orchestrate connection details
             
           </span>
         </div>
@@ -311,18 +309,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -343,7 +343,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -358,10 +358,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../setup-wxo/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -377,6 +386,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -448,19 +458,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../03-create-connection/" class="md-nav__link">
         
   
   
@@ -476,7 +477,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -790,64 +790,88 @@
 
 
 
-<div><h1 id="create-agent-connection-and-configure-credentials">Create agent connection and configure credentials<a class="headerlink" href="#create-agent-connection-and-configure-credentials" title="Permanent link">#</a></h1>
-<p>Within the <strong>Custom-Agent-Builder</strong> directory on Linux, you should see a <code>zosmf_connection.yaml</code> file. With watsonx Orchestrate and the ADK, connections provide a way to associate vearious tools together and assigning credentials needed for the tools to access external services on behalf of the agent. In this Lab, the tools you will use are focused on calling z/OSMF APIs to your zD&amp;T zOS image in order to issue various commands and retrieve system details. The first step in deploying your agent is to create a connection to your zOS environment for the tools to use. </p>
+<div><h1 id="logging-into-watsonx-orchestrate-and-retrieving-connection-details">Logging into watsonx Orchestrate and retrieving connection details<a class="headerlink" href="#logging-into-watsonx-orchestrate-and-retrieving-connection-details" title="Permanent link">#</a></h1>
+<p>In order to log into the ADK environment, you will need two environment details that you will locate and record in this section:</p>
+<ul>
+<li><strong>WxO Service Instance URL</strong></li>
+<li><strong>IBM Cloud API Key</strong></li>
+</ul>
 <ol>
 <li>
-<p>Open the <code>zosmf_connection.yaml</code> file by typing the following within your <strong>Custom-Agent-Builder</strong> directory on Linux:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>nano zosmf_connection.yaml
-</span></code></pre></div>
+<p>Click on the <strong>Student URL</strong> provided by the instructor for the <strong>watsonx Orchestrate</strong> environment and when prompted, enter the password. </p>
 </li>
 <li>
-<p>Once you're viewing the file, <strong>replace</strong> <code>&lt;public-ip&gt;</code> in the <code>server_url</code> variable with the <strong>public IP of your zD&amp;T environment</strong> that you recorded earlier. </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/linux7.png" data-desc-position="bottom"><img alt="" src="../_attachments/linux7.png"></a></p>
-</li>
-</ol>
-<p><em>This must be done for the <code>server_url</code> variable in both the draft AND live sections of the file.</em></p>
-<ol start="3">
-<li>
-<p>Make sure to save the file after modifying it.</p>
-<p>To save the file, press <strong>Ctrl+S</strong> to save the file.</p>
-<p>Then exit from the editor view by clicking <strong>Ctrl+X</strong>.</p>
+<p>Once done, you should be taken to the environment details page for your <strong>watsonx Orchestrate</strong> environment.</p>
 </li>
 <li>
-<p>Now you can import the connection to your ADK environment.</p>
-<p>Once back at the command-line, issue the following command to import the connection:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>orchestrate connections import --file zosmf_connection.yaml
-</span></code></pre></div>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/linux8.png" data-desc-position="bottom"><img alt="" src="../_attachments/linux8.png"></a></p>
+<p>As you will use <strong>Student ID's</strong> for accessing your cloud resource, firstly click on the <strong>logout URL</strong> referenced on the page:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/student1.png" data-desc-position="bottom"><img alt="" src="../_attachments/student1.png"></a></p>
+<p>A pop-up window will open confirming you're logged out. You can then close that tab.</p>
 </li>
 <li>
-<p>Verify the connection was successfully imported by running the following command at the Linux command-line:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>orchestrate connections list
-</span></code></pre></div>
-<p>In the output of the command, notice that your new connection is listed with <em>app-id</em> <strong>zosmf</strong> and that the Credentials have not yet been set (as shown below).</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/linux9.png" data-desc-position="bottom"><img alt="" src="../_attachments/linux9.png"></a></p>
-<p><strong>Note</strong>: <em>you may need to scroll to the top of the connections list.</em></p>
-<p>You will next set your connection credentials.</p>
+<p>Navigate back to the environment details page, and record the <strong>App ID User credentials</strong> towards the bottom of the page. (Copy your <strong>Username</strong> and <strong>Password</strong> to a local notepad for reference). For example:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/student2.png" data-desc-position="bottom"><img alt="" src="../_attachments/student2.png"></a></p>
+<p>In the above example, my Username would be <code>student0@techzone.ibm.com</code> and my Password would be <code>V14u8#CrmWittakd</code>. </p>
 </li>
 <li>
-<p>The connection credentials you provide will later be used to authenticate tools to access your environment's z/OSMF APIs. </p>
-<p>Credentials hold the values used to authorize against external services. In the case of your previously created connection, you configured it with kind: basic which enforces username and password credentials (i.e. the username and password used by the z/OS IBMUSER ID).</p>
-<p>To set your connection credentials for the <strong>draft</strong> environment, enter the following command in the Linux command-line, replacing <code>&lt;your-passphrase&gt;</code> with the value of the RACF Passphrase you set earlier for <strong>IBMUSER</strong>.</p>
-<div class="highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>orchestrate connections set-credentials --app-id zosmf --env draft --username 'IBMUSER' --password '&lt;your-passphrase&gt;'
-</span></code></pre></div>
-<p>For example:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>orchestrate connections set-credentials --app-id zosmf --env draft --username 'IBMUSER' --password 'YOUR PASSWORD PHRASE'
-</span></code></pre></div>
+<p>Then under the <strong>App ID Instructions</strong>, click on the <code>https://cloud.ibm.com/authorize/...</code> link in your environment details:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/student3.png" data-desc-position="bottom"><img alt="" src="../_attachments/student3.png"></a></p>
 </li>
 <li>
-<p>Next, set your connection credentials for the <strong>live</strong> environment by issuing the same command as above, but replace <code>--env draft</code> with <code>--env live</code>. </p>
+<p>In the new tab, enter your recorded <strong>Username</strong> and <strong>Password</strong>, then click <strong>Sign in</strong>. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/student4.png" data-desc-position="bottom"><img alt="" src="../_attachments/student4.png"></a></p>
 </li>
-</ol>
-<p>You should see a <code>Credentials successfully set...</code> message.</p>
-<ol start="8">
 <li>
-<p>Now re-verify the connection with your newly set credentails by entering the following command:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>orchestrate connections list
-</span></code></pre></div>
-<p>You should now see that your previous <code>zosmf</code> connection now has credentials set, as shown below:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/linux10.png" data-desc-position="bottom"><img alt="" src="../_attachments/linux10.png"></a></p>
+<p>Once logged in, generate a new IBM Cloud <strong>API Key</strong> by clicking on <strong>Manage</strong> --&gt; <strong>Access(IAM)</strong> in the upper right hand corner. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/lab6.png" data-desc-position="bottom"><img alt="" src="../_attachments/lab6.png"></a></p>
+</li>
+<li>
+<p>Once the appropriate Cloud account is selected from the drop-down, generate a new IBM Cloud <strong>API Key</strong> by clicking on <strong>Manage</strong> --&gt; <strong>Access(IAM)</strong> in the upper right hand corner. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/lab6.png" data-desc-position="bottom"><img alt="" src="../_attachments/lab6.png"></a></p>
+</li>
+<li>
+<p>In the <strong>IAM</strong> settings page, select <strong>API keys</strong> from the left-hand menu.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/lab7.png" data-desc-position="bottom"><img alt="" src="../_attachments/lab7.png"></a></p>
+</li>
+<li>
+<p>In the <strong>API keys</strong> screen, click on <strong>Create +</strong>. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/lab8.png" data-desc-position="bottom"><img alt="" src="../_attachments/lab8.png"></a></p>
+</li>
+<li>
+<p>Enter any <strong>Name</strong> for your API Key and click <strong>Create</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/lab9.png" data-desc-position="bottom"><img alt="" src="../_attachments/lab9.png"></a></p>
+</li>
+<li>
+<p>You’ll then see a window appear <strong><em>“API key successfully created”</em></strong></p>
+<p><strong>IMPORTANT</strong>: Make sure to <strong>Download</strong> and <strong>Copy</strong> your API key (this can only be retrieved once).</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/lab10.png" data-desc-position="bottom"><img alt="" src="../_attachments/lab10.png"></a></p>
+<p><strong>Copy and record your API key value in a local notepad on your workstation for later use. This will later be referenced in your agents configuration as a shared secret.</strong></p>
+</li>
+<li>
+<p>Next you will retrieve and record your watsonx Orchestrate <strong>Service Instance URL</strong>. </p>
+<p>After generating your API key within IBM Cloud in the previous section, click on the ‘hamburger’ menu icon in the top-left corner of the IBM Cloud window and select <strong>Resource list</strong>. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/serviceurl1.png" data-desc-position="bottom"><img alt="" src="../_attachments/serviceurl1.png"></a></p>
+</li>
+<li>
+<p>Expand the <strong>AI / Machine Learning</strong> section and you should see the following resources available:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/serviceurl2.png" data-desc-position="bottom"><img alt="" src="../_attachments/serviceurl2.png"></a></p>
+</li>
+<li>
+<p>Click on the resource shown for the <strong>watsonx Orchestrate</strong> resource: </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/serviceurl2.png" data-desc-position="bottom"><img alt="" src="../_attachments/serviceurl2.png"></a></p>
+</li>
+<li>
+<p>Click <strong>Launch watsonx Orchestrate</strong>. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/serviceurl3.png" data-desc-position="bottom"><img alt="" src="../_attachments/serviceurl3.png"></a></p>
+</li>
+<li>
+<p>In the watsonx Orchestrate UI, click on you <strong>profile icon</strong> in the top-right corner and then <strong>Settings</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/serviceurl4.png" data-desc-position="bottom"><img alt="" src="../_attachments/serviceurl4.png"></a></p>
+</li>
+<li>
+<p>In the Settings page, click on the <strong>API details</strong> tab, then <strong>copy and record</strong> your <strong>Service instance URL</strong> to a local notepad for later use.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/serviceurl5.png" data-desc-position="bottom"><img alt="" src="../_attachments/serviceurl5.png"></a></p>
+<p>Once recorded, you can minimize the window to come back to later. </p>
 </li>
 </ol></div>
 
@@ -878,31 +902,15 @@
       
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
-          
-          <a href="../login-adk/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Log into ADK">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Log into ADK
-              </div>
-            </div>
-          </a>
-        
         
           
-          <a href="../04-import-tools/" class="md-footer__link md-footer__link--next" aria-label="Next: Import tools">
+          <a href="../setup-zdt/" class="md-footer__link md-footer__link--next" aria-label="Next: Set RACF Passphrase in zD&amp;T">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Import tools
+                Set RACF Passphrase in zD&amp;T
               </div>
             </div>
             <div class="md-footer__button md-icon">
