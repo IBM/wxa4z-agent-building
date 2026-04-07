@@ -14,17 +14,18 @@ Access the ADK by SSH'ing into the Linux environment hosting the watsonx Orchest
 
     You should see the following:
 
-    ![](_attachments/linux1.png)
+    ![](_attachments/linux1.png){width=50%}
 
 2. Navigate to the **Custom-Agent-Builder** directory on the Linux system:
    
     `cd Custom-Agent-Builder`
 
-    ![](_attachments/linux2.png)
+
+    ![](_attachments/linux2.png){width=50%}
 
     Then type `ls` to view the configuration files.
 
-    ![](_attachments/linux3.png)
+    ![](_attachments/linux3.png){width=50%}
 
 3. Login and activate your ADK environment by running the following command in the Linux command-line, replacing `<your Service Instance URL>` with your unique **Service Instance URL** you recorded earlier:
    
@@ -38,7 +39,7 @@ Access the ADK by SSH'ing into the Linux environment hosting the watsonx Orchest
 
     **Copy and paste** the value of your **IBM Cloud API key** from the preceding steps and hit **enter**. You should then see that your environment is now active, as shown below:
 
-    ![](_attachments/linux5.png)
+    ![](_attachments/linux5.png){width=50%}
 
 5. Once activated, verify you’re successfully connected by running the following command to view existing agents in your environment:
 
