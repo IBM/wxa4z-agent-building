@@ -1,6 +1,4 @@
-
-
-### Enabling `zRAG Agent` collaboration
+# Enable `zRAG Agent` collaboration and test flow
 
 In the previous sub-section, you successfully tested the execution and behavior of your tool using a hard-coded Db2 for z/OS command. 
 
@@ -54,13 +52,17 @@ Now you will enable a workflow where the user can tell the agent what informatio
 
     These new set of **Instructions** will enable dynamic command input mapping. The tool execution would follow the below flow:
 
-    - The user asks the **z/OS Helper Agent** to display certain information from the Db2 for z/OS subsystem.
-    - The Agent then retrieves the relevant command by routing the query to the **zRAG Agent**.
-    - The **zRAG Agent** then uses it's available tools to search the back-end watsonx Assistant for Z RAG documentation and return a response including the relevant command the user inquired about. 
-    - Once the command is determined, the **z/OS Helper Agent** will pass that command as input to the **db2Command** tool to execute the command via the **DSN TSO/E** interface. 
-    - Full output is returned back to the end-user. 
+      **a.** The user asks the **z/OS Helper Agent** to display certain information from the Db2 for z/OS subsystem.
 
-6. Now, test the new flow by click on the Agent Chat in the right-side of the screen and prompt the agent. 
+      **b.** The Agent then retrieves the relevant command by routing the query to the **zRAG Agent**.
+
+      **c.** The **zRAG Agent** then uses it's available tools to search the back-end watsonx Assistant for Z RAG documentation and return a response including the relevant command the user inquired about. 
+
+      **d.** Once the command is determined, the **z/OS Helper Agent** will pass that command as input to the **db2Command** tool to execute the command via the **DSN TSO/E** interface. 
+
+      **e.** Full output is returned back to the end-user. 
+
+1. Now, test the new flow by click on the Agent Chat in the right-side of the screen and prompt the agent. 
    
     Previously, you had hard-coded the `-DISPLAY GROUP` command as input to the tool. Now let's see what happens if we instead tell the agent what we want to retrieve and allow it to determine the command on its own. 
 
@@ -73,7 +75,7 @@ Now you will enable a workflow where the user can tell the agent what informatio
     
     **NOTE:** You may need to restart the conversation....
 
-7. View the full output of the response. 
+2. View the full output of the response. 
    
     ![](_attachments/build18.png){width=50%}
     
