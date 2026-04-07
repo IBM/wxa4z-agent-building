@@ -1,4 +1,3 @@
-
 # Log into ADK environment
 
 As mentioned previously, the ADK environment has already been setup for you with all the agent configuration files. In this section you will access the ADK command-line and log into your environment. 
