@@ -155,6 +155,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#enable-zrag-agent-collaboration-and-test-flow" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -665,6 +670,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -767,6 +774,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -783,9 +792,7 @@
 
 
 
-  <h1>Enable zRAG Agent collaboration</h1>
-
-<div><h3 id="enabling-zrag-agent-collaboration">Enabling <code>zRAG Agent</code> collaboration<a class="headerlink" href="#enabling-zrag-agent-collaboration" title="Permanent link">#</a></h3>
+<div><h1 id="enable-zrag-agent-collaboration-and-test-flow">Enable <code>zRAG Agent</code> collaboration and test flow<a class="headerlink" href="#enable-zrag-agent-collaboration-and-test-flow" title="Permanent link">#</a></h1>
 <p>In the previous sub-section, you successfully tested the execution and behavior of your tool using a hard-coded Db2 for z/OS command. </p>
 <p>Now you will enable a workflow where the user can tell the agent what information they'd like to view, and then the agent will retrieve the relevant command to then pass to the tool as input. To accomplish this, you will be leveraging the <code>zRAG Agent</code> for agent collaboration. The zRAG Agent is one of the <strong>pre-built Agents supported with watsonx Assistant for Z.</strong></p>
 <p><strong>For the purpose of this lab, the zRAG Agent was already deployed to your environment.</strong></p>
@@ -822,13 +829,11 @@
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>If the user asks to get or display information about Db2, call the "zRAG Agent" collaborator agent, passing the user's exact query to the agent. Wait until the zRAG Agent finishes generating a response, then return the exact response back to the user. Then extract the relevant command from the output and display it back to the user. Ensure that every Db2 command begins with "-", i.e. "-DISPLAY GROUP". THEN, pass that command as input to the "db2Command" tool. Wait until the full output is returned, then return the full output back to the user in a pretty, structured, line-by-line format. DISPLAY THE OUTPUT EXACTLY AS THE TOOL RETURNS IT WITH LINE BREAKS.    
 </span></code></pre></div>
 <p>These new set of <strong>Instructions</strong> will enable dynamic command input mapping. The tool execution would follow the below flow:</p>
-<ul>
-<li>The user asks the <strong>z/OS Helper Agent</strong> to display certain information from the Db2 for z/OS subsystem.</li>
-<li>The Agent then retrieves the relevant command by routing the query to the <strong>zRAG Agent</strong>.</li>
-<li>The <strong>zRAG Agent</strong> then uses it's available tools to search the back-end watsonx Assistant for Z RAG documentation and return a response including the relevant command the user inquired about. </li>
-<li>Once the command is determined, the <strong>z/OS Helper Agent</strong> will pass that command as input to the <strong>db2Command</strong> tool to execute the command via the <strong>DSN TSO/E</strong> interface. </li>
-<li>Full output is returned back to the end-user. </li>
-</ul>
+<p><strong>a.</strong> The user asks the <strong>z/OS Helper Agent</strong> to display certain information from the Db2 for z/OS subsystem.</p>
+<p><strong>b.</strong> The Agent then retrieves the relevant command by routing the query to the <strong>zRAG Agent</strong>.</p>
+<p><strong>c.</strong> The <strong>zRAG Agent</strong> then uses it's available tools to search the back-end watsonx Assistant for Z RAG documentation and return a response including the relevant command the user inquired about. </p>
+<p><strong>d.</strong> Once the command is determined, the <strong>z/OS Helper Agent</strong> will pass that command as input to the <strong>db2Command</strong> tool to execute the command via the <strong>DSN TSO/E</strong> interface. </p>
+<p><strong>e.</strong> Full output is returned back to the end-user. </p>
 </li>
 <li>
 <p>Now, test the new flow by click on the Agent Chat in the right-side of the screen and prompt the agent. </p>

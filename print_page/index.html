@@ -1536,10 +1536,14 @@
 <p>Now that you have your <code>IPL_Validator_Agent</code> created using the ADK, you will now create an <strong>Orchestrator Agent</strong> via the Agent Builder Experience (WxO UI) that provides multi-agent orchestration in order to accomplish various tasks. </p>
 <p>In this scenario, you will create an agent named <strong>z/OS Helper Agent</strong> that collaborates with:</p>
 <ul>
-<li><code>IPL_Validator_Agent</code> </li>
+<li><code>IPL_Validator_Agent</code> <ul>
 <li><strong>Purpose</strong>: to provide post-IPL health checks</li>
-<li><code>zRAG Agent</code> which you previously deployed with watsonx Assistant for Z</li>
+</ul>
+</li>
+<li><code>zRAG Agent</code> which you previously deployed with watsonx Assistant for Z<ul>
 <li><strong>Purpose</strong>: to retrieve commands used to display certain information about the Db2 for z/OS subsystem</li>
+</ul>
+</li>
 <li><code>db2Command</code> tool you previously imported in order to run Db2 for z/OS commands using the DSN TSO/E interface</li>
 </ul>
 <h3 id="multi-agent-create-creating-your-new-agent-within-watsonx-orchestrate">Creating your new agent within watsonx Orchestrate<a class="headerlink" href="#multi-agent-create-creating-your-new-agent-within-watsonx-orchestrate" title="Permanent link">#</a></h3>
@@ -1624,13 +1628,13 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/build12.png" data-desc-position="bottom"><img alt="" src="../_attachments/build12.png" width="50%"></a></p>
 <p>This command was of course hard-coded in the <strong>Instructions</strong> you used previously. But in the next section you will enable dynamic command inputs according to what the user would like to retrieve. </p>
 </li>
-</ol></div></body></html></section><section class="print-page" id="multi-agent-zrag-collab" heading-number="7.3"><h1 id="multi-agent-zrag-collab-multi-agent-zrag-collab">Enable zRAG Agent collaboration</h1><html><head>
+</ol></div></body></html></section><section class="print-page" id="multi-agent-zrag-collab" heading-number="7.3"><html><head>
         <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function () {
             remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
         })
         </script>
-        </head><body><div><h3 id="enabling-zrag-agent-collaboration">Enabling <code>zRAG Agent</code> collaboration<a class="headerlink" href="#multi-agent-zrag-collab-enabling-zrag-agent-collaboration" title="Permanent link">#</a></h3>
+        </head><body><div><h1 id="enable-zrag-agent-collaboration-and-test-flow">Enable <code>zRAG Agent</code> collaboration and test flow<a class="headerlink" href="#multi-agent-zrag-collab-enable-zrag-agent-collaboration-and-test-flow" title="Permanent link">#</a></h1>
 <p>In the previous sub-section, you successfully tested the execution and behavior of your tool using a hard-coded Db2 for z/OS command. </p>
 <p>Now you will enable a workflow where the user can tell the agent what information they'd like to view, and then the agent will retrieve the relevant command to then pass to the tool as input. To accomplish this, you will be leveraging the <code>zRAG Agent</code> for agent collaboration. The zRAG Agent is one of the <strong>pre-built Agents supported with watsonx Assistant for Z.</strong></p>
 <p><strong>For the purpose of this lab, the zRAG Agent was already deployed to your environment.</strong></p>
@@ -1667,13 +1671,11 @@
 </span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#multi-agent-zrag-collab-__codelineno-2-5"></a>If the user asks to get or display information about Db2, call the "zRAG Agent" collaborator agent, passing the user's exact query to the agent. Wait until the zRAG Agent finishes generating a response, then return the exact response back to the user. Then extract the relevant command from the output and display it back to the user. Ensure that every Db2 command begins with "-", i.e. "-DISPLAY GROUP". THEN, pass that command as input to the "db2Command" tool. Wait until the full output is returned, then return the full output back to the user in a pretty, structured, line-by-line format. DISPLAY THE OUTPUT EXACTLY AS THE TOOL RETURNS IT WITH LINE BREAKS.    
 </span></code></pre></div>
 <p>These new set of <strong>Instructions</strong> will enable dynamic command input mapping. The tool execution would follow the below flow:</p>
-<ul>
-<li>The user asks the <strong>z/OS Helper Agent</strong> to display certain information from the Db2 for z/OS subsystem.</li>
-<li>The Agent then retrieves the relevant command by routing the query to the <strong>zRAG Agent</strong>.</li>
-<li>The <strong>zRAG Agent</strong> then uses it's available tools to search the back-end watsonx Assistant for Z RAG documentation and return a response including the relevant command the user inquired about. </li>
-<li>Once the command is determined, the <strong>z/OS Helper Agent</strong> will pass that command as input to the <strong>db2Command</strong> tool to execute the command via the <strong>DSN TSO/E</strong> interface. </li>
-<li>Full output is returned back to the end-user. </li>
-</ul>
+<p><strong>a.</strong> The user asks the <strong>z/OS Helper Agent</strong> to display certain information from the Db2 for z/OS subsystem.</p>
+<p><strong>b.</strong> The Agent then retrieves the relevant command by routing the query to the <strong>zRAG Agent</strong>.</p>
+<p><strong>c.</strong> The <strong>zRAG Agent</strong> then uses it's available tools to search the back-end watsonx Assistant for Z RAG documentation and return a response including the relevant command the user inquired about. </p>
+<p><strong>d.</strong> Once the command is determined, the <strong>z/OS Helper Agent</strong> will pass that command as input to the <strong>db2Command</strong> tool to execute the command via the <strong>DSN TSO/E</strong> interface. </p>
+<p><strong>e.</strong> Full output is returned back to the end-user. </p>
 </li>
 <li>
 <p>Now, test the new flow by click on the Agent Chat in the right-side of the screen and prompt the agent. </p>

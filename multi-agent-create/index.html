@@ -789,10 +789,14 @@
 <p>Now that you have your <code>IPL_Validator_Agent</code> created using the ADK, you will now create an <strong>Orchestrator Agent</strong> via the Agent Builder Experience (WxO UI) that provides multi-agent orchestration in order to accomplish various tasks. </p>
 <p>In this scenario, you will create an agent named <strong>z/OS Helper Agent</strong> that collaborates with:</p>
 <ul>
-<li><code>IPL_Validator_Agent</code> </li>
+<li><code>IPL_Validator_Agent</code> <ul>
 <li><strong>Purpose</strong>: to provide post-IPL health checks</li>
-<li><code>zRAG Agent</code> which you previously deployed with watsonx Assistant for Z</li>
+</ul>
+</li>
+<li><code>zRAG Agent</code> which you previously deployed with watsonx Assistant for Z<ul>
 <li><strong>Purpose</strong>: to retrieve commands used to display certain information about the Db2 for z/OS subsystem</li>
+</ul>
+</li>
 <li><code>db2Command</code> tool you previously imported in order to run Db2 for z/OS commands using the DSN TSO/E interface</li>
 </ul>
 <h3 id="creating-your-new-agent-within-watsonx-orchestrate">Creating your new agent within watsonx Orchestrate<a class="headerlink" href="#creating-your-new-agent-within-watsonx-orchestrate" title="Permanent link">#</a></h3>
