@@ -1,0 +1,127 @@
+# Project info
+site_name: IBM wxa4z Agent Builder Lab Guide
+site_description: IBM watsonx Assistant for Z - Build your own Agent
+site_author: Max Weiss (maxwell.g.weiss@ibm.com)
+copyright: Copyright &copy; 2025 IBM - V 3.0
+
+# Repository
+repo_name:  IBM/wxa4z-agent-building
+docs_dir: docs
+
+# navigation menu moved to nav.md
+# nav:
+#   - 'Welcome': 'index.md'
+#   - 'Reserve the IBM Technology Zone environments': 'TechZoneEnvironment.md'
+#   - 'Next steps': 'NextSteps.md'
+
+# don't add the terminology file to the navigation
+not_in_nav: |
+  /terminology
+
+
+theme:
+  name: material
+  icon:
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - navigation.footer
+    # - content.tabs.link
+    - hide:                 # hide right hand side document toc
+        - toc
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+
+plugins:
+    - mkdocs-video
+    - macros
+    - search
+    - glightbox
+    # - autorefs
+    - literate-nav:
+        nav_file: nav.md
+    - print-site:
+        add_to_navigation: false
+        print_page_title: 'IBM watsonx Assistant for Z - Agent Building Lab'
+        add_print_site_banner: false
+        # Table of contents
+        add_table_of_contents: true
+        toc_title: 'Table of Contents'
+        toc_depth: 6
+        # Content-related
+        add_full_urls: false
+        enumerate_headings: false
+        enumerate_figures: false
+        add_cover_page: true
+        cover_page_template: ""
+        path_to_pdf: ""
+        include_css: true
+        enabled: true
+        exclude:
+          - printInstructions.md
+
+markdown_extensions:
+  - toc:
+      permalink: "#"
+      toc_depth: "1-1"
+  - sane_lists
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - abbr
+  - pymdownx.details
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      auto_append: ["terminology"]
+      base_path: ["docs"]
+  - pymdownx.superfences
+  - pymdownx.keys
+  - attr_list
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.pathconverter:
+      base_path: '' # default: ''
+      relative_path: '' # default ''
+      absolute: false # default: false
+      tags: 'a script img link object embed'
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_css:
+  - style.css
