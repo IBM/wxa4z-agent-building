@@ -851,14 +851,11 @@
 <h3 id="test-the-ipl_validator_agent">Test the <code>IPL_Validator_Agent</code><a class="headerlink" href="#test-the-ipl_validator_agent" title="Permanent link">#</a></h3>
 <p>Now you can test the execution flow of your agent. When the user prompts the agent to <code>run IPL check</code> or <code>validate my IPL</code> or something similar, the agent will kick off a series of steps as defined in the <strong>Instructions</strong> section of your agent definition. </p>
 <p><strong><em>In the agent chat window on the right-side of the screen, prompt the agent with <code>run IPL check</code></em></strong>. The agent will then call the appropriate tool according to the current step in the process. Wait until the agent processing is completed and the full output is returned. </p>
-<h4 id="step-1"><strong>Step 1:</strong><a class="headerlink" href="#step-1" title="Permanent link">#</a></h4>
-<p>The agent calls the <code>operatorCommand</code> tool, passing <code>D IPLINFO</code> as input to the tool. The results should be displayed similarly to below:</p>
+<p><strong>Step 1:</strong> The agent calls the <code>operatorCommand</code> tool, passing <code>D IPLINFO</code> as input to the tool. The results should be displayed similarly to below:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/test8.png" data-desc-position="bottom"><img alt="" src="../_attachments/test8.png" width="50%"></a></p>
-<h4 id="step-2"><strong>Step 2:</strong><a class="headerlink" href="#step-2" title="Permanent link">#</a></h4>
-<p>The agent calls the <code>tsoCommand</code> tool, passing <code>TIME</code> as the command input. This verifies that TSO is running. The output of that step should look like:</p>
+<p><strong>Step 2:</strong> The agent calls the <code>tsoCommand</code> tool, passing <code>TIME</code> as the command input. This verifies that TSO is running. The output of that step should look like:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/test9.png" data-desc-position="bottom"><img alt="" src="../_attachments/test9.png" width="50%"></a></p>
-<h4 id="step-3"><strong>Step 3:</strong><a class="headerlink" href="#step-3" title="Permanent link">#</a></h4>
-<p>The agent calls the <code>operatorCommand</code> tool, passing <code>D OMVS</code> as input:</p>
+<p><strong>Step 3:</strong> The agent calls the <code>operatorCommand</code> tool, passing <code>D OMVS</code> as input:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/test10.png" data-desc-position="bottom"><img alt="" src="../_attachments/test10.png" width="50%"></a></p>
 <p><strong>Step 4:</strong> The agent calls the <code>operatorCommand</code> tool, passing <code>D OMVS,MF</code> as input:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/test11.png" data-desc-position="bottom"><img alt="" src="../_attachments/test11.png" width="50%"></a></p>
