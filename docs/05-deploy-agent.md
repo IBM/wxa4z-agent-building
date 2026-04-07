@@ -11,10 +11,8 @@ In this section, you will define an agent named **IPL Validator Agent** that lev
     nano IPL-validator-agent.yaml
     ```
    
-2. You should then be able to see the agent definition as shown below:
+2. You should then be able to see the agent definition.
    
-    ![](_attachments/linux13.png)
-
     *Lets go over each of the sections...*
     
     **Section** | **Description**

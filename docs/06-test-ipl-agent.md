@@ -83,18 +83,15 @@ Now you can test the execution flow of your agent. When the user prompts the age
 
 ***In the agent chat window on the right-side of the screen, prompt the agent with `run IPL check`***. The agent will then call the appropriate tool according to the current step in the process. Wait until the agent processing is completed and the full output is returned. 
 
-#### **Step 1:** 
-The agent calls the `operatorCommand` tool, passing `D IPLINFO` as input to the tool. The results should be displayed similarly to below:
+**Step 1:** The agent calls the `operatorCommand` tool, passing `D IPLINFO` as input to the tool. The results should be displayed similarly to below:
 
 ![](_attachments/test8.png){width=50%}
 
-#### **Step 2:** 
-The agent calls the `tsoCommand` tool, passing `TIME` as the command input. This verifies that TSO is running. The output of that step should look like:
+**Step 2:** The agent calls the `tsoCommand` tool, passing `TIME` as the command input. This verifies that TSO is running. The output of that step should look like:
 
 ![](_attachments/test9.png){width=50%}
 
-#### **Step 3:** 
-The agent calls the `operatorCommand` tool, passing `D OMVS` as input:
+**Step 3:** The agent calls the `operatorCommand` tool, passing `D OMVS` as input:
 
 ![](_attachments/test10.png){width=50%}
 
