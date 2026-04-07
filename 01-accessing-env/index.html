@@ -10,6 +10,10 @@
       
       
       
+        <link rel="prev" href="../00-overview/">
+      
+      
+        <link rel="next" href="../02-login-adk/">
       
       
         
@@ -20,7 +24,7 @@
     
     
       
-        <title>Nav - IBM wxa4z Agent Builder Lab Guide</title>
+        <title>Accessing the environments - IBM wxa4z Agent Builder Lab Guide</title>
       
     
     
@@ -151,6 +155,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#accessing-the-environments" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -183,7 +192,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Nav
+              Accessing the environments
             
           </span>
         </div>
@@ -329,10 +338,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../01-accessing-env/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -348,6 +366,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -531,6 +550,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -547,18 +568,152 @@
 
 
 
-  <h1>Nav</h1>
-
+<div><h1 id="accessing-the-environments">Accessing the environments<a class="headerlink" href="#accessing-the-environments" title="Permanent link">#</a></h1>
+<p>For this Lab you will be using two different TechZone environments:</p>
+<h4 id="1-watsonx-orchestrate">1. <strong>watsonx Orchestrate</strong>:<a class="headerlink" href="#1-watsonx-orchestrate" title="Permanent link">#</a></h4>
+<p>A dedicated SaaS tenant of watsonx Orchestrate on IBM Cloud that you will be using to deploy and build custom agents for various Z specific use cases. 
+<strong>IBM watsonx Assistant for Z</strong> is powered by watsonx Orchestrate, a generative AI platform for building, accessing and testing AI agents and assistants. With watsonx Assistant for Z, customers have the ability to connect their agents to a broad range of components, including IBM Z infrastructure, middleware, tools, third-party software and custom applications, forming the foundation for scalable and secure enterprise operations. </p>
+<h4 id="2-z-dev-test-for-zos-zdt">2. <strong>Z Dev &amp; Test for z/OS (zD&amp;T)</strong>:<a class="headerlink" href="#2-z-dev-test-for-zos-zdt" title="Permanent link">#</a></h4>
+<p>An emulated z/OS image running on IBM Cloud which is pre-configured to simulate a running z/OS environment. The image runs locally on a Linux hypervisor, and provides a set of middleware and products, including: CICS, Db2, IMS, JES, z/OSMF, and more.  </p>
+<h3 id="logging-into-watsonx-orchestrate-and-retrieving-connection-details">Logging into watsonx Orchestrate and retrieving connection details<a class="headerlink" href="#logging-into-watsonx-orchestrate-and-retrieving-connection-details" title="Permanent link">#</a></h3>
+<p>In order to log into the ADK environment, you will need two environment details that you will locate and record in this section:</p>
 <ul>
-<li><a href="../00-overview/">Lab Overview and Background</a></li>
-<li><a href="../01-accessing-env/">Accessing the environments</a></li>
-<li><a href="../02-login-adk/">Log in to ADK</a></li>
-<li><a href="../03-create-connection/">Create connection</a></li>
-<li><a href="../04-import-tools/">Import tools</a></li>
-<li><a href="../05-deploy-agent/">Deploy agent</a></li>
-<li><a href="../06-test-ipl-agent/">Test IPL Agent</a></li>
-<li><a href="../07-multi-agent/">Multi-agent</a></li>
+<li><strong>WxO Service Instance URL</strong></li>
+<li><strong>IBM Cloud API Key</strong></li>
 </ul>
+<ol>
+<li>
+<p>Click on the <strong>Student URL</strong> provided by the instructor for the <strong>watsonx Orchestrate</strong> environment and when prompted, enter the password. </p>
+</li>
+<li>
+<p>Once done, you should be taken to the environment details page for your <strong>watsonx Orchestrate</strong> environment.</p>
+</li>
+<li>
+<p>As you will use <strong>Student ID's</strong> for accessing your cloud resource, firstly click on the <strong>logout URL</strong> referenced on the page:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/student1.png" data-desc-position="bottom"><img alt="" src="../_attachments/student1.png"></a></p>
+<p>A pop-up window will open confirming you're logged out. You can then close that tab.</p>
+</li>
+<li>
+<p>Navigate back to the environment details page, and record the <strong>App ID User credentials</strong> towards the bottom of the page. (Copy your <strong>Username</strong> and <strong>Password</strong> to a local notepad for reference). For example:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/student2.png" data-desc-position="bottom"><img alt="" src="../_attachments/student2.png"></a></p>
+<p>In the above example, my Username would be <code>student0@techzone.ibm.com</code> and my Password would be <code>V14u8#CrmWittakd</code>. </p>
+</li>
+<li>
+<p>Then under the <strong>App ID Instructions</strong>, click on the <code>https://cloud.ibm.com/authorize/...</code> link in your environment details:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/student3.png" data-desc-position="bottom"><img alt="" src="../_attachments/student3.png"></a></p>
+</li>
+<li>
+<p>In the new tab, enter your recorded <strong>Username</strong> and <strong>Password</strong>, then click <strong>Sign in</strong>. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/student4.png" data-desc-position="bottom"><img alt="" src="../_attachments/student4.png"></a></p>
+</li>
+<li>
+<p>Once logged in, generate a new IBM Cloud <strong>API Key</strong> by clicking on <strong>Manage</strong> --&gt; <strong>Access(IAM)</strong> in the upper right hand corner. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/lab6.png" data-desc-position="bottom"><img alt="" src="../_attachments/lab6.png"></a></p>
+</li>
+<li>
+<p>Once the appropriate Cloud account is selected from the drop-down, generate a new IBM Cloud <strong>API Key</strong> by clicking on <strong>Manage</strong> --&gt; <strong>Access(IAM)</strong> in the upper right hand corner. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/lab6.png" data-desc-position="bottom"><img alt="" src="../_attachments/lab6.png"></a></p>
+</li>
+<li>
+<p>In the <strong>IAM</strong> settings page, select <strong>API keys</strong> from the left-hand menu.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/lab7.png" data-desc-position="bottom"><img alt="" src="../_attachments/lab7.png"></a></p>
+</li>
+<li>
+<p>In the <strong>API keys</strong> screen, click on <strong>Create +</strong>. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/lab8.png" data-desc-position="bottom"><img alt="" src="../_attachments/lab8.png"></a></p>
+</li>
+<li>
+<p>Enter any <strong>Name</strong> for your API Key and click <strong>Create</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/lab9.png" data-desc-position="bottom"><img alt="" src="../_attachments/lab9.png"></a></p>
+</li>
+<li>
+<p>You’ll then see a window appear <strong><em>“API key successfully created”</em></strong></p>
+<p><strong>IMPORTANT</strong>: Make sure to <strong>Download</strong> and <strong>Copy</strong> your API key (this can only be retrieved once).</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/lab10.png" data-desc-position="bottom"><img alt="" src="../_attachments/lab10.png"></a></p>
+<p><strong>Copy and record your API key value in a local notepad on your workstation for later use. This will later be referenced in your agents configuration as a shared secret.</strong></p>
+</li>
+<li>
+<p>Next you will retrieve and record your watsonx Orchestrate <strong>Service Instance URL</strong>. </p>
+<p>After generating your API key within IBM Cloud in the previous section, click on the ‘hamburger’ menu icon in the top-left corner of the IBM Cloud window and select <strong>Resource list</strong>. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/serviceurl1.png" data-desc-position="bottom"><img alt="" src="../_attachments/serviceurl1.png"></a></p>
+</li>
+<li>
+<p>Expand the <strong>AI / Machine Learning</strong> section and you should see the following resources available:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/serviceurl2.png" data-desc-position="bottom"><img alt="" src="../_attachments/serviceurl2.png"></a></p>
+</li>
+<li>
+<p>Click on the resource shown for the <strong>watsonx Orchestrate</strong> resource: </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/serviceurl2.png" data-desc-position="bottom"><img alt="" src="../_attachments/serviceurl2.png"></a></p>
+</li>
+<li>
+<p>Click <strong>Launch watsonx Orchestrate</strong>. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/serviceurl3.png" data-desc-position="bottom"><img alt="" src="../_attachments/serviceurl3.png"></a></p>
+</li>
+<li>
+<p>In the watsonx Orchestrate UI, click on you <strong>profile icon</strong> in the top-right corner and then <strong>Settings</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/serviceurl4.png" data-desc-position="bottom"><img alt="" src="../_attachments/serviceurl4.png"></a></p>
+</li>
+<li>
+<p>In the Settings page, click on the <strong>API details</strong> tab, then <strong>copy and record</strong> your <strong>Service instance URL</strong> to a local notepad for later use.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/serviceurl5.png" data-desc-position="bottom"><img alt="" src="../_attachments/serviceurl5.png"></a></p>
+<p>Once recorded, you can minimize the window to come back to later. </p>
+</li>
+</ol>
+<h3 id="set-racf-passphrase-for-ibmuser-id-on-zdt">Set RACF Passphrase for <code>IBMUSER</code> ID on zD&amp;T<a class="headerlink" href="#set-racf-passphrase-for-ibmuser-id-on-zdt" title="Permanent link">#</a></h3>
+<ol>
+<li>
+<p>Click on the <strong>Student URL</strong> provided by the instructor for the <strong>zD&amp;T</strong> environment and when prompted, enter the password. </p>
+</li>
+<li>
+<p>Once done, you should be taken to the environment details page for your <strong>zD&amp;T</strong> environment which will look something like this:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/zdt2.png" data-desc-position="bottom"><img alt="" src="../_attachments/zdt2.png"></a></p>
+</li>
+<li>
+<p>Locate and record the <strong>Public IP</strong> field for your environment.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/zdt2.png" data-desc-position="bottom"><img alt="" src="../_attachments/zdt2.png"></a></p>
+</li>
+<li>
+<p>At the bottom of the reservation page, click on <strong>Download SSH key</strong> to download the SSH key locally.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/zdt3.png" data-desc-position="bottom"><img alt="" src="../_attachments/zdt3.png"></a></p>
+</li>
+<li>
+<p>In order to set a new Passphrase for your IBMUSER zOS user, you will first need to SSH into z/OS USS, using port 2022.</p>
+<p>On your local machine's command line, navigate to the directory of your downloaded SSH key from the previous step, for example:</p>
+<p><code>cd Downloads</code></p>
+</li>
+<li>
+<p>Set the permissions of your downloaded key to allow SSH access:</p>
+<p><code>chmod 600 &lt;ssh-key.pem&gt;</code></p>
+</li>
+<li>
+<p>Then SSH into z/OS UNIX, by running the below command, replacing <code>&lt;ssh-key.pem&gt;</code> with the name of your downloaded key, and replacing <code>&lt;public ip&gt;</code> with the IP you recorded in the above section:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ssh -i &lt;ssh-key.pem&gt; ibmuser@&lt;public ip&gt; -p 2022
+</span></code></pre></div>
+<p>Once SSH'ed in successfully, you should see something similar to below:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/zdt5.png" data-desc-position="bottom"><img alt="" src="../_attachments/zdt5.png"></a></p>
+</li>
+<li>
+<p>Next, set a new zOS Passphrase for your <strong>IBMUSER</strong> zOS user by running the following command. This is the RACF Passphrase that you will use to log into TSO as the IBMUSER ID.</p>
+<p>Once you're SSH'ed into zOS USS, enter the following command, substituting a passphrase of your choice for the string <code>YOUR PASSWORD PHRASE</code>:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>tsocmd "ALTUSER IBMUSER PHRASE('YOUR PASSWORD PHRASE') NOEXPIRE RESUME"
+</span></code></pre></div>
+<details class="tip">
+<summary>Syntax rules for RACF Password Phrases (below)</summary>
+<ul>
+<li>minimum length: 9 characters</li>
+<li>Must contain at least 2 alphabetic characters (A - Z, a - z)</li>
+<li>Must contain at least 2 non-alphabetic characters (numerics, punctuation, or special characters, including spaces)</li>
+<li>Must not contain more than 2 consecutive characters that are identical</li>
+</ul>
+</details>
+<p><strong>Note:</strong> <em>if you typed the command yourself, be sure to include the single-quotes before and after the password.</em> <strong><em>Record the passphrase as it will be needed later.</em></strong></p>
+<p>Afterwards, you should see something similar to the following:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/zdt6.png" data-desc-position="bottom"><img alt="" src="../_attachments/zdt6.png"></a></p>
+</li>
+<li>
+<p>Exit out of z/OS USS by entering <code>exit</code> on the command-line. </p>
+</li>
+</ol></div>
 
 
 
@@ -583,6 +738,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../00-overview/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Lab Overview and Background">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Lab Overview and Background
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../02-login-adk/" class="md-footer__link md-footer__link--next" aria-label="Next: Log in to ADK">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Log in to ADK
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">

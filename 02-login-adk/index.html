@@ -10,6 +10,10 @@
       
       
       
+        <link rel="prev" href="../01-accessing-env/">
+      
+      
+        <link rel="next" href="../03-create-connection/">
       
       
         
@@ -20,7 +24,7 @@
     
     
       
-        <title>Nav - IBM wxa4z Agent Builder Lab Guide</title>
+        <title>Log in to ADK - IBM wxa4z Agent Builder Lab Guide</title>
       
     
     
@@ -151,6 +155,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#log-into-adk-environment" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -183,7 +192,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Nav
+              Log in to ADK
             
           </span>
         </div>
@@ -356,10 +365,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../02-login-adk/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -375,6 +393,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -531,6 +550,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -547,18 +568,43 @@
 
 
 
-  <h1>Nav</h1>
-
-<ul>
-<li><a href="../00-overview/">Lab Overview and Background</a></li>
-<li><a href="../01-accessing-env/">Accessing the environments</a></li>
-<li><a href="../02-login-adk/">Log in to ADK</a></li>
-<li><a href="../03-create-connection/">Create connection</a></li>
-<li><a href="../04-import-tools/">Import tools</a></li>
-<li><a href="../05-deploy-agent/">Deploy agent</a></li>
-<li><a href="../06-test-ipl-agent/">Test IPL Agent</a></li>
-<li><a href="../07-multi-agent/">Multi-agent</a></li>
-</ul>
+<div><h1 id="log-into-adk-environment">Log into ADK environment<a class="headerlink" href="#log-into-adk-environment" title="Permanent link">#</a></h1>
+<p>As mentioned previously, the ADK environment has already been setup for you with all the agent configuration files. In this section you will access the ADK command-line and log into your environment. </p>
+<p>Access the ADK by SSH'ing into the Linux environment hosting the watsonx Orchestrate ADK tools.</p>
+<ol>
+<li>
+<p>Previously you SSH'ed into z/OS UNIX using the SSH key you downloaded locally. You will use that same key to SSH into the Linux server. </p>
+<p>On your local machine's command-line, <strong>SSH into Linux</strong> on port <code>2223</code> by running the below command, replacing <code>&lt;ssh-key.pem&gt;</code> with the name of your downloaded key, and replacing <code>&lt;public ip&gt;</code> with the IP you recorded earlier:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ssh -i &lt;ssh-key.pem&gt; itzuser@&lt;public ip&gt; -p 2223
+</span></code></pre></div>
+<p>You should see the following:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/linux1.png" data-desc-position="bottom"><img alt="" src="../_attachments/linux1.png"></a></p>
+</li>
+<li>
+<p>Navigate to the <strong>Custom-Agent-Builder</strong> directory on the Linux system:</p>
+<p><code>cd Custom-Agent-Builder</code></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/linux2.png" data-desc-position="bottom"><img alt="" src="../_attachments/linux2.png"></a></p>
+<p>Then type <code>ls</code> to view the configuration files.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/linux3.png" data-desc-position="bottom"><img alt="" src="../_attachments/linux3.png"></a></p>
+</li>
+<li>
+<p>Login and activate your ADK environment by running the following command in the Linux command-line, replacing <code>&lt;your Service Instance URL&gt;</code> with your unique <strong>Service Instance URL</strong> you recorded earlier:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>orchestrate env add -n zos -u &lt;your Service Instance URL&gt; --type ibm_iam --activate
+</span></code></pre></div>
+</li>
+<li>
+<p>After issuing the above command, you will be prompted for your <strong>WXO API key</strong> as shown below:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/linux4.png" data-desc-position="bottom"><img alt="" src="../_attachments/linux4.png"></a></p>
+<p><strong>Copy and paste</strong> the value of your <strong>IBM Cloud API key</strong> from the preceding steps and hit <strong>enter</strong>. You should then see that your environment is now active, as shown below:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/linux5.png" data-desc-position="bottom"><img alt="" src="../_attachments/linux5.png"></a></p>
+</li>
+<li>
+<p>Once activated, verify you’re successfully connected by running the following command to view existing agents in your environment:</p>
+<p><code>orchestrate agents list</code></p>
+<p>You should see the <strong>zRAG Agent</strong> listed which was pre-deployed for you. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/linux6.png" data-desc-position="bottom"><img alt="" src="../_attachments/linux6.png"></a></p>
+</li>
+</ol></div>
 
 
 
@@ -583,6 +629,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../01-accessing-env/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Accessing the environments">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Accessing the environments
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../03-create-connection/" class="md-footer__link md-footer__link--next" aria-label="Next: Create connection">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Create connection
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
