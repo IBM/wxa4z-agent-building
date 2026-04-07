@@ -25,7 +25,11 @@ The steps in this section assume you're already logged into the watsonx Orchestr
 
 3. Select **Create from scratch**
    
-    - In the **Name** field, give your agent a descriptive name that describe it's functionality. For this scenario, name your agent: `z/OS Helper Agent`
+    - In the **Name** field, give your agent a descriptive name that describe it's functionality. For this scenario, name your agent: 
+      ```
+      z/OS Helper Agent
+      ```
+
     - In the **Description**, copy and paste:
       ```
       Agent that runs various z/OS and Db2 commands to retrieve information, and leverages the zRAG to retrieve command syntax. 
@@ -34,11 +38,11 @@ The steps in this section assume you're already logged into the watsonx Orchestr
 
         ![](_attachments/build3.png){width=50%}
 
-4. Scroll down to the **Agent style** section. Select the **React** style. This style of agent allows the LLM to learn and refine its behavior. 
+1. Scroll down to the **Agent style** section. Select the **React** style. This style of agent allows the LLM to learn and refine its behavior. 
 
     ![](_attachments/build4.png){width=50%}
 
-5. The first tool you'll test to build the scenario is the `db2Command` tool. 
+2. The first tool you'll test to build the scenario is the `db2Command` tool. 
 
     Scroll down to the **Tools** section and click **Add tool**. 
 
