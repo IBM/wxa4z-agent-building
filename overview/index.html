@@ -1,7 +1,4 @@
-
-<!doctype html>
-<html lang="en" class="no-js">
-  <head>
+<!DOCTYPE html><html lang="en" class="no-js"><head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -14,23 +11,25 @@
       
       
       
+        <link rel="next" href="../setup-wxo/">
+      
       
         
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>IBM wxa4z Agent Builder Lab Guide</title>
+        <title>Welcome and Lab Overview - IBM wxa4z Agent Builder Lab Guide</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
   
@@ -109,24 +108,34 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
-      <link rel="stylesheet" href="/css/print-site.css">
+      <link rel="stylesheet" href="../css/print-site.css">
     
-      <link rel="stylesheet" href="/css/print-site-material.css">
+      <link rel="stylesheet" href="../css/print-site-material.css">
     
-      <link rel="stylesheet" href="/style.css">
+      <link rel="stylesheet" href="../style.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  </head>
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
   
   
     
@@ -144,6 +153,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#welcome-and-lab-overview" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -156,15 +170,15 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="IBM wxa4z Agent Builder Lab Guide" class="md-header__button md-logo" aria-label="IBM wxa4z Agent Builder Lab Guide" data-md-component="logo">
+    <a href=".." title="IBM wxa4z Agent Builder Lab Guide" class="md-header__button md-logo" aria-label="IBM wxa4z Agent Builder Lab Guide" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -176,7 +190,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Welcome and Lab Overview
             
           </span>
         </div>
@@ -189,20 +203,20 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
       </label>
     
   
@@ -218,7 +232,7 @@
       
         <label class="md-header__button md-icon" for="__search">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         </label>
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -227,15 +241,15 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
         </button>
       </nav>
       
@@ -271,7 +285,7 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -280,10 +294,10 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="IBM wxa4z Agent Builder Lab Guide" class="md-nav__button md-logo" aria-label="IBM wxa4z Agent Builder Lab Guide" data-md-component="logo">
+    <a href=".." title="IBM wxa4z Agent Builder Lab Guide" class="md-nav__button md-logo" aria-label="IBM wxa4z Agent Builder Lab Guide" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
 
     </a>
     IBM wxa4z Agent Builder Lab Guide
@@ -295,10 +309,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/overview/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -314,6 +337,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -333,7 +357,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -372,7 +396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/setup-wxo/" class="md-nav__link">
+      <a href="../setup-wxo/" class="md-nav__link">
         
   
   
@@ -400,14 +424,14 @@
   
   
     <li class="md-nav__item">
-      <a href="/setup-zdt/" class="md-nav__link">
+      <a href="../setup-zdt/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Set RACF Passphrase in zD&T
+    Set RACF Passphrase in zD&amp;T
   
 
     
@@ -435,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/login-adk/" class="md-nav__link">
+      <a href="../login-adk/" class="md-nav__link">
         
   
   
@@ -462,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/03-create-connection/" class="md-nav__link">
+      <a href="../03-create-connection/" class="md-nav__link">
         
   
   
@@ -489,7 +513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/04-import-tools/" class="md-nav__link">
+      <a href="../04-import-tools/" class="md-nav__link">
         
   
   
@@ -516,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/05-deploy-agent/" class="md-nav__link">
+      <a href="../05-deploy-agent/" class="md-nav__link">
         
   
   
@@ -543,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/06-test-ipl-agent/" class="md-nav__link">
+      <a href="../06-test-ipl-agent/" class="md-nav__link">
         
   
   
@@ -578,7 +602,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -617,7 +641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/multi-agent-create/" class="md-nav__link">
+      <a href="../multi-agent-create/" class="md-nav__link">
         
   
   
@@ -645,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/multi-agent-test-db2/" class="md-nav__link">
+      <a href="../multi-agent-test-db2/" class="md-nav__link">
         
   
   
@@ -673,7 +697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/multi-agent-zrag-collab/" class="md-nav__link">
+      <a href="../multi-agent-zrag-collab/" class="md-nav__link">
         
   
   
@@ -701,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/multi-agent-ipl-collab/" class="md-nav__link">
+      <a href="../multi-agent-ipl-collab/" class="md-nav__link">
         
   
   
@@ -736,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/publish-agent/" class="md-nav__link">
+      <a href="../publish-agent/" class="md-nav__link">
         
   
   
@@ -764,7 +788,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -772,6 +796,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
 </nav>
@@ -785,8 +811,75 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<div><h1 id="welcome-and-lab-overview">Welcome and Lab Overview<a class="headerlink" href="#welcome-and-lab-overview" title="Permanent link">#</a></h1>
+<p><strong>IBM® watsonx Assistant for Z</strong> leverages generative AI solutions to simplify and optimize the way developers, operators, and programmers interact and manage the IBM Z® platform. A key part of the solution is a set of capabilities that enable conversational AI, featuring advanced agentic AI to drive greater productivity and operational efficiency. It provides intelligent, data-driven automation that understands conversational context and navigates complex, multi-step interactions.</p>
+<h2 id="key-features-of-watsonx-assistant-for-z-agents">Key features of watsonx Assistant for Z agents<a class="headerlink" href="#key-features-of-watsonx-assistant-for-z-agents" title="Permanent link">#</a></h2>
+<h4 id="foundational-agentic-framework">Foundational agentic framework<a class="headerlink" href="#foundational-agentic-framework" title="Permanent link">#</a></h4>
+<p>A scalable architecture designed to support the creation and management of AI agents across the mainframe ecosystem. It features multi-agent orchestration, enabling seamless collaboration between AI agents and assistants to automate complex workflows. The framework also provides an environment to run the agents and simplifies the deployment of pre-built watsonx Assistant for Z agents, IBM Z product agents, and custom third-party agents.</p>
+<h4 id="agent-integration-services">Agent integration services<a class="headerlink" href="#agent-integration-services" title="Permanent link">#</a></h4>
+<p>Integration services allow agents to interact with the operating system or middleware to retrieve the data they need for making informed decisions. This includes support for integration with Model Context Protocol (MCP) servers, simplifying the process of importing external tools and extending the capabilities of your agents.</p>
+<h4 id="ai-agent-builder-experience">AI agent builder experience<a class="headerlink" href="#ai-agent-builder-experience" title="Permanent link">#</a></h4>
+<p>The enhanced Agent Builder empowers teams to develop custom agents for a wide range of workflows from simple tasks to complex processes. It includes:</p>
+<ul>
+<li>A no-code interface for rapid creation of task-specific agents</li>
+<li>pro-code Agent Development Kit (ADK) for building advanced agent capabilities</li>
+</ul>
+<h4 id="accelerated-value-with-pre-built-ai-agents">Accelerated value with pre-built AI agents<a class="headerlink" href="#accelerated-value-with-pre-built-ai-agents" title="Permanent link">#</a></h4>
+<p>Watsonx Assistant for Z includes a suite of pre-built AI agents and services, enabling teams to achieve immediate productivity gains. Customers also have the flexibility to create their own AI agents or leverage pre-built agents provided by IBM Z software products. These agents, embedded with AI chat capabilities, support decision-making and automate workflows using the watsonx Assistant™ for Z agentic AI framework. Developed across the IBM Z software stack, these agents offer an extensive set of capabilities to streamline operations and accelerate outcomes.</p>
+<h2 id="agent-development-kit-adk">Agent Development Kit (ADK)<a class="headerlink" href="#agent-development-kit-adk" title="Permanent link">#</a></h2>
+<p>Built on top of IBM watsonx Orchestrate, the watsonx Assistant for Z offering also enables flexible agent development for all users, empowering both business users and developers with a unified studio supporting low-code and pro-code development for key Z-specific use cases.</p>
+<p>The <strong>watsonx Orchestrate Agent Development Kit (ADK)</strong> is a set of tools designed to make it easy to build and deploy agents. It is packaged as a Python library and command-line tool that allows builders to configure agents that run on the platform. The ADK also supports integrating agents and tools built on other frameworks.</p>
+<p>The Agent Development Kit (ADK) is set of CLI utilities and python modules that helps you create agents and tools for watsonx Orchestrate.</p>
+<p>The ADK also provides a framework for developers to easily define new tools and agents programmatically.</p>
+<ol>
+<li>
+<p>Tools are defined using one of the available binding types (Python, OpenAPI, MCP, etc.) and then imported into the Orchestrate platform using the Orchestrate CLI.</p>
+</li>
+<li>
+<p>Agents are defined using the ADK and then imported into the Orchestrate platform using the Orchestrate CLI. Agents use the tools defined in step 1.</p>
+</li>
+<li>
+<p>Once an agent is imported, it can be used to start conversations with users either through the Orchestrate Agent Chat UI or through the Orchestrate API.</p>
+</li>
+</ol>
+<p>For more information on the ADK, reference the ADK documentation <strong><a href="https://developer.watson-orchestrate.ibm.com/" target="_blank">here</a></strong>.</p>
+<h2 id="lab-overview">Lab Overview<a class="headerlink" href="#lab-overview" title="Permanent link">#</a></h2>
+<p>For this Hands-on Agent Builder Lab, you will build multiple agents augmented with tools for calling various z/OSMF REST API endpoints to assist in verifying the status and health of different z/OS components. </p>
+<p>You will first build an <strong><em>IPL Validator Agent</em></strong> using the <strong>pro-code</strong> ADK approach which has two different pre-defined tools available to it. </p>
+<p>Following the successful deployment and testing of this agent, you will then create a new Orchestrator Agent using the <strong>low-code</strong> approach which will enable multi-agent collaboration. This agent, named the <strong>z/OS Helper Agent</strong>, will collaborate with the previously created <strong>IPL Validator Agent</strong> as well as the <strong>zRAG Agent</strong> which is a pre-built agent included in watsonx Assistant for Z and is being made available to you as part of the Lab. </p>
+<p>This hands-on lab shows how easy it is to create your own agents for key IBM Z use cases, in addition to the set of pre-built Z agents that ship with the product.</p>
+<p>The steps you will execute include:</p>
+<ul>
+<li>Installing and setting up your local ADK environment</li>
+<li>Configuring a connection and setting credentials</li>
+<li>Importing the provided tools</li>
+<li>Importing and testing the <code>IPL_Validator_Agent</code></li>
+<li>Creating a custom <code>z/OS Helper Agent</code> which is an orchestrator agent with collaborator agents and additional tools</li>
+</ul>
+<h2 id="lab-environments">Lab Environments<a class="headerlink" href="#lab-environments" title="Permanent link">#</a></h2>
+<p>For this Lab you will be using two different TechZone environments:</p>
+<h4 id="1-watsonx-orchestrate">1. <strong>watsonx Orchestrate</strong>:<a class="headerlink" href="#1-watsonx-orchestrate" title="Permanent link">#</a></h4>
+<p>A dedicated SaaS tenant of watsonx Orchestrate on IBM Cloud that you will be using to deploy and build custom agents for various Z specific use cases. 
+<strong>IBM watsonx Assistant for Z</strong> is powered by watsonx Orchestrate, a generative AI platform for building, accessing and testing AI agents and assistants. With watsonx Assistant for Z, customers have the ability to connect their agents to a broad range of components, including IBM Z infrastructure, middleware, tools, third-party software and custom applications, forming the foundation for scalable and secure enterprise operations. </p>
+<h4 id="2-z-dev-test-for-zos-zdt">2. <strong>Z Dev &amp; Test for z/OS (zD&amp;T)</strong>:<a class="headerlink" href="#2-z-dev-test-for-zos-zdt" title="Permanent link">#</a></h4>
+<p>An emulated z/OS image running on IBM Cloud which is pre-configured to simulate a running z/OS environment. The image runs locally on a Linux hypervisor, and provides a set of middleware and products, including: CICS, Db2, IMS, JES, z/OSMF, and more.  </p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -799,13 +892,35 @@
         <footer class="md-footer">
   
     
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+        
+          
+          <a href="../setup-wxo/" class="md-footer__link md-footer__link--next" aria-label="Next: Retrieve watsonx Orchestrate connection details">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Retrieve watsonx Orchestrate connection details
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2025 IBM - V 3.0
+      Copyright © 2025 IBM - V 3.0
     </div>
   
   
@@ -829,13 +944,15 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": ["navigation.instant", "navigation.tracking", "content.code.annotate", "content.code.copy", "content.code.select", "navigation.footer", {"hide": ["toc"]}], "search": "/assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "content.code.annotate", "content.code.copy", "content.code.select", "navigation.footer", {"hide": ["toc"]}], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="/js/print-site.js"></script>
+        <script src="../js/print-site.js"></script>
       
     
-  </body>
-</html>
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
