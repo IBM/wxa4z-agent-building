@@ -68,7 +68,7 @@ Now you will enable a workflow where the user can tell the agent what informatio
 
     Prompt the agent with the following query:
     ```
-    display information about my Db2 subsystem catalog and function levels 
+    display information about my Db2 subsystem and data sharing groups
     ```
 
     ![](_attachments/build17.png){width=50%}

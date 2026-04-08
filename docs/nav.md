@@ -1,3 +1,4 @@
+* [Welcome and Lab Overview](./overview.md)
 * Access and Setup Environments
     * [Retrieve watsonx Orchestrate connection details](./setup-wxo.md)
     * [Set RACF Passphrase in zD&T](./setup-zdt.md)
