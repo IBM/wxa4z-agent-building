@@ -14,15 +14,21 @@ In this section, you will access your imported agent within your watsonx Orchest
 
     A pop-up window will open confirming you're logged out. You can then close that tab.
 
-4. Navigate back to the environment details page, and record the **App ID User credentials** towards the bottom of the page. (Copy your **Username** and **Password** to a local notepad for reference). For example:
+4. Navigate back to the environment details page, and locate the **App ID User credentials** section towards the bottom of the page. Copy the email address for `student0@techzone.ibm.com` and its associated **password** immediately following it. *Copy both of these to a local notepad for later reference*. For example:
    
-    ![](_attachments/student2.png){width=50%}
+    ![](_attachments/student2new.png)
 
-    In the above example, my Username would be `student0@techzone.ibm.com` and my Password would be `V14u8#CrmWittakd`. 
+    !!! Warning "Copying the password"
 
-5. Then under the **App ID Instructions**, click on the `https://cloud.ibm.com/authorize/...` link in your environment details:
+        You will see up to 35 sets of student id's listed under **App ID User Credentials**. Make sure you copy the first ID and associated password, where the ID to copy is `student0@techzone.ibm.com` and the password is the text string immediately following it before `student1@techzone.ibm.com`.
+
+
+    In the above example, my Username would be `student0@techzone.ibm.com` and my Password would be `527aP54lsaTZ4#w1`. 
+
+
+5. Then under the **App ID Instructions** section above that, find and copy the `https://cloud.ibm.com/authorize/...` link and paste it into your web browser to access it.
    
-    ![](_attachments/student3.png){width=50%}
+    ![](_attachments/student3new.png)
 
 6. In the new tab, enter your recorded **Username** and **Password**, then click **Sign in**. 
    
