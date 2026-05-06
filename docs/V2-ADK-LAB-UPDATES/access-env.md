@@ -1,6 +1,7 @@
 # Access Windows ADK and Environment Overview
 
 In order to execute the Lab exercises, there are two environments provisioned for you:
+
   - Windows VM
   - Z Dev & Test for z/OS (zD&T) 
 
@@ -14,16 +15,15 @@ You will not be accessing the **zD&T** environment directly, but rather using th
 
 2. Once done, you should be taken to the environment details page for your **Windows ADK** environment.
    
-   **IMAGE**
+    ![](_attachments/win-access1.png)
 
 
-3. Open the Windows VM Console
+3. Open the Windows VM Console by clicking on **Console** in blue.
    
-    **IMAGE**
+    ![](_attachments/win-access2.png)
 
-4. You should now see the Windows VM Desktop as shown below:
+4. You should then be taken to a new tab displaying the Windows VM Desktop (with VS Code pre-opened):
    
-    **IMAGE**
 
 
 
@@ -41,47 +41,38 @@ You will not be accessing the **zD&T** environment directly, but rather using th
 
 ### Windows VM Layout 
 
+When first accessing, you should immediately see the **VS Code** window already opened with a folder opened titled `CUSTOM-AGENT-BUILDER` as shown below:
+
+![](_attachments/win-access3.png)
 
 
-- VS Code with agent files pre-loaded in workspace
-- Google Chrome opened with ADK/wxo UI and Lab Guide
-- Notepad on desktop with zD&T env details, and text to help quickly copy and paste
+This VS Code Workspace contains the various agent configuration files needed to build your agents using the ADK, and will be used in the following section. 
+
+Additionally, there should be a **Google Chrome** window in the toolbar with a tab opened for the **watsonx Orchestrate Chat UI** as well as the Lab guide within the Windows VM itself.
+
+![](_attachments/win-access4.png)
+
+Lastly, on the Desktop of the Windows VM, there are two important text files for this Lab:
+
+- `zD&T env details.txt`
+- `Lab commands.txt`
+
+The `zD&T env details.txt` file will be needed in the next section when creating a connection to your **zD&T zOS** environment. It contains the **public IP** of your zD&T instance and the RACF Passphrase for the **IBMUSER** ID for accessing z/OSMF. 
+
+The `Lab commands.txt` file contains the commands referenced in this Lab guide for easier copy and pasting within the Windows VM.
+
+
 
 ### Verify whether ADK is configured 
 
-Before moving on, verify that the ADK is successfully configured by running the following command in the **Terminal** of your VS Code window:
+Before moving on, verify that the ADK is successfully configured by **running the following command in the Terminal of your VS Code window** (in Windows VM):
 
 ```
 orchestrate agents list
 ```
 
-It should return something similar to what's shown below:
+If configured as expected, it should return something like what's shown below:
 
-**IMAGE**
+![](_attachments/win-access5.png)
 
-If it is, you can proceed to the following section. 
-If it's not, let an instructor know. 
-
-
-
-
-
-**FLOW:**
-As mentioned previously, the ADK environment has already been setup for you with all the agent configuration files. In this section you will access the ADK command-line and log into your environment.
-
-```
-orchestrate agents list
-```
-
-
-- How to access Windows VM
-- Discuss layout of screens/windows
-- Notepad on Desktop with the following:
-  - zD&T env details
-  - Agent instructions to copy and paste
-  - commands?
-- Have users verify whether ADK is configured
-  - orchestrate agents list
-  - If not, provide troubleshooting
-- Describe steps to re-format screen, copy and paste, etc. 
-- 
+If so, you can proceed to the following section. If not, let an instructor know before moving on. 

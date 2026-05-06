@@ -1,8 +1,6 @@
 
 # Create agent connection and configure credentials
 
-***Assume the user already executed `orchestrate agents list` command successfully from previous step***
-
 Within the **Custom-Agent-Builder** workspace in VS Code, you should see a `zosmf_connection.yaml` file. With watsonx Orchestrate and the ADK, connections provide a way to associate various tools together and assigning credentials needed for the tools to access external services on behalf of the agent. In this Lab, the tools you will use are focused on calling z/OSMF APIs to your zD&T zOS image in order to issue various commands and retrieve system details. The first step in deploying your agent is to create a connection to your zOS environment for the tools to use. 
 
 1. Within VS Code, click on the `zosmf_connection.yaml` file to view the contents.
@@ -13,8 +11,10 @@ Within the **Custom-Agent-Builder** workspace in VS Code, you should see a `zosm
    
     ![](_attachments/windows2.png)
 
-    ***NOTE: The public ip can be retrieved from the .txt file in workspace***
 
+    !!! Warning "Retrieve your `public-ip`"
+    
+        To retrieve your **public ip** address, open the `zD&T env details.txt` file on the Desktop of the Windows VM. Copy and paste it into VS Code. 
 
 3. Once modified, save the `zosmf_connection.yaml` file by clicking **File --> Save**.
    
