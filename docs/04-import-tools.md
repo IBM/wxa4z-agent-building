@@ -36,11 +36,9 @@ In this scenario, your ***IPL Validator Agent*** will be leveraging 2 different 
 
 In this section, you will use the provided tool files in the Linux **Custom-Agent-Builder** directory to import your agent tools for later use. 
 
-1. From within the **Custom-Agent-Builder** directory, view the contents of the `operatorCommand.py` file by issuing the following command:
+1. From within the **Custom-Agent-Builder** directory of VS Code, view the contents of the `operatorCommand.py` file by clicking on the file name.
    
-    ```
-    nano operatorCommand.py
-    ```
+    ![](_attachments/win-tools1.png)
    
     Take some time to review the contents. Specifically, note the following section:
 
@@ -59,11 +57,10 @@ In this section, you will use the provided tool files in the Linux **Custom-Agen
 
     Within the body of the API call, `cmd` gets passed as input from the agent. Depending on the step in the IPL validation, the agent may pass `D A,L` as the command to execute, as an example. 
 
-    Then close out of the editor view by clicking **Ctrl+X**.
 
 2. Then do the same for the `tsoCommand.py` file and take some time to review its content as well. 
 
-3. Import the `operatorCommand` tool by running the following command from your Linux command-line:
+3. Import the `operatorCommand` tool by running the following command from your VS Code **Terminal**:
    
     ```
     orchestrate tools import -k python -f operatorCommand.py --app-id zosmf 
@@ -71,7 +68,7 @@ In this section, you will use the provided tool files in the Linux **Custom-Agen
 
     After issuing the command, you should see a message similar to what's shown below:
 
-    ![](_attachments/linux11.png)
+    ![](_attachments/win-tools2.png)
 
     That indicates that the `operatorCommand` tool was imported successfully. 
 
@@ -95,6 +92,6 @@ In this section, you will use the provided tool files in the Linux **Custom-Agen
     orchestrate tools list
     ```
 
-    This should output a table similar to below showing all your imported tools.
+    This should output a table similar to below showing all your imported tools. *The 3 tools you imported may be listed at the bottom of the table...*
 
-    ![](_attachments/linux12.png)
+    ![](_attachments/win-tools3.png)

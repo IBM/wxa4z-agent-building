@@ -1,38 +1,36 @@
 
 # Create agent connection and configure credentials
 
-Within the **Custom-Agent-Builder** directory on Linux, you should see a `zosmf_connection.yaml` file. With watsonx Orchestrate and the ADK, connections provide a way to associate vearious tools together and assigning credentials needed for the tools to access external services on behalf of the agent. In this Lab, the tools you will use are focused on calling z/OSMF APIs to your zD&T zOS image in order to issue various commands and retrieve system details. The first step in deploying your agent is to create a connection to your zOS environment for the tools to use. 
+Within the **Custom-Agent-Builder** workspace in VS Code, you should see a `zosmf_connection.yaml` file. With watsonx Orchestrate and the ADK, connections provide a way to associate various tools together and assigning credentials needed for the tools to access external services on behalf of the agent. In this Lab, the tools you will use are focused on calling z/OSMF APIs to your zD&T zOS image in order to issue various commands and retrieve system details. The first step in deploying your agent is to create a connection to your zOS environment for the tools to use. 
 
-1. Open the `zosmf_connection.yaml` file by typing the following within your **Custom-Agent-Builder** directory on Linux:
+1. Within VS Code, click on the `zosmf_connection.yaml` file to view the contents.
    
-    ```
-    nano zosmf_connection.yaml
-    ```
+    ![](_attachments/windows1.png)
 
-2. Once you're viewing the file, **replace** `<public-ip>` in the `server_url` variable with the **public IP of your zD&T environment** that you recorded earlier. 
+2. Once you're viewing the file, modify it to **replace** `<public-ip>` in the `server_url` variable with the **public IP of your zD&T environment**. 
    
-    ![](_attachments/linux7.png)
+    ![](_attachments/windows2.png)
 
-   *This must be done for the `server_url` variable in both the draft AND live sections of the file.*
 
-3. Make sure to save the file after modifying it.
+    !!! Warning "Retrieve your `public-ip`"
+    
+        To retrieve your **public ip** address, open the `zD&T env details.txt` file on the Desktop of the Windows VM. Copy and paste it into VS Code. 
+
+3. Once modified, save the `zosmf_connection.yaml` file by clicking **File --> Save**.
    
-    To save the file, press **Ctrl+S** to save the file.
-
-    Then exit from the editor view by clicking **Ctrl+X**.
+    ![](_attachments/windows3.png)
 
 4. Now you can import the connection to your ADK environment.
-
-    Once back at the command-line, issue the following command to import the connection:
+   
+    In the **Terminal** command-prompt on the bottom of the VS Code window, enter the following command to import the connection:
 
     ```
     orchestrate connections import --file zosmf_connection.yaml
     ```
 
-    ![](_attachments/linux8.png)
+    ![](_attachments/windows4.png)
 
-
-5. Verify the connection was successfully imported by running the following command at the Linux command-line:
+5. Next, verify the connection was successsfully imported by running the following command in the Terminal:
    
     ```
     orchestrate connections list
@@ -40,9 +38,7 @@ Within the **Custom-Agent-Builder** directory on Linux, you should see a `zosmf_
 
     In the output of the command, notice that your new connection is listed with *app-id* **zosmf** and that the Credentials have not yet been set (as shown below).
 
-    ![](_attachments/linux9.png)
-
-    **Note**: *you may need to scroll to the top of the connections list.*
+    ![](_attachments/windows5.png)
 
     You will next set your connection credentials.
 
@@ -50,7 +46,7 @@ Within the **Custom-Agent-Builder** directory on Linux, you should see a `zosmf_
    
     Credentials hold the values used to authorize against external services. In the case of your previously created connection, you configured it with kind: basic which enforces username and password credentials (i.e. the username and password used by the z/OS IBMUSER ID).
 
-    To set your connection credentials for the **draft** environment, enter the following command in the Linux command-line, replacing `<your-passphrase>` with the value of the RACF Passphrase you set earlier for **IBMUSER**.
+    To set your connection credentials for the **draft** environment, enter the following command in the VS Code Terminal, replacing `<your-passphrase>` with the value provided in the **.txt** file in your folder.
 
     ```
     orchestrate connections set-credentials --app-id zosmf --env draft --username 'IBMUSER' --password '<your-passphrase>'
@@ -61,12 +57,12 @@ Within the **Custom-Agent-Builder** directory on Linux, you should see a `zosmf_
     ```
     orchestrate connections set-credentials --app-id zosmf --env draft --username 'IBMUSER' --password 'YOUR PASSWORD PHRASE'
     ```
-
-7. Next, set your connection credentials for the **live** environment by issuing the same command as above, but replace `--env draft` with `--env live`. 
    
    You should see a `Credentials successfully set...` message.
 
-8. Now re-verify the connection with your newly set credentails by entering the following command:
+    ![](_attachments/windows6.png)
+
+7. Now re-verify the connection with your newly set credentials by entering the following command:
 
 
     ```
@@ -75,4 +71,4 @@ Within the **Custom-Agent-Builder** directory on Linux, you should see a `zosmf_
 
     You should now see that your previous `zosmf` connection now has credentials set, as shown below:
 
-    ![](_attachments/linux10.png)
+    ![](_attachments/windows7.png)

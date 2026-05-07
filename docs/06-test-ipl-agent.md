@@ -2,65 +2,21 @@
 
 In this section, you will access your imported agent within your watsonx Orchestrate environment and test the agent’s execution flow. The scenario follows the following flow below, and the agent uses its two available tools to validate that your zOS system's configuration and subsystems are what you'd expect after an IPL.
 
-***NOTE:*** **this step requires that you're already logged into your watsonx Orchestrate environment. You may have the UI already opened from earlier when retrieving your Service Instance URL. If so, you can skip steps 1-9 below.**
+1. Minimize the VS Code window you've previously been working in, then open Google Chrome. 
 
-1. Click on the **Student URL** provided by the instructor for the **watsonx Orchestrate** environment and when prompted, enter the password. 
+    You should see a pre-opened tab with the **watsonx Orchestrate UI**. 
 
-2. Once done, you should be taken to the environment details page for your **watsonx Orchestrate** environment.
+    ![](_attachments/win-test1.png)
 
-3. As you will use **Student ID's** for accessing your cloud resource, firstly click on the **logout URL** referenced on the page:
-    
-    ![](_attachments/student1.png){width=50%}
+2. Click on **Manage agents** to view your imported agent.
 
-    A pop-up window will open confirming you're logged out. You can then close that tab.
+    ![](_attachments/win-test2.png)
 
-4. Navigate back to the environment details page, and locate the **App ID User credentials** section towards the bottom of the page. Copy the email address for `student0@techzone.ibm.com` and its associated **password** immediately following it. *Copy both of these to a local notepad for later reference*. For example:
+3. From there, you should see the list of all your existing agents, including the **IPL_Validator_Agent** you previously imported:
    
-    ![](_attachments/student2new.png)
+    ![](_attachments/win-test3.png)
 
-    !!! Warning "Copying the password"
-
-        You will see up to 35 sets of student id's listed under **App ID User Credentials**. Make sure you copy the first ID and associated password, where the ID to copy is `student0@techzone.ibm.com` and the password is the text string immediately following it before `student1@techzone.ibm.com`.
-
-
-    In the above example, my Username would be `student0@techzone.ibm.com` and my Password would be `527aP54lsaTZ4#w1`. 
-
-
-5. Then under the **App ID Instructions** section above that, find and copy the `https://cloud.ibm.com/authorize/...` link and paste it into your web browser to access it.
-   
-    ![](_attachments/student3new.png)
-
-6. In the new tab, enter your recorded **Username** and **Password**, then click **Sign in**. 
-   
-    ![](_attachments/student4.png){width=50%}
-
-
-7. Once logged in, navigate to the **Resource List** by clicking on the hamburger menu icon in the top-left corner and clicking on **Resources**. 
-   
-    ![](_attachments/student5.png){width=50%}
-
-8. Expand the **AI / Machine Learning** section and you should see the following resources available:
-   
-    ![](_attachments/serviceurl2.png){width=50%}
-
-9.  Click on the resource shown for the **watsonx Orchestrate** resource: 
-    
-    ![](_attachments/serviceurl2.png){width=50%}
-
-10. Click **Launch watsonx Orchestrate**. 
-
-    ![](_attachments/serviceurl3.png){width=50%}
-
-
-11. Once you're logged into the **watsonx Orchestrate UI**, you may be taken to the **Chat** window. Click on the hamburger menu in the top-left corner and select **Build**. 
-    
-    ![](_attachments/test2.png){width=50%}
-
-12. From there, you should see the list of all your existing agents. You should be able to see your **IPL_Validator_Agent** as shown below:
-   
-    ![](_attachments/test3.png){width=50%}
-
-13. Click on your **IPL_Validator_Agent**. You'll then be taken to the Builder view for your agent, where you can see all the agent characteristics that were defined in your agent definition file, including the following:
+4. Click on your **IPL_Validator_Agent**. You'll then be taken to the Builder view for your agent, where you can see all the agent characteristics that were defined in your agent definition file, including the following:
    
     ***`Description`***
   

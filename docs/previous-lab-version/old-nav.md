@@ -1,5 +1,8 @@
 * [Welcome and Lab Overview](./overview.md)
-* [Access Lab Environment](./access-env.md)
+* Access and Setup Environments
+    * [Retrieve watsonx Orchestrate connection details](./setup-wxo.md)
+    * [Set RACF Passphrase in zD&T](./setup-zdt.md)
+* [Log into ADK](./login-adk.md)
 * [Create connection](./03-create-connection.md)
 * [Import tools](./04-import-tools.md)
 * [Deploy agent](./05-deploy-agent.md)
@@ -9,3 +12,4 @@
     * [Test `db2Command` tool](./multi-agent-test-db2.md)
     * [Enable `zRAG Agent` collaboration](./multi-agent-zrag-collab.md)
     * [Enable `IPL Validator Agent` collaboration](./multi-agent-ipl-collab.md)
+* [Publish agent](./publish-agent.md)

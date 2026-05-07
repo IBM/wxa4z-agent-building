@@ -5,11 +5,10 @@ In the ADK, agents can use tools to perform complex tasks defined by users. Each
 
 In this section, you will define an agent named **IPL Validator Agent** that leverages the tools you have imported into the ADK environment to help users verify the health of their z/OS system following an IPL. It will leverage two tools you've imported (`tsoCommand` and `operatorCommand`) to retrieve information about the system and provide a step-by-step summary back to the user.
 
-1. In the Linux command-line,open the `IPL-validator-agent.yaml` file by issuing:
+1. In the VS Code window, open the `IPL-validator-agent.yaml` file.
    
-    ```
-    nano IPL-validator-agent.yaml
-    ```
+    ![](_attachments/win-agent1.png)
+
    
 2. You should then be able to see the agent definition.
    
@@ -30,13 +29,13 @@ In this section, you will define an agent named **IPL Validator Agent** that lev
 
 3. Then exit the editor view by clicking **Ctrl+X**.
    
-4. Finally, deploy the agent by issuing the following command within your Linux command-line:
+4. Finally, deploy the agent by issuing the following command within the VS Code Terminal:
 
     ```
     orchestrate agents import -f IPL-validator-agent.yaml
     ```
 5. If executed correctly, you should see a message similar to below:
    
-    ![](_attachments/linux14.png)
-
+    ![](_attachments/win-agent2.png)
+w
 **Congratulations! You’ve deployed your first agent using the ADK and are now ready to test the execution flow**.

@@ -14,14 +14,14 @@ In this scenario, you will create an agent named **z/OS Helper Agent** that coll
 
 The steps in this section assume you're already logged into the watsonx Orchestrate UI. 
 
-1. From the **Agent editor** window, click on the **Manage agents** option at the top. 
+1. From the **Agent chat** window, click on the hamburger menu icon and select **Build**
 
-    ![](_attachments/win-build1.png)
+    ![](_attachments/build1.png){width=50%}
 
 
 2. Click on **Create agent** in the top-right corner.
 
-    ![](_attachments/win-build2.png)
+    ![](_attachments/build2.png){width=50%}
 
 3. Select **Create from scratch**
    
@@ -36,13 +36,13 @@ The steps in this section assume you're already logged into the watsonx Orchestr
       ```
     - Then click **Create**
 
-        ![](_attachments/win-build3.png)
+        ![](_attachments/build3.png){width=50%}
 
-4. Scroll down to the **Agent style** section. Select the **React** style. This style of agent allows the LLM to learn and refine its behavior. 
+1. Scroll down to the **Agent style** section. Select the **React** style. This style of agent allows the LLM to learn and refine its behavior. 
 
     ![](_attachments/build4.png){width=50%}
 
-5. The first tool you'll test to build the scenario is the `db2Command` tool. 
+2. The first tool you'll test to build the scenario is the `db2Command` tool. 
 
     Scroll down to the **Tools** section and click **Add tool**. 
 
