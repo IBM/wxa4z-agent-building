@@ -335,125 +335,15 @@
   
   
   
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Access and Setup Environments
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Access and Setup Environments
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../setup-wxo/" class="md-nav__link">
+      <a href="../access-env/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Retrieve watsonx Orchestrate connection details
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../setup-zdt/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Set RACF Passphrase in zD&amp;T
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../login-adk/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Log into ADK
+    Access Lab Environment
   
 
     
@@ -597,10 +487,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -618,8 +508,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -748,33 +638,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../publish-agent/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Publish agent
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -848,50 +711,48 @@
 <p>In this section, you will use the provided tool files in the Linux <strong>Custom-Agent-Builder</strong> directory to import your agent tools for later use. </p>
 <ol>
 <li>
-<p>From within the <strong>Custom-Agent-Builder</strong> directory, view the contents of the <code>operatorCommand.py</code> file by issuing the following command:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>nano operatorCommand.py
-</span></code></pre></div>
+<p>From within the <strong>Custom-Agent-Builder</strong> directory of VS Code, view the contents of the <code>operatorCommand.py</code> file by clicking on the file name.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/win-tools1.png" data-desc-position="bottom"><img alt="" src="../_attachments/win-tools1.png"></a></p>
 <p>Take some time to review the contents. Specifically, note the following section:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>get_status_url = urljoin(base_url, f'restconsoles/consoles/iserVS01')
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>request_body = {
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    "cmd": cmd,
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    "sol-key": "JES"
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>}
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>get_status_url = urljoin(base_url, f'restconsoles/consoles/iserVS01')
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>request_body = {
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    "cmd": cmd,
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    "sol-key": "JES"
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>}
 </span></code></pre></div>
 <p>The resulting z/OSMF API endpoint that will get called in this tool is:</p>
 <p><code>https://&lt;public-ip&gt;:10443/zosmf/restconsoles/consoles/iserVS01</code></p>
 <p>Within the body of the API call, <code>cmd</code> gets passed as input from the agent. Depending on the step in the IPL validation, the agent may pass <code>D A,L</code> as the command to execute, as an example. </p>
-<p>Then close out of the editor view by clicking <strong>Ctrl+X</strong>.</p>
 </li>
 <li>
 <p>Then do the same for the <code>tsoCommand.py</code> file and take some time to review its content as well. </p>
 </li>
 <li>
-<p>Import the <code>operatorCommand</code> tool by running the following command from your Linux command-line:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>orchestrate tools import -k python -f operatorCommand.py --app-id zosmf 
+<p>Import the <code>operatorCommand</code> tool by running the following command from your VS Code <strong>Terminal</strong>:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>orchestrate tools import -k python -f operatorCommand.py --app-id zosmf 
 </span></code></pre></div>
 <p>After issuing the command, you should see a message similar to what's shown below:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/linux11.png" data-desc-position="bottom"><img alt="" src="../_attachments/linux11.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/win-tools2.png" data-desc-position="bottom"><img alt="" src="../_attachments/win-tools2.png"></a></p>
 <p>That indicates that the <code>operatorCommand</code> tool was imported successfully. </p>
 </li>
 <li>
 <p>Similarly, import the <code>tsoCommand</code> tool by running the following command:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>orchestrate tools import -k python -f tsoCommand.py --app-id zosmf
+<div class="highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>orchestrate tools import -k python -f tsoCommand.py --app-id zosmf
 </span></code></pre></div>
 <p>Confirm that this tool was also imported successfully. </p>
 </li>
 <li>
 <p>Finally, import the <code>db2Command</code> tool, which is a tool used for later, by running the following command:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>orchestrate tools import -k python -f db2Command.py --app-id zosmf
+<div class="highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>orchestrate tools import -k python -f db2Command.py --app-id zosmf
 </span></code></pre></div>
 </li>
 <li>
 <p>Once you’ve successfully imported all 3 tools, verify they’re now active by running the following command:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>orchestrate tools list
+<div class="highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>orchestrate tools list
 </span></code></pre></div>
-<p>This should output a table similar to below showing all your imported tools.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/linux12.png" data-desc-position="bottom"><img alt="" src="../_attachments/linux12.png"></a></p>
+<p>This should output a table similar to below showing all your imported tools. <em>The 3 tools you imported may be listed at the bottom of the table...</em></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/win-tools3.png" data-desc-position="bottom"><img alt="" src="../_attachments/win-tools3.png"></a></p>
 </li>
 </ol></div>
 

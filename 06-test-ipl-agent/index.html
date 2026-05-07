@@ -335,125 +335,15 @@
   
   
   
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Access and Setup Environments
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Access and Setup Environments
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../setup-wxo/" class="md-nav__link">
+      <a href="../access-env/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Retrieve watsonx Orchestrate connection details
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../setup-zdt/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Set RACF Passphrase in zD&amp;T
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../login-adk/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Log into ADK
+    Access Lab Environment
   
 
     
@@ -597,10 +487,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -618,8 +508,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -748,33 +638,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../publish-agent/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Publish agent
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -812,59 +675,19 @@
 
 <div><h3 id="access-the-ipl_validator_agent">Access the <code>IPL_Validator_Agent</code><a class="headerlink" href="#access-the-ipl_validator_agent" title="Permanent link">#</a></h3>
 <p>In this section, you will access your imported agent within your watsonx Orchestrate environment and test the agent’s execution flow. The scenario follows the following flow below, and the agent uses its two available tools to validate that your zOS system's configuration and subsystems are what you'd expect after an IPL.</p>
-<p><strong><em>NOTE:</em></strong> <strong>this step requires that you're already logged into your watsonx Orchestrate environment. You may have the UI already opened from earlier when retrieving your Service Instance URL. If so, you can skip steps 1-9 below.</strong></p>
 <ol>
 <li>
-<p>Click on the <strong>Student URL</strong> provided by the instructor for the <strong>watsonx Orchestrate</strong> environment and when prompted, enter the password. </p>
+<p>Minimize the VS Code window you've previously been working in, then open Google Chrome. </p>
+<p>You should see a pre-opened tab with the <strong>watsonx Orchestrate UI</strong>. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/win-test1.png" data-desc-position="bottom"><img alt="" src="../_attachments/win-test1.png"></a></p>
 </li>
 <li>
-<p>Once done, you should be taken to the environment details page for your <strong>watsonx Orchestrate</strong> environment.</p>
+<p>Click on <strong>Manage agents</strong> to view your imported agent.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/win-test2.png" data-desc-position="bottom"><img alt="" src="../_attachments/win-test2.png"></a></p>
 </li>
 <li>
-<p>As you will use <strong>Student ID's</strong> for accessing your cloud resource, firstly click on the <strong>logout URL</strong> referenced on the page:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/student1.png" data-desc-position="bottom"><img alt="" src="../_attachments/student1.png" width="50%"></a></p>
-<p>A pop-up window will open confirming you're logged out. You can then close that tab.</p>
-</li>
-<li>
-<p>Navigate back to the environment details page, and locate the <strong>App ID User credentials</strong> section towards the bottom of the page. Copy the email address for <code>student0@techzone.ibm.com</code> and its associated <strong>password</strong> immediately following it. <em>Copy both of these to a local notepad for later reference</em>. For example:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/student2new.png" data-desc-position="bottom"><img alt="" src="../_attachments/student2new.png"></a></p>
-<div class="admonition warning">
-<p class="admonition-title">Copying the password</p>
-<p>You will see up to 35 sets of student id's listed under <strong>App ID User Credentials</strong>. Make sure you copy the first ID and associated password, where the ID to copy is <code>student0@techzone.ibm.com</code> and the password is the text string immediately following it before <code>student1@techzone.ibm.com</code>.</p>
-</div>
-<p>In the above example, my Username would be <code>student0@techzone.ibm.com</code> and my Password would be <code>527aP54lsaTZ4#w1</code>. </p>
-</li>
-<li>
-<p>Then under the <strong>App ID Instructions</strong> section above that, find and copy the <code>https://cloud.ibm.com/authorize/...</code> link and paste it into your web browser to access it.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/student3new.png" data-desc-position="bottom"><img alt="" src="../_attachments/student3new.png"></a></p>
-</li>
-<li>
-<p>In the new tab, enter your recorded <strong>Username</strong> and <strong>Password</strong>, then click <strong>Sign in</strong>. </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/student4.png" data-desc-position="bottom"><img alt="" src="../_attachments/student4.png" width="50%"></a></p>
-</li>
-<li>
-<p>Once logged in, navigate to the <strong>Resource List</strong> by clicking on the hamburger menu icon in the top-left corner and clicking on <strong>Resources</strong>. </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/student5.png" data-desc-position="bottom"><img alt="" src="../_attachments/student5.png" width="50%"></a></p>
-</li>
-<li>
-<p>Expand the <strong>AI / Machine Learning</strong> section and you should see the following resources available:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/serviceurl2.png" data-desc-position="bottom"><img alt="" src="../_attachments/serviceurl2.png" width="50%"></a></p>
-</li>
-<li>
-<p>Click on the resource shown for the <strong>watsonx Orchestrate</strong> resource: </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/serviceurl2.png" data-desc-position="bottom"><img alt="" src="../_attachments/serviceurl2.png" width="50%"></a></p>
-</li>
-<li>
-<p>Click <strong>Launch watsonx Orchestrate</strong>. </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/serviceurl3.png" data-desc-position="bottom"><img alt="" src="../_attachments/serviceurl3.png" width="50%"></a></p>
-</li>
-<li>
-<p>Once you're logged into the <strong>watsonx Orchestrate UI</strong>, you may be taken to the <strong>Chat</strong> window. Click on the hamburger menu in the top-left corner and select <strong>Build</strong>. </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/test2.png" data-desc-position="bottom"><img alt="" src="../_attachments/test2.png" width="50%"></a></p>
-</li>
-<li>
-<p>From there, you should see the list of all your existing agents. You should be able to see your <strong>IPL_Validator_Agent</strong> as shown below:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/test3.png" data-desc-position="bottom"><img alt="" src="../_attachments/test3.png" width="50%"></a></p>
+<p>From there, you should see the list of all your existing agents, including the <strong>IPL_Validator_Agent</strong> you previously imported:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/win-test3.png" data-desc-position="bottom"><img alt="" src="../_attachments/win-test3.png"></a></p>
 </li>
 <li>
 <p>Click on your <strong>IPL_Validator_Agent</strong>. You'll then be taken to the Builder view for your agent, where you can see all the agent characteristics that were defined in your agent definition file, including the following:</p>

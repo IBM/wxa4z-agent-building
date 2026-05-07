@@ -335,125 +335,15 @@
   
   
   
-    
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Access and Setup Environments
-  
-
-    
-  </span>
-  
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-  
-    Access and Setup Environments
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../setup-wxo/" class="md-nav__link">
+      <a href="../access-env/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Retrieve watsonx Orchestrate connection details
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../setup-zdt/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Set RACF Passphrase in zD&amp;T
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../login-adk/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Log into ADK
+    Access Lab Environment
   
 
     
@@ -597,10 +487,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7">
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   
@@ -618,8 +508,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -748,33 +638,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../publish-agent/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Publish agent
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -815,9 +678,8 @@
 <p>In this section, you will define an agent named <strong>IPL Validator Agent</strong> that leverages the tools you have imported into the ADK environment to help users verify the health of their z/OS system following an IPL. It will leverage two tools you've imported (<code>tsoCommand</code> and <code>operatorCommand</code>) to retrieve information about the system and provide a step-by-step summary back to the user.</p>
 <ol>
 <li>
-<p>In the Linux command-line,open the <code>IPL-validator-agent.yaml</code> file by issuing:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>nano IPL-validator-agent.yaml
-</span></code></pre></div>
+<p>In the VS Code window, open the <code>IPL-validator-agent.yaml</code> file.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/win-agent1.png" data-desc-position="bottom"><img alt="" src="../_attachments/win-agent1.png"></a></p>
 </li>
 <li>
 <p>You should then be able to see the agent definition.</p>
@@ -870,14 +732,15 @@
 <p>Then exit the editor view by clicking <strong>Ctrl+X</strong>.</p>
 </li>
 <li>
-<p>Finally, deploy the agent by issuing the following command within your Linux command-line:</p>
-<p></p><div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>orchestrate agents import -f IPL-validator-agent.yaml
+<p>Finally, deploy the agent by issuing the following command within the VS Code Terminal:</p>
+<p></p><div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>orchestrate agents import -f IPL-validator-agent.yaml
 </span></code></pre></div>
 5. If executed correctly, you should see a message similar to below:
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/linux14.png" data-desc-position="bottom"><img alt="" src="../_attachments/linux14.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/win-agent2.png" data-desc-position="bottom"><img alt="" src="../_attachments/win-agent2.png"></a>
+w
+<strong>Congratulations! You’ve deployed your first agent using the ADK and are now ready to test the execution flow</strong>.</p>
 </li>
-</ol>
-<p><strong>Congratulations! You’ve deployed your first agent using the ADK and are now ready to test the execution flow</strong>.</p></div>
+</ol></div>
 
 
 
