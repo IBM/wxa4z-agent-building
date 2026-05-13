@@ -630,6 +630,33 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test z/OS Helper Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -781,6 +808,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test z/OS Helper Agent
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -928,29 +966,30 @@
 </li>
 <li>
 <p>Once done, you should be taken to the environment details page for your <strong>Windows ADK</strong> environment.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/win-access1.png" data-desc-position="bottom"><img alt="" src="../_attachments/win-access1.png"></a></p>
 </li>
 <li>
-<p>Open the Windows VM Console by clicking on <strong>Console</strong> in blue.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/win-access2.png" data-desc-position="bottom"><img alt="" src="../_attachments/win-access2.png"></a></p>
+<p>In the Environment Details drop-down, click on the <strong>Console URL for accessing the virtual machine</strong>.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/newwin-access2.png" data-desc-position="bottom"><img alt="" src="../_attachments/newwin-access2.png"></a></p>
+</li>
+<li>
+<p>A new tab should open showing the VM Dashboard. Click on <strong>Console</strong> in blue to open up the VM. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/newwin-access3.png" data-desc-position="bottom"><img alt="" src="../_attachments/newwin-access3.png"></a></p>
+</li>
+<li>
+<p>Then click <strong>Connect with RDP</strong> in blue once more. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/newwin-access4.png" data-desc-position="bottom"><img alt="" src="../_attachments/newwin-access4.png"></a></p>
 </li>
 <li>
 <p>You should then be taken to a new tab displaying the Windows VM Desktop (with VS Code pre-opened):</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/newwin-access5.png" data-desc-position="bottom"><img alt="" src="../_attachments/newwin-access5.png"></a></p>
 </li>
 </ol>
-<h3 id="access-env-tips-for-using-the-windows-vm">Tips for using the Windows VM<a class="headerlink" href="#access-env-tips-for-using-the-windows-vm" title="Permanent link">#</a></h3>
-<ul>
-<li>re-format screen</li>
-<li>copy and paste</li>
-<li>don't use the built-in 'Send Text' option</li>
-<li>Rather, any commands or prompts needed are in a local .txt file on the Windows Desktop</li>
-</ul>
 <h3 id="access-env-windows-vm-layout">Windows VM Layout<a class="headerlink" href="#access-env-windows-vm-layout" title="Permanent link">#</a></h3>
-<p>When first accessing, you should immediately see the <strong>VS Code</strong> window already opened with a folder opened titled <code>CUSTOM-AGENT-BUILDER</code> as shown below:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/win-access3.png" data-desc-position="bottom"><img alt="" src="../_attachments/win-access3.png"></a></p>
+<p>When first accessing, you should immediately see the <strong>VS Code</strong> window already opened with a folder opened titled <code>WORKSHOP-CUSTOM-AGENT-BUILDER</code> as shown below:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/newwin-access6.png" data-desc-position="bottom"><img alt="" src="../_attachments/newwin-access6.png"></a></p>
 <p>This VS Code Workspace contains the various agent configuration files needed to build your agents using the ADK, and will be used in the following section. </p>
-<p>Additionally, there should be a <strong>Google Chrome</strong> window in the toolbar with a tab opened for the <strong>watsonx Orchestrate Chat UI</strong> as well as the Lab guide within the Windows VM itself.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/win-access4.png" data-desc-position="bottom"><img alt="" src="../_attachments/win-access4.png"></a></p>
+<p>Additionally, there should be a <strong>Microsoft Edge</strong> browser window in the toolbar with a tab opened for the <strong>watsonx Orchestrate Chat UI</strong> as well as the Lab guide within the Windows VM itself.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/newwin-access7.png" data-desc-position="bottom"><img alt="" src="../_attachments/newwin-access7.png"></a></p>
 <p>Lastly, on the Desktop of the Windows VM, there are two important text files for this Lab:</p>
 <ul>
 <li><code>zD&amp;T env details.txt</code></li>
@@ -1013,12 +1052,9 @@
 <p>For example:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#03-create-connection-__codelineno-3-1"></a>orchestrate connections set-credentials --app-id zosmf --env draft --username 'IBMUSER' --password 'YOUR PASSWORD PHRASE'
 </span></code></pre></div>
-</li>
-</ol>
 <p>You should see a <code>Credentials successfully set...</code> message.</p>
-<div class="highlight"><pre><span></span><code>![](_attachments/windows6.png)
-</code></pre></div>
-<ol start="7">
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/windows6.png" data-desc-position="bottom"><img alt="" src="../_attachments/windows6.png"></a></p>
+</li>
 <li>
 <p>Now re-verify the connection with your newly set credentials by entering the following command:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#03-create-connection-__codelineno-4-1"></a>orchestrate connections list
@@ -1493,7 +1529,30 @@ w
 <li>
 <p>Click on <strong>Show reasoning</strong> to view the steps in the reasoning process.</p>
 </li>
-</ol></div></body></html></section></section></div><style>.print-site-enumerate-headings #overview > h1:before { content: '1 ' }
+</ol></div></body></html></section></section><section class="print-page" id="test" heading-number="8"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><div><h1 id="test-the-finalized-zos-helper-agent">Test the finalized <code>z/OS Helper Agent</code><a class="headerlink" href="#test-test-the-finalized-zos-helper-agent" title="Permanent link">#</a></h1>
+<p>If all else went smoothly, you can now test your finalized <code>z/OS Helper Agent</code> via the <strong>Agent Chat</strong> view of watsonx Orchestrate. </p>
+<p>To access the Chat UI:</p>
+<ol>
+<li>
+<p>Click on the <strong>Agent chat</strong> option in the top-left corner of the Agent Editor page:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/finaltest1.png" data-desc-position="bottom"><img alt="" src="../_attachments/finaltest1.png"></a></p>
+</li>
+<li>
+<p>In the <strong>Agents</strong> drop-down, select your <code>z/OS Helper Agent</code> to open up the chat. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/finaltest2.png" data-desc-position="bottom"><img alt="" src="../_attachments/finaltest2.png"></a></p>
+</li>
+<li>
+<p>Test the agent by prompting it with any of the examples previously mentioned and confirm it's functioning as expected. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/finaltest3.png" data-desc-position="bottom"><img alt="" src="../_attachments/finaltest3.png"></a></p>
+<p><em>Once done, the lab is completed and you can close out of the environment window.</em></p>
+</li>
+</ol></div></body></html></section></div><style>.print-site-enumerate-headings #overview > h1:before { content: '1 ' }
 
                 .print-site-enumerate-headings #overview h2:before { content: '1.' counter(counter-overview-2) ' ' }
                 .print-site-enumerate-headings #overview h2 {  counter-reset: counter-overview-3  counter-overview-4  counter-overview-5  counter-overview-6 ;  counter-increment: counter-overview-2 }
@@ -1651,6 +1710,23 @@ w
             
                 .print-site-enumerate-headings #multi-agent-ipl-collab h5:before { content: '7.4.' counter(counter-multi-agent-ipl-collab-2) '.' counter(counter-multi-agent-ipl-collab-3) '.' counter(counter-multi-agent-ipl-collab-4) '.' counter(counter-multi-agent-ipl-collab-5) ' ' }
                 .print-site-enumerate-headings #multi-agent-ipl-collab h5 {  counter-increment: counter-multi-agent-ipl-collab-5 }
+            
+.print-site-enumerate-headings #test > h1:before { content: '8 ' }
+
+                .print-site-enumerate-headings #test h2:before { content: '8.' counter(counter-test-2) ' ' }
+                .print-site-enumerate-headings #test h2 {  counter-reset: counter-test-3  counter-test-4  counter-test-5  counter-test-6 ;  counter-increment: counter-test-2 }
+            
+                .print-site-enumerate-headings #test h3:before { content: '8.' counter(counter-test-2) '.' counter(counter-test-3) ' ' }
+                .print-site-enumerate-headings #test h3 {  counter-reset: counter-test-4  counter-test-5  counter-test-6 ;  counter-increment: counter-test-3 }
+            
+                .print-site-enumerate-headings #test h4:before { content: '8.' counter(counter-test-2) '.' counter(counter-test-3) '.' counter(counter-test-4) ' ' }
+                .print-site-enumerate-headings #test h4 {  counter-reset: counter-test-5  counter-test-6 ;  counter-increment: counter-test-4 }
+            
+                .print-site-enumerate-headings #test h5:before { content: '8.' counter(counter-test-2) '.' counter(counter-test-3) '.' counter(counter-test-4) '.' counter(counter-test-5) ' ' }
+                .print-site-enumerate-headings #test h5 {  counter-reset: counter-test-6 ;  counter-increment: counter-test-5 }
+            
+                .print-site-enumerate-headings #test h6:before { content: '8.' counter(counter-test-2) '.' counter(counter-test-3) '.' counter(counter-test-4) '.' counter(counter-test-5) '.' counter(counter-test-6) ' ' }
+                .print-site-enumerate-headings #test h6 {  counter-increment: counter-test-6 }
             </style>
 
 

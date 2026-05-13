@@ -10,24 +10,26 @@
       
       
       
+        <link rel="prev" href="../multi-agent-ipl-collab/">
+      
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>06 test ipl agent - IBM wxa4z Agent Builder Lab Guide</title>
+        <title>Test z/OS Helper Agent - IBM wxa4z Agent Builder Lab Guide</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
   
@@ -111,19 +113,19 @@
       
     
     
-      <link rel="stylesheet" href="../../css/print-site.css">
+      <link rel="stylesheet" href="../css/print-site.css">
     
-      <link rel="stylesheet" href="../../css/print-site-material.css">
+      <link rel="stylesheet" href="../css/print-site-material.css">
     
-      <link rel="stylesheet" href="../../style.css">
+      <link rel="stylesheet" href="../style.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -151,6 +153,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#test-the-finalized-zos-helper-agent" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -163,7 +170,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="IBM wxa4z Agent Builder Lab Guide" class="md-header__button md-logo" aria-label="IBM wxa4z Agent Builder Lab Guide" data-md-component="logo">
+    <a href=".." title="IBM wxa4z Agent Builder Lab Guide" class="md-header__button md-logo" aria-label="IBM wxa4z Agent Builder Lab Guide" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -183,7 +190,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              06 test ipl agent
+              Test z/OS Helper Agent
             
           </span>
         </div>
@@ -287,7 +294,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="IBM wxa4z Agent Builder Lab Guide" class="md-nav__button md-logo" aria-label="IBM wxa4z Agent Builder Lab Guide" data-md-component="logo">
+    <a href=".." title="IBM wxa4z Agent Builder Lab Guide" class="md-nav__button md-logo" aria-label="IBM wxa4z Agent Builder Lab Guide" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
@@ -305,7 +312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
@@ -332,7 +339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../access-env/" class="md-nav__link">
+      <a href="../access-env/" class="md-nav__link">
         
   
   
@@ -359,7 +366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03-create-connection/" class="md-nav__link">
+      <a href="../03-create-connection/" class="md-nav__link">
         
   
   
@@ -386,7 +393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-import-tools/" class="md-nav__link">
+      <a href="../04-import-tools/" class="md-nav__link">
         
   
   
@@ -413,7 +420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-deploy-agent/" class="md-nav__link">
+      <a href="../05-deploy-agent/" class="md-nav__link">
         
   
   
@@ -440,7 +447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06-test-ipl-agent/" class="md-nav__link">
+      <a href="../06-test-ipl-agent/" class="md-nav__link">
         
   
   
@@ -514,7 +521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../multi-agent-create/" class="md-nav__link">
+      <a href="../multi-agent-create/" class="md-nav__link">
         
   
   
@@ -542,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../multi-agent-test-db2/" class="md-nav__link">
+      <a href="../multi-agent-test-db2/" class="md-nav__link">
         
   
   
@@ -570,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../multi-agent-zrag-collab/" class="md-nav__link">
+      <a href="../multi-agent-zrag-collab/" class="md-nav__link">
         
   
   
@@ -598,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../multi-agent-ipl-collab/" class="md-nav__link">
+      <a href="../multi-agent-ipl-collab/" class="md-nav__link">
         
   
   
@@ -630,10 +637,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../test/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -649,6 +665,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -670,6 +687,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -686,97 +705,24 @@
 
 
 
-  <h1>06 test ipl agent</h1>
-
-<div><h3 id="access-the-ipl_validator_agent">Access the <code>IPL_Validator_Agent</code><a class="headerlink" href="#access-the-ipl_validator_agent" title="Permanent link">#</a></h3>
-<p>In this section, you will access your imported agent within your watsonx Orchestrate environment and test the agent’s execution flow. The scenario follows the following flow below, and the agent uses its two available tools to validate that your zOS system's configuration and subsystems are what you'd expect after an IPL.</p>
-<p><strong><em>NOTE:</em></strong> <strong>this step requires that you're already logged into your watsonx Orchestrate environment. You may have the UI already opened from earlier when retrieving your Service Instance URL. If so, you can skip steps 1-9 below.</strong></p>
+<div><h1 id="test-the-finalized-zos-helper-agent">Test the finalized <code>z/OS Helper Agent</code><a class="headerlink" href="#test-the-finalized-zos-helper-agent" title="Permanent link">#</a></h1>
+<p>If all else went smoothly, you can now test your finalized <code>z/OS Helper Agent</code> via the <strong>Agent Chat</strong> view of watsonx Orchestrate. </p>
+<p>To access the Chat UI:</p>
 <ol>
 <li>
-<p>Click on the <strong>Student URL</strong> provided by the instructor for the <strong>watsonx Orchestrate</strong> environment and when prompted, enter the password. </p>
+<p>Click on the <strong>Agent chat</strong> option in the top-left corner of the Agent Editor page:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/finaltest1.png" data-desc-position="bottom"><img alt="" src="../_attachments/finaltest1.png"></a></p>
 </li>
 <li>
-<p>Once done, you should be taken to the environment details page for your <strong>watsonx Orchestrate</strong> environment.</p>
+<p>In the <strong>Agents</strong> drop-down, select your <code>z/OS Helper Agent</code> to open up the chat. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/finaltest2.png" data-desc-position="bottom"><img alt="" src="../_attachments/finaltest2.png"></a></p>
 </li>
 <li>
-<p>As you will use <strong>Student ID's</strong> for accessing your cloud resource, firstly click on the <strong>logout URL</strong> referenced on the page:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/student1.png" data-desc-position="bottom"><img alt="" src="../_attachments/student1.png" width="50%"></a></p>
-<p>A pop-up window will open confirming you're logged out. You can then close that tab.</p>
+<p>Test the agent by prompting it with any of the examples previously mentioned and confirm it's functioning as expected. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/finaltest3.png" data-desc-position="bottom"><img alt="" src="../_attachments/finaltest3.png"></a></p>
+<p><em>Once done, the lab is completed and you can close out of the environment window.</em></p>
 </li>
-<li>
-<p>Navigate back to the environment details page, and locate the <strong>App ID User credentials</strong> section towards the bottom of the page. Copy the email address for <code>student0@techzone.ibm.com</code> and its associated <strong>password</strong> immediately following it. <em>Copy both of these to a local notepad for later reference</em>. For example:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/student2new.png" data-desc-position="bottom"><img alt="" src="../_attachments/student2new.png"></a></p>
-<div class="admonition warning">
-<p class="admonition-title">Copying the password</p>
-<p>You will see up to 35 sets of student id's listed under <strong>App ID User Credentials</strong>. Make sure you copy the first ID and associated password, where the ID to copy is <code>student0@techzone.ibm.com</code> and the password is the text string immediately following it before <code>student1@techzone.ibm.com</code>.</p>
-</div>
-<p>In the above example, my Username would be <code>student0@techzone.ibm.com</code> and my Password would be <code>527aP54lsaTZ4#w1</code>. </p>
-</li>
-<li>
-<p>Then under the <strong>App ID Instructions</strong> section above that, find and copy the <code>https://cloud.ibm.com/authorize/...</code> link and paste it into your web browser to access it.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/student3new.png" data-desc-position="bottom"><img alt="" src="../_attachments/student3new.png"></a></p>
-</li>
-<li>
-<p>In the new tab, enter your recorded <strong>Username</strong> and <strong>Password</strong>, then click <strong>Sign in</strong>. </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/student4.png" data-desc-position="bottom"><img alt="" src="../_attachments/student4.png" width="50%"></a></p>
-</li>
-<li>
-<p>Once logged in, navigate to the <strong>Resource List</strong> by clicking on the hamburger menu icon in the top-left corner and clicking on <strong>Resources</strong>. </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/student5.png" data-desc-position="bottom"><img alt="" src="../_attachments/student5.png" width="50%"></a></p>
-</li>
-<li>
-<p>Expand the <strong>AI / Machine Learning</strong> section and you should see the following resources available:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/serviceurl2.png" data-desc-position="bottom"><img alt="" src="../_attachments/serviceurl2.png" width="50%"></a></p>
-</li>
-<li>
-<p>Click on the resource shown for the <strong>watsonx Orchestrate</strong> resource: </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/serviceurl2.png" data-desc-position="bottom"><img alt="" src="../_attachments/serviceurl2.png" width="50%"></a></p>
-</li>
-<li>
-<p>Click <strong>Launch watsonx Orchestrate</strong>. </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/serviceurl3.png" data-desc-position="bottom"><img alt="" src="../_attachments/serviceurl3.png" width="50%"></a></p>
-</li>
-<li>
-<p>Once you're logged into the <strong>watsonx Orchestrate UI</strong>, you may be taken to the <strong>Chat</strong> window. Click on the hamburger menu in the top-left corner and select <strong>Build</strong>. </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/test2.png" data-desc-position="bottom"><img alt="" src="../_attachments/test2.png" width="50%"></a></p>
-</li>
-<li>
-<p>From there, you should see the list of all your existing agents. You should be able to see your <strong>IPL_Validator_Agent</strong> as shown below:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/test3.png" data-desc-position="bottom"><img alt="" src="../_attachments/test3.png" width="50%"></a></p>
-</li>
-<li>
-<p>Click on your <strong>IPL_Validator_Agent</strong>. You'll then be taken to the Builder view for your agent, where you can see all the agent characteristics that were defined in your agent definition file, including the following:</p>
-<p><strong><em><code>Description</code></em></strong></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/test4.png" data-desc-position="bottom"><img alt="" src="../_attachments/test4.png" width="50%"></a></p>
-<p><strong><em><code>Agent style</code></em></strong></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/test5.png" data-desc-position="bottom"><img alt="" src="../_attachments/test5.png" width="50%"></a></p>
-<p><strong><em><code>Tools</code></em></strong></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/test6.png" data-desc-position="bottom"><img alt="" src="../_attachments/test6.png" width="50%"></a></p>
-<p><strong><em><code>Instructions</code></em></strong></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/test7.png" data-desc-position="bottom"><img alt="" src="../_attachments/test7.png" width="50%"></a></p>
-<p>Verify that your two tools exist and are available to your agent. </p>
-</li>
-</ol>
-<h3 id="test-the-ipl_validator_agent">Test the <code>IPL_Validator_Agent</code><a class="headerlink" href="#test-the-ipl_validator_agent" title="Permanent link">#</a></h3>
-<p>Now you can test the execution flow of your agent. When the user prompts the agent to <code>run IPL check</code> or <code>validate my IPL</code> or something similar, the agent will kick off a series of steps as defined in the <strong>Instructions</strong> section of your agent definition. </p>
-<p><strong><em>In the agent chat window on the right-side of the screen, prompt the agent with <code>run IPL check</code></em></strong>. The agent will then call the appropriate tool according to the current step in the process. Wait until the agent processing is completed and the full output is returned. </p>
-<p><strong>Step 1:</strong> The agent calls the <code>operatorCommand</code> tool, passing <code>D IPLINFO</code> as input to the tool. The results should be displayed similarly to below:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/test8.png" data-desc-position="bottom"><img alt="" src="../_attachments/test8.png" width="50%"></a></p>
-<p><strong>Step 2:</strong> The agent calls the <code>tsoCommand</code> tool, passing <code>TIME</code> as the command input. This verifies that TSO is running. The output of that step should look like:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/test9.png" data-desc-position="bottom"><img alt="" src="../_attachments/test9.png" width="50%"></a></p>
-<p><strong>Step 3:</strong> The agent calls the <code>operatorCommand</code> tool, passing <code>D OMVS</code> as input:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/test10.png" data-desc-position="bottom"><img alt="" src="../_attachments/test10.png" width="50%"></a></p>
-<p><strong>Step 4:</strong> The agent calls the <code>operatorCommand</code> tool, passing <code>D OMVS,MF</code> as input:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/test11.png" data-desc-position="bottom"><img alt="" src="../_attachments/test11.png" width="50%"></a></p>
-<p><strong>Step 5:</strong> The agent verifies if z/OSMF is running:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/test12.png" data-desc-position="bottom"><img alt="" src="../_attachments/test12.png" width="50%"></a></p>
-<p><strong>Step 6:</strong> The agent checks to see if JES is running by calling the <code>operatorCommand</code> tool, passing <code>$D JES2</code> as input. </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/test13.png" data-desc-position="bottom"><img alt="" src="../_attachments/test13.png" width="50%"></a></p>
-<p><strong>Step 7:</strong> The agent checks the status of JES2 by running the <code>operatorCommand</code> tool, passing <code>D A,JES2</code> as input:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/test14.png" data-desc-position="bottom"><img alt="" src="../_attachments/test14.png" width="50%"></a></p>
-<p><strong>Step 8:</strong> The agent then provides a summarized list of the previous checks, with an explanation:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../_attachments/test15.png" data-desc-position="bottom"><img alt="" src="../_attachments/test15.png" width="50%"></a></p>
-<p><strong><em>Congratulations! You've successfully imported and tested your first agent using the ADK with custom tools. In the following section, you will create a new custom agent using the 'low-code approach' which provides multi-agent orchestration, using other agents (including this one) as collaborators</em></strong></p></div>
+</ol></div>
 
 
 
@@ -801,6 +747,28 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../multi-agent-ipl-collab/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Enable IPL Validator Agent collaboration">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Enable IPL Validator Agent collaboration
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -832,12 +800,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "content.code.annotate", "content.code.copy", "content.code.select", "navigation.footer", {"hide": ["toc"]}], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "content.code.annotate", "content.code.copy", "content.code.select", "navigation.footer", {"hide": ["toc"]}], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="../../js/print-site.js"></script>
+        <script src="../js/print-site.js"></script>
       
     
   
