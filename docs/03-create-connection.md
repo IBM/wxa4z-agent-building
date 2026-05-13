@@ -58,7 +58,7 @@ Within the **Custom-Agent-Builder** workspace in VS Code, you should see a `zosm
     orchestrate connections set-credentials --app-id zosmf --env draft --username 'IBMUSER' --password 'YOUR PASSWORD PHRASE'
     ```
    
-   You should see a `Credentials successfully set...` message.
+    You should see a `Credentials successfully set...` message.
 
     ![](_attachments/windows6.png)
 

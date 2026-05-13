@@ -9,3 +9,4 @@
     * [Test `db2Command` tool](./multi-agent-test-db2.md)
     * [Enable `zRAG Agent` collaboration](./multi-agent-zrag-collab.md)
     * [Enable `IPL Validator Agent` collaboration](./multi-agent-ipl-collab.md)
+* [Test z/OS Helper Agent](./test.md)

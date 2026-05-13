@@ -62,7 +62,7 @@ Now you will enable a workflow where the user can tell the agent what informatio
 
       **e.** Full output is returned back to the end-user. 
 
-1. Now, test the new flow by click on the Agent Chat in the right-side of the screen and prompt the agent. 
+6. Now, test the new flow by click on the Agent Chat in the right-side of the screen and prompt the agent. 
    
     Previously, you had hard-coded the `-DISPLAY GROUP` command as input to the tool. Now let's see what happens if we instead tell the agent what we want to retrieve and allow it to determine the command on its own. 
 
@@ -75,7 +75,7 @@ Now you will enable a workflow where the user can tell the agent what informatio
     
     **NOTE:** You may need to restart the conversation....
 
-2. View the full output of the response. 
+7. View the full output of the response. 
    
     ![](_attachments/build18.png){width=50%}
     
@@ -123,7 +123,7 @@ Now you will enable a workflow where the user can tell the agent what informatio
 
     Similarly to before, expand the **Show reasoning** steps to review the flow.
 
-10. Test another agent prompt:
+10.  Test another agent prompt:
     
     ```
     Display all defined databases

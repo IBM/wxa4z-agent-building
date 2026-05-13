@@ -15,42 +15,34 @@ You will not be accessing the **zD&T** environment directly, but rather using th
 
 2. Once done, you should be taken to the environment details page for your **Windows ADK** environment.
    
-    ![](_attachments/win-access1.png)
+    ![](_attachments/newwin-access1.png)
 
 
-3. Open the Windows VM Console by clicking on **Console** in blue.
+3. In the Environment Details drop-down, click on the **Console URL for accessing the virtual machine**.
    
-    ![](_attachments/win-access2.png)
+    ![](_attachments/newwin-access2.png)
 
-4. You should then be taken to a new tab displaying the Windows VM Desktop (with VS Code pre-opened):
+
+4. A new tab should open showing the VM Dashboard. Click on **Console** in blue to open up the VM. 
+
+5. Then click **Connect with RDP** in blue once more. 
+
+
+6. You should then be taken to a new tab displaying the Windows VM Desktop (with VS Code pre-opened):
    
-
-
-
-### Tips for using the Windows VM
-
-
-
-- re-format screen
-- copy and paste
-  - don't use the built-in 'Send Text' option
-  - Rather, any commands or prompts needed are in a local .txt file on the Windows Desktop
-
-
-
 
 ### Windows VM Layout 
 
 When first accessing, you should immediately see the **VS Code** window already opened with a folder opened titled `CUSTOM-AGENT-BUILDER` as shown below:
 
-![](_attachments/win-access3.png)
+![](_attachments/newwin-access3.png)
 
 
 This VS Code Workspace contains the various agent configuration files needed to build your agents using the ADK, and will be used in the following section. 
 
 Additionally, there should be a **Google Chrome** window in the toolbar with a tab opened for the **watsonx Orchestrate Chat UI** as well as the Lab guide within the Windows VM itself.
 
-![](_attachments/win-access4.png)
+![](_attachments/newwin-access4.png)
 
 Lastly, on the Desktop of the Windows VM, there are two important text files for this Lab:
 
@@ -73,6 +65,6 @@ orchestrate agents list
 
 If configured as expected, it should return something like what's shown below:
 
-![](_attachments/win-access5.png)
+![](_attachments/newwin-access5.png)
 
 If so, you can proceed to the following section. If not, let an instructor know before moving on. 
