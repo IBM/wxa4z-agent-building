@@ -1,4 +1,4 @@
-## Configuration of zRAG Agent
+# Configuration of zRAG Agent
 
 1. Copy the example `.env` file in the `agents/zrag-external-agent/` directory using the following command (assuming from the `/deploy` directory:
 
@@ -23,6 +23,7 @@
 
 4. Make note on a notepad the value you set for the **zRAG Agent** as this will be needed later.
 
-   Finally, save the file in the text editor.
+
+5. Finally, save the file in the text editor.
 
 
