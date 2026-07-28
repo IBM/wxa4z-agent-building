@@ -1,5 +1,9 @@
 # Configuration of zRAG Agent
 
+Assuming you're still viewing the **Chat** page of the Management Console, navigate back to the command-prompt of your Linux VM which you previously had open via web browser. 
+
+Also, ensure you're current directory is `lite-stack`.
+
 1. Copy the example `.env` file in the `agents/zrag-external-agent/` directory using the following command (assuming from the `/deploy` directory:
 
    ```
