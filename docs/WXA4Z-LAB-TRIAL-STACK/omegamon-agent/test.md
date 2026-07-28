@@ -1,20 +1,17 @@
 # Test the IBM Z OMEGAMON Insights Agent
 
-Now that you've successfully deployed the OMEGAMON Insights Agent, you can test some example queries. 
+Now that you've successfully activated the OMEGAMON Insights Agent, you can test some example queries. 
 
 Firstly, **navigate back to the Chat** view by selecting **Chat** at the top. 
 
-**IMAGE**
+Start a new chat (by clicking on the blue icon), then begin prompting the agent with the below example queries:
 
-Begin prompting the agent with the below example questions:
+- `Show all my CICSPlexes`
+  
+    ![](_attachments/om4.png)
 
-`Show all my LPARs`
+- `Show all regions under CICSPlex xx`
+  
+    ![](_attachments/om5.png)
 
-`Show jobs running on LPAR KOSP4B`
-
-
-`Show me my CICSPlexes`
-
-`Get details of DEMOPLEX`
-
-`Show all regions of CICSPlex DEMOPLEX`
+- `Show all my Db2 subsystems`

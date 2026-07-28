@@ -43,17 +43,15 @@ Lastly, activate the agent within the **IBM watsonx Assistant for Z Management C
 
 2. Once logged in, click on the **ellipses** icon and select **Agents** from the drop-down:
    
-    **IMAGE**
+    ![](_attachments/zrag1.png)
   
 
 3. Next, locate the tile for the **zRAG Agent** and click on the gear icon as shown below:
    
-    **IMAGE**
+    ![](_attachments/zrag2.png)
 
 4. You should then see the **Agent Configuration** page:
    
-    **IMAGE**
-
     Make the following changes to activate your agent:
 
     - `Connection`: Make sure the **zRAG Retriever Connection** is selected
@@ -62,9 +60,9 @@ Lastly, activate the agent within the **IBM watsonx Assistant for Z Management C
 
     Then click **Save**. 
 
-    **IMAGE**
+    ![](_attachments/zrag3.png)
 
 5. After activating, you should see the **zRAG Agent** tile with the **Active** flag:
    
-    **IMAGE**
+    ![](_attachments/zrag4.png)
 

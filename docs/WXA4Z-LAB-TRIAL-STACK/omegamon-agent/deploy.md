@@ -39,34 +39,22 @@ INFO:     Uvicorn running on http://0.0.0.0:8050 (Press CTRL+C to quit)
 
 ### Activate Agent
 
-Lastly, activate the agent within the **IBM watsonx Assistant for Z Management Console**. 
+1. Similarly to what you did previously to active the zRAG Agent, navigate back to the **Management Console**, click on the **Agents** icon in the drop-down, and locate the tile for the **IBM Z OMEGAMON Insights Agent**.
 
-1. Log into the **Management Console** via web browser. 
+    ![](_attachments/om1.png)
 
+2. Click on the gear icon, then you should see the **Agent Configuration** page.
 
-2. Once logged in, click on the **ellipses** icon and select **Agents** from the drop-down:
+3. Make the following changes to activate your agent:
    
-    **IMAGE**
-  
-
-3. Next, locate the tile for the **IBM Z OMEGAMON Insights Agent** and click on the gear icon as shown below:
-   
-    **IMAGE**
-
-4. You should then see the **Agent Configuration** page:
-   
-    **IMAGE**
-
-    Make the following changes to activate your agent:
-
     - `API Key`: enter the **AGENT_AUTH_TOKEN** value you set in the `Configure` section (i.e. omegamon_auth)
     - `Status`: Toggle the status to **Active**
 
     Then click **Save**. 
 
-    **IMAGE**
+    ![](_attachments/om2.png)
 
-5. After activating, you should see the **IBM Z OMEGAMON Insights Agent** tile with the **Active** flag:
+4. After activating, you should see the **IBM Z OMEGAMON Insights Agent** tile with the **Active** flag:
    
-    **IMAGE**
+    ![](_attachments/om3.png)
 

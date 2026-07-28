@@ -1,16 +1,19 @@
 # Test the zRAG Agent
 
-Now that you've successfully tested the zRAG Agent, you can test some example queries. 
+Now that you've activated the zRAG Agent, you can test some example queries. 
 
-Firstly, **navigate back to the Chat** view by selecting **Chat** at the top. 
+1. Firstly, **navigate back to the Chat** view by selecting **Chat** at the top of the Management Console. 
+   
 
-**IMAGE**
+2. Once at the **Chat** page, click the blue icon to start a new chat, then enter a prompt in the agent chat, for example `What is IMS?`:
+   
+    ![](_attachments/zrag5.png)
 
-Begin prompting the agent with general z/OS queries to invoke the zRAG Agent.
+3. Wait for an answer to be generated, then you should get a response back similar to what's shown below:
+   
+    ![](_attachments/zrag6.png)
 
-`What are the different types of IMS databases?`
 
-`What is the process of generating RACF certificates?`
+4. Continue prompting the agent with various queries to test the zRAG capabilities. 
 
-`What is the meaning of the DFHAC2001 error message?`
-
+    When finished testing, move on to the other agent deployments. 
