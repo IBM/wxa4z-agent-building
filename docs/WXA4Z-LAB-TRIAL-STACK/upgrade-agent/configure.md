@@ -32,7 +32,7 @@
   
 4. Next, locate the environment variables for `ZOSMF_ENDPOINT`, `ZOSMF_USERNAME`, and `ZOSMF_PASSWORD` and set them to the following:
    
-    - `ZOSMF_ENDPOINT`: `https://<zdt-ip>:10443/zosmf`, where `<zdt-ip>` should be replaced with the public IP of your zD*T environment
+    - `ZOSMF_ENDPOINT`: `https://<zdt-ip>:10443/zosmf`, where `<zdt-ip>` should be replaced with the public IP of your zD&T environment
     - `ZOSMF_USERNAME`: `IBMUSER`
     - `ZOSMF_PASSWORD`: 
 

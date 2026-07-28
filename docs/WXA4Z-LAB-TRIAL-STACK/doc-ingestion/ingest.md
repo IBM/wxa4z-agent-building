@@ -28,8 +28,14 @@
     **IMAGE**
 
 
-    Ensure the `Tabular support` toggle is left enabled, and disable the toggle for PII Check.
+    Ensure the `Tabular support` toggle is left enabled, and **disable** the toggle for **PII Check**.
 
 7. Then finally click **Ingest**. 
+
+Data in the processing stage appears under your defined collection source name from the specified bucket.
+Once the ingestion completes, the collection source appears on the Content Ingestion page. You can:
+Search for a collection source by name using the search icon.
+Filter collection sources by type or ingestion status by using the filter icon.
+Delete collection sources by selecting them and clicking Delete.
 
 
