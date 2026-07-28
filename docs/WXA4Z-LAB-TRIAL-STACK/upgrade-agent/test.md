@@ -52,6 +52,9 @@ For example:
 ### **Receive the missing PTFs for FIXCAT xxx**
 
 
+
 ### **Ask about upgrade workflow-related queries using the ingested docs**
 
-`What are the steps to upgrade to the z17?`
+`What are important considerations to make when upgrading to z17?`
+
+![alt text](image-5.png)
