@@ -35,7 +35,7 @@ newgrp docker
 
 ## Enable networking to cp.icr.io
 
-``
+```
 sudo cp /etc/resolv.conf /etc/resolv.conf.bak
 
 echo -e "nameserver 8.8.8.8\nnameserver 1.1.1.1" | sudo tee /etc/resolv.conf
