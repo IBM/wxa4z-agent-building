@@ -5,38 +5,41 @@
   
 ## Install docker using below commands:
     
-    ```
-    sudo dnf remove -y podman buildah docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine runc
-    ```
+```
+sudo dnf remove -y podman buildah docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine runc
+```
 
-    ```
-    sudo dnf install -y dnf-plugins-core
-    ```
+```
+sudo dnf install -y dnf-plugins-core
+```
 
-    ```
-    sudo dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo    
-    ```
+```
+sudo dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo    
+```
 
-    ```
-    sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-    ```
+```
+sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
 
-    ```
-    sudo systemctl enable --now docker
-    ```
+```
+sudo systemctl enable --now docker
+```
 
-    ```
-    sudo usermod -aG docker $USER    
-    ```
+```
+sudo usermod -aG docker $USER    
+```
 
-    ```
-    newgrp docker
-    ```
+```
+newgrp docker
+```
+
 ## Enable networking to cp.icr.io
 
 ``
 sudo cp /etc/resolv.conf /etc/resolv.conf.bak
+
 echo -e "nameserver 8.8.8.8\nnameserver 1.1.1.1" | sudo tee /etc/resolv.conf
+
 sudo chattr +i /etc/resolv.conf
 ```
 
