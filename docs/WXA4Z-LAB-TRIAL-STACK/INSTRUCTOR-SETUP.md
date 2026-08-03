@@ -69,3 +69,8 @@ docker login cp.icr.io
     - **Access key id**
     - **Secret Access Key**
     - **Bucket name**
+9. Finally, enable cockpit/Linux Web Console access using the below commands on Linux:
+  - sudo dnf install cockpit -y
+  - sudo systemctl enable --now cockpit.socket
+  - Verify connectivity to `https://<public-ip>:9090
+  - Log into web console using `itzuser` and password found in environment details
