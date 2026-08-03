@@ -12,7 +12,7 @@
 
 4. In the screen that follows, enter the following connection details for your S3 bucket. 
    
-    *Each of these values can be found in the `doc-source.txt` file within the `lite-stack` directory on Linux
+    *Each of these values can be found in the `LAB-S3-BUCKET.txt` file within the `lite-stack` directory on Linux*:
    
     - `URL`
     - `Access Key ID`

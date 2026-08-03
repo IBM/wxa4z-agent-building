@@ -10,7 +10,7 @@
 2. Once done, edit the `.env.agent.omegamon-insight` file using `nano` or `vi` text editor. For example:
 
    ```
-   nano agents/omegamon-insight-agent/.env.agent.omegamon-insight
+   vi agents/omegamon-insight-agent/.env.agent.omegamon-insight
    ```
 
    For the **OMEGAMON Insights Agent**, most of the configuration is done already via the core services, including the AIOps server to connect to SMU. The only required environment variable for the Agent is the `AGENT_AUTH_TOKEN` variable.

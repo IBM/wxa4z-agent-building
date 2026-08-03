@@ -14,7 +14,7 @@ Also, ensure you're current directory is `lite-stack`.
 2. Once done, edit the `.env.agent.zrag-agent` file using `nano` or `vi` text editor. For example:
 
    ```
-   nano agents/zrag-external-agent/.env.agent.zrag-agent
+   vi agents/zrag-external-agent/.env.agent.zrag-agent
    ```
 
    For the **zRAG Agent**, most of the configuration is done already via the core services. The only required environment variable for the zRAG Agent is the `AGENT_AUTH_TOKEN` variable.

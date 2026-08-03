@@ -10,7 +10,7 @@
 2. Once done, edit the `.env.agent.upgrade-agent` file using `nano` or `vi` text editor. For example:
 
    ```
-   nano agents/upgrade-agent/.env.agent.upgrade-agent
+   vi agents/upgrade-agent/.env.agent.upgrade-agent
    ```
 
    For the **Upgrade Agent**, there are a set of environment variables that must be configured:
