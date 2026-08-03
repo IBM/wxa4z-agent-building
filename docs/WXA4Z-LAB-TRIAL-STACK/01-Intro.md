@@ -33,3 +33,7 @@ At the core of its architecture is the central router, which acts as the primary
 
 - Testing Q&A leveraging ingested docs
 
+## Disclaimer
+
+The watsonx Assistant for Z Trial is a **proof of concept (PoC)** designed to demonstrate core orchestration and routing capabilities. It is **not production** ready and has not been hardened, performance-tuned, or certified for production use. It should not be deployed in customer-facing or business-critical environments. Production-level nonfunctional requirements, such as high availability, resilience, security hardening, and operational monitoring, are outside the scope of this release.
+
