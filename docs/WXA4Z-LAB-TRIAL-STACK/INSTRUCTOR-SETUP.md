@@ -56,13 +56,15 @@ docker login cp.icr.io
 
 # setup `lite-stack` folder
 
-- use updated version in git
-- tar it locally
-- scp it to the linux vm
-- untar it from there (no unzip)
-
-  - Deploy core services using: `./deploy.sh up --profile core --skip-aiops`
-  - Provide COS bucket connection details with docs for ingestion pre-loaded & zD&T env details:
+1. Download .tar file from Github: https://ibm.ent.box.com/file/2385822506233
+2. SCP it directly to Linux machine in user's /home directory
+3. Untar it using `tar -xvf lite-stack.tar`
+4. `cd lite-stack` - folder must be named `lite-stack`
+5. Modify needed variables in `.env.core`:
+  - 3 LLM variables - as well as LLM (either `openai/gpt-oss-120b` or `meta-llama/llama-3-3-70b-instruct`
+6. Deploy core services using `./deploy.sh up --profile core --skip-aiops`
+7. Ensure all core services come up successfully
+8. Provide zD&T image details and COS bucket connection details with docs for ingestion pre-loaded & zD&T env details:
     - **URL**
     - **Access key id**
     - **Secret Access Key**
