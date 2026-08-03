@@ -7,7 +7,7 @@
    agents/upgrade-agent/.env.agent.upgrade-agent
    ```
 
-2. Once done, edit the `.env.agent.upgrade-agent` file using `nano` or `vi` text editor. For example:
+2. Once done, edit the `.env.agent.upgrade-agent` file using `vi`. For example:
 
    ```
    vi agents/upgrade-agent/.env.agent.upgrade-agent
@@ -30,11 +30,11 @@
 
     Make note on a notepad the value you set for the **Upgrade Agent** as this will be needed later.
   
-4. Next, locate the environment variables for `ZOSMF_ENDPOINT`, `ZOSMF_USERNAME`, and `ZOSMF_PASSWORD` and set them to the following:
+4. Next, locate the environment variables for `ZOSMF_ENDPOINT`, `ZOSMF_USERNAME`, and `ZOSMF_PASSWORD` and set them to the following using the `LAB-ZDT-ENV.txt` file contents which you'll need:
    
-    - `ZOSMF_ENDPOINT`: `https://<zdt-ip>:10443/zosmf`, where `<zdt-ip>` should be replaced with the public IP of your zD&T environment
+    - `ZOSMF_ENDPOINT`: `https://<zdt-ip>:10443/zosmf`, where `<zdt-ip>` should be replaced with the public IP of your zD&T environment found in `LAB-ZDT-ENV.txt`
     - `ZOSMF_USERNAME`: `IBMUSER`
-    - `ZOSMF_PASSWORD`: 
+    - `ZOSMF_PASSWORD` - replace with the `PASSPHRASE` value recorded in your `LAB-ZDT-ENV.txt` file.
 
 5. Finally, locate the environment variable for `HOST_NAME`. 
    
