@@ -22,16 +22,15 @@ At the core of its architecture is the central router, which acts as the primary
 
 ## Sections of this Lab
 
-- Getting environment access
+- [Getting environment access](./02-env-access.md)
 
-- Agent deployment and testing
-  - zRAG Agent
-  - IBM Z OMEGAMON Insights Agent
-  - IBM Z Upgrade Agent
+- Agent configuration, deployment and testing
+    - [zRAG Agent](./zrag-agent/overview.md)
+    - [IBM Z OMEGAMON Insights Agent](./omegamon-agent/overview.md)
+    - [IBM Z Upgrade Agent](./upgrade-agent/overview.md)
 
-- Content Ingestion of external documents
+- [Content Ingestion of external documents](./doc-ingestion/overview.md)
 
-- Testing Q&A leveraging ingested docs
 
 ## Disclaimer
 
