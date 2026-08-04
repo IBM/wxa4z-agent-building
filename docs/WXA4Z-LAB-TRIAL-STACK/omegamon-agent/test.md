@@ -4,14 +4,24 @@ Now that you've successfully activated the OMEGAMON Insights Agent, you can test
 
 Firstly, **navigate back to the Chat** view by selecting **Chat** at the top. 
 
-Start a new chat (by clicking on the blue icon), then begin prompting the agent with the below example queries:
+Start a new chat (by clicking on the blue icon), then begin prompting the agent around it's capabilities as described ***[here](./overview.md)***.
+
+As an example to prompt about CICS resources, one could ask:
+
 
 - `Show all my CICSPlexes`
   
-    ![](_attachments/om4.png)
+    ![alt text](image.png)
 
-- `Show all regions under CICSPlex xx`
+
+- `Show all regions for CICSPlex DEMOPLEX`
   
-    ![](_attachments/om5.png)
+    ![alt text](image-1.png)
 
-- `Show all my Db2 subsystems`
+
+- `Get transactions for region CICSTIV3`
+    
+    ![alt text](image-2.png)
+
+
+Continue prompting the agent across various topics before moving on to the Upgrade Agent. 

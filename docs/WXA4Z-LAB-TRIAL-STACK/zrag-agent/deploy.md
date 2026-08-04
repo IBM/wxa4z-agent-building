@@ -55,8 +55,9 @@ Lastly, activate the agent within the **IBM watsonx Assistant for Z Management C
     Make the following changes to activate your agent:
 
     - `Connection`: Make sure the **zRAG Retriever Connection** is selected
-    - `API Key`: enter the **AGENT_AUTH_TOKEN** value you set in the `Configure` section (i.e. zrag_auth)
+    - `API Key`: enter the **AGENT_AUTH_TOKEN** value you set in the ***[Configure](./configure.md)*** section (i.e. `zrag_auth`).
     - `Status`: Toggle the status to **Active**
+
 
     Then click **Save**. 
 

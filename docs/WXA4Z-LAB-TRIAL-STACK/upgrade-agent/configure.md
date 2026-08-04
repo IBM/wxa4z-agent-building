@@ -1,17 +1,17 @@
 # Configuration of IBM Z Upgrade Agent
 
-1. Copy the example `.env` file in the `agents/upgrade-agent/` directory using the following command (assuming from the `/deploy` directory:
+1. Copy the example `.env` file in the `agents/upgrade-agent/` directory using the following command (assuming from the `/deploy` directory):
 
-   ```
-   cp agents/upgrade-agent/.env.agent.upgrade-agent.example \
-   agents/upgrade-agent/.env.agent.upgrade-agent
-   ```
+    ```
+    cp agents/upgrade-agent/.env.agent.upgrade-agent.example \
+    agents/upgrade-agent/.env.agent.upgrade-agent
+    ```
 
 2. Once done, edit the `.env.agent.upgrade-agent` file using `vi`. For example:
 
-   ```
-   vi agents/upgrade-agent/.env.agent.upgrade-agent
-   ```
+    ```
+    vi agents/upgrade-agent/.env.agent.upgrade-agent
+    ```
 
    For the **Upgrade Agent**, there are a set of environment variables that must be configured:
 
@@ -30,7 +30,7 @@
 
     Make note on a notepad the value you set for the **Upgrade Agent** as this will be needed later.
   
-4. Next, locate the environment variables for `ZOSMF_ENDPOINT`, `ZOSMF_USERNAME`, and `ZOSMF_PASSWORD` and set them to the following using the `LAB-ZDT-ENV.txt` file contents which you'll need:
+4. Next, locate the environment variables for `ZOSMF_ENDPOINT`, `ZOSMF_USERNAME`, and `ZOSMF_PASSWORD` and set them to the following using the `LAB-ZDT-ENV.txt` file contents as described [here](../02-env-access.md#record-your-zdt-details).
    
     - `ZOSMF_ENDPOINT`: `https://<zdt-ip>:10443/zosmf`, where `<zdt-ip>` should be replaced with the public IP of your zD&T environment found in `LAB-ZDT-ENV.txt`
     - `ZOSMF_USERNAME`: `IBMUSER`

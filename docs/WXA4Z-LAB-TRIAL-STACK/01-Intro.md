@@ -1,6 +1,6 @@
 # Lab Introduction
 
-watsonx Assistant for Z Trial provides agentic capabilities across Z systems, offering faster deployment, ease of setup, and lower infrastructure demands.
+The **watsonx Assistant for Z Trial** provides agentic capabilities across Z systems, offering faster deployment, ease of setup, and lower infrastructure demands.
 
 watsonx Assistant for Z Trial integrates a central router, agents, and supporting services to deliver intelligent, conversational automation and insights across IBM Z environments.
 

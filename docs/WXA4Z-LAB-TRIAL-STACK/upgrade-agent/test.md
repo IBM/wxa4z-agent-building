@@ -1,6 +1,8 @@
 # Testing IBM Z Upgrade Agent
 
+Finally, test the capabilities of the **IBM Z Upgrade Agent** by referencing the full list in the [Overview section](./overview.md).
 
+The example prompts below are shown only for reference. Your results may differ. 
 
 Questions:
 - What are the steps to upgrade to z17?

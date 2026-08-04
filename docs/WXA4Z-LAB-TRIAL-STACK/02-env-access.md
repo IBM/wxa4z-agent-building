@@ -8,18 +8,18 @@ You will first be instructed to access your **Linux VM** on IBM Cloud. This Virt
 
 2. You should then be taken to a page with your environment details. 
    
-    Take note of your `Linux-ip`, the public IP address of your environment. Record this somewhere locally. 
+    Take note of your `linux-ip`, the public IP address of your environment. Record this somewhere locally. 
 
-    Also, take note of your Linux VM's `Username` and `Password` credentials that are recorded at the top of your environment details:
+    Also, take note of your Linux VM's `Username` and `Password` credentials that are recorded at the top of your environment details. For example:
 
     ![alt text](image-5.png)
 
     *You will need these details later*.
     
-3. Next, access the **Red Hat Web Console** by navigating to the following URL on your local machine's web browser, replacing `<public-ip>` with the Public IP address of your Linux VM that you recorded earlier:
+3. Next, access the **Red Hat Web Console** by navigating to the following URL on your local machine's web browser, replacing `<linux-ip>` with the Public IP address of your Linux VM that you recorded earlier:
    
     ```
-    https://<public-ip>:9090    
+    https://<linux-ip>:9090    
     ```
    
 4. You should then be taken to the login page as shown below:

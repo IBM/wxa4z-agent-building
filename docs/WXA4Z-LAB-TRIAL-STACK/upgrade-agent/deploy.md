@@ -82,9 +82,9 @@ Lastly, activate the agent within the **IBM watsonx Assistant for Z Management C
     **IMAGE**
   
 
-3. Next, locate the tile for the **zRAG Agent** and click on the gear icon as shown below:
+3. Next, locate the tile for the **IBM Z Upgrade Agent** and click on the gear icon as shown below:
    
-    **IMAGE**
+    ![alt text](image-6.png)
 
 4. You should then see the **Agent Configuration** page:
    
@@ -93,14 +93,14 @@ Lastly, activate the agent within the **IBM watsonx Assistant for Z Management C
     Make the following changes to activate your agent:
 
     - `Connection`: Make sure the **zRAG Retriever Connection** is selected
-    - `API Key`: enter the **AGENT_AUTH_TOKEN** value you set in the `Configure` section (i.e. zrag_auth)
+    - `API Key`: enter the **AGENT_AUTH_TOKEN** value you set in the [Configure](./configure.md) section (i.e. `upgrade_auth`)
     - `Status`: Toggle the status to **Active**
 
     Then click **Save**. 
 
     **IMAGE**
 
-5. After activating, you should see the **zRAG Agent** tile with the **Active** flag:
+5. After activating, you should see the **Upgrade Agent** tile with the **Active** flag:
    
-    **IMAGE**
+    ![alt text](image-7.png)
 
