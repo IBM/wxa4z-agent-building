@@ -506,7 +506,7 @@
   <span class="md-ellipsis">
     
   
-    Test Aget
+    Test Agent
   
 
     
@@ -672,7 +672,7 @@
   <span class="md-ellipsis">
     
   
-    Test Aget
+    Test Agent
   
 
     
@@ -850,7 +850,7 @@
   <span class="md-ellipsis">
     
   
-    Test Aget
+    Test Agent
   
 
     
@@ -1046,16 +1046,18 @@
 
 <div><h1 id="configuration-of-ibm-z-upgrade-agent">Configuration of IBM Z Upgrade Agent<a class="headerlink" href="#configuration-of-ibm-z-upgrade-agent" title="Permanent link">#</a></h1>
 <ol>
-<li>Copy the example <code>.env</code> file in the <code>agents/upgrade-agent/</code> directory using the following command (assuming from the <code>/deploy</code> directory:</li>
-</ol>
+<li>
+<p>Copy the example <code>.env</code> file in the <code>agents/upgrade-agent/</code> directory using the following command (assuming from the <code>/deploy</code> directory):</p>
 <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cp agents/upgrade-agent/.env.agent.upgrade-agent.example \
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>agents/upgrade-agent/.env.agent.upgrade-agent
 </span></code></pre></div>
-<ol start="2">
-<li>Once done, edit the <code>.env.agent.upgrade-agent</code> file using <code>vi</code>. For example:</li>
-</ol>
+</li>
+<li>
+<p>Once done, edit the <code>.env.agent.upgrade-agent</code> file using <code>vi</code>. For example:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>vi agents/upgrade-agent/.env.agent.upgrade-agent
 </span></code></pre></div>
+</li>
+</ol>
 <p>For the <strong>Upgrade Agent</strong>, there are a set of environment variables that must be configured:</p>
 <ul>
 <li><code>AGENT_AUTH_TOKEN</code></li>
@@ -1072,7 +1074,7 @@
 <p>Make note on a notepad the value you set for the <strong>Upgrade Agent</strong> as this will be needed later.</p>
 </li>
 <li>
-<p>Next, locate the environment variables for <code>ZOSMF_ENDPOINT</code>, <code>ZOSMF_USERNAME</code>, and <code>ZOSMF_PASSWORD</code> and set them to the following using the <code>LAB-ZDT-ENV.txt</code> file contents which you'll need:</p>
+<p>Next, locate the environment variables for <code>ZOSMF_ENDPOINT</code>, <code>ZOSMF_USERNAME</code>, and <code>ZOSMF_PASSWORD</code> and set them to the following using the <code>LAB-ZDT-ENV.txt</code> file contents as described <a href="../../02-env-access/#record-your-zdt-details">here</a>.</p>
 <ul>
 <li><code>ZOSMF_ENDPOINT</code>: <code>https://&lt;zdt-ip&gt;:10443/zosmf</code>, where <code>&lt;zdt-ip&gt;</code> should be replaced with the public IP of your zD&amp;T environment found in <code>LAB-ZDT-ENV.txt</code></li>
 <li><code>ZOSMF_USERNAME</code>: <code>IBMUSER</code></li>

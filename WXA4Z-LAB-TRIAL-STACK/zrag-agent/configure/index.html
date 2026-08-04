@@ -518,7 +518,7 @@
   <span class="md-ellipsis">
     
   
-    Test Aget
+    Test Agent
   
 
     
@@ -684,7 +684,7 @@
   <span class="md-ellipsis">
     
   
-    Test Aget
+    Test Agent
   
 
     
@@ -850,7 +850,7 @@
   <span class="md-ellipsis">
     
   
-    Test Aget
+    Test Agent
   
 
     
@@ -1048,23 +1048,23 @@
 <p>Assuming you're still viewing the <strong>Chat</strong> page of the Management Console, navigate back to the command-prompt of your Linux VM which you previously had open via web browser. </p>
 <p>Also, ensure you're current directory is <code>lite-stack</code>.</p>
 <ol>
-<li>Copy the example <code>.env</code> file in the <code>agents/zrag-external-agent/</code> directory using the following command (assuming from the <code>/deploy</code> directory:</li>
-</ol>
+<li>
+<p>Copy the example <code>.env</code> file in the <code>agents/zrag-external-agent/</code> directory using the following command (assuming from the <code>/deploy</code> directory):</p>
 <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cp agents/zrag-external-agent/.env.agent.zrag-agent.example \
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>agents/zrag-external-agent/.env.agent.zrag-agent
 </span></code></pre></div>
-<ol start="2">
-<li>Once done, edit the <code>.env.agent.zrag-agent</code> file using <code>nano</code> or <code>vi</code> text editor. For example:</li>
-</ol>
+</li>
+<li>
+<p>Once done, edit the <code>.env.agent.zrag-agent</code> file using <code>nano</code> or <code>vi</code> text editor. For example:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>vi agents/zrag-external-agent/.env.agent.zrag-agent
 </span></code></pre></div>
-<p>For the <strong>zRAG Agent</strong>, most of the configuration is done already via the core services. The only required environment variable for the zRAG Agent is the <code>AGENT_AUTH_TOKEN</code> variable.</p>
-<ol start="3">
-<li>Locate the  <code>AGENT_AUTH_TOKEN</code> variable in the <code>.env.agent.zrag-agent</code> file and set a unique value (i.e. <code>zrag_auth</code>).</li>
-</ol>
+<p>For the <strong>zRAG Agent</strong>, most of the configuration is already done, including the core services. The only required environment variable for the zRAG Agent is the <code>AGENT_AUTH_TOKEN</code> variable.</p>
+</li>
+<li>
+<p>Locate the  <code>AGENT_AUTH_TOKEN</code> variable in the <code>.env.agent.zrag-agent</code> file and set a unique value (i.e. <code>zrag_auth</code>).</p>
 <div class="highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>AGENT_AUTH_TOKEN=zrag_auth
 </span></code></pre></div>
-<ol start="4">
+</li>
 <li>
 <p>Make note on a notepad the value you set for the <strong>zRAG Agent</strong> as this will be needed later.</p>
 </li>

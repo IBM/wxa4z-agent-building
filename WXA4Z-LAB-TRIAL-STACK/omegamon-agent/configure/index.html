@@ -506,7 +506,7 @@
   <span class="md-ellipsis">
     
   
-    Test Aget
+    Test Agent
   
 
     
@@ -684,7 +684,7 @@
   <span class="md-ellipsis">
     
   
-    Test Aget
+    Test Agent
   
 
     
@@ -850,7 +850,7 @@
   <span class="md-ellipsis">
     
   
-    Test Aget
+    Test Agent
   
 
     
@@ -1046,19 +1046,21 @@
 
 <div><h1 id="configuration-of-ibm-z-omegamon-insights-agent">Configuration of IBM Z OMEGAMON Insights Agent<a class="headerlink" href="#configuration-of-ibm-z-omegamon-insights-agent" title="Permanent link">#</a></h1>
 <ol>
-<li>Copy the example <code>.env</code> file in the <code>agents/omegamon-insight-agent/</code> directory using the following command (assuming from the <code>/deploy</code> directory:</li>
-</ol>
+<li>
+<p>Copy the example <code>.env</code> file in the <code>agents/omegamon-insight-agent/</code> directory using the following command (assuming from the <code>/deploy</code> directory:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cp agents/omegamon-insight-agent/.env.agent.omegamon-insight.example \
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>agents/omegamon-insight-agent/.env.agent.omegamon-insight
 </span></code></pre></div>
-<ol start="2">
-<li>Once done, edit the <code>.env.agent.omegamon-insight</code> file using <code>nano</code> or <code>vi</code> text editor. For example:</li>
-</ol>
+</li>
+<li>
+<p>Once done, edit the <code>.env.agent.omegamon-insight</code> file using <code>nano</code> or <code>vi</code> text editor. For example:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>vi agents/omegamon-insight-agent/.env.agent.omegamon-insight
 </span></code></pre></div>
 <p>For the <strong>OMEGAMON Insights Agent</strong>, most of the configuration is done already via the core services, including the AIOps server to connect to SMU. The only required environment variable for the Agent is the <code>AGENT_AUTH_TOKEN</code> variable.</p>
-<ol start="3">
-<li>Locate the  <code>AGENT_AUTH_TOKEN</code> variable in the <code>.env.agent.omegamon-insight</code> file and set a unique value (i.e. <code>omegamon_auth</code>).</li>
+</li>
+<li>
+<p>Locate the  <code>AGENT_AUTH_TOKEN</code> variable in the <code>.env.agent.omegamon-insight</code> file and set a unique value (i.e. <code>omegamon_auth</code>).</p>
+</li>
 </ol>
 <div class="highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>AGENT_AUTH_TOKEN=omegamon_auth
 </span></code></pre></div>

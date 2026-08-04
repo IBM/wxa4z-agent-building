@@ -501,7 +501,7 @@
   <span class="md-ellipsis">
     
   
-    Test Aget
+    Test Agent
   
 
     
@@ -667,7 +667,7 @@
   <span class="md-ellipsis">
     
   
-    Test Aget
+    Test Agent
   
 
     
@@ -833,7 +833,7 @@
   <span class="md-ellipsis">
     
   
-    Test Aget
+    Test Agent
   
 
     
@@ -1087,7 +1087,7 @@
   <a href="#wxa4z-lab-trial-stack-zrag-agent-test" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Test Aget
+        Test Agent
       
     </span>
   </a>
@@ -1148,7 +1148,7 @@
   <a href="#wxa4z-lab-trial-stack-omegamon-agent-test" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Test Aget
+        Test Agent
       
     </span>
   </a>
@@ -1209,7 +1209,7 @@
   <a href="#wxa4z-lab-trial-stack-upgrade-agent-test" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Test Aget
+        Test Agent
       
     </span>
   </a>
@@ -1347,7 +1347,7 @@
         })
         </script>
         </head><body><div><h1 id="lab-introduction">Lab Introduction<a class="headerlink" href="#wxa4z-lab-trial-stack-01-intro-lab-introduction" title="Permanent link">#</a></h1>
-<p>watsonx Assistant for Z Trial provides agentic capabilities across Z systems, offering faster deployment, ease of setup, and lower infrastructure demands.</p>
+<p>The <strong>watsonx Assistant for Z Trial</strong> provides agentic capabilities across Z systems, offering faster deployment, ease of setup, and lower infrastructure demands.</p>
 <p>watsonx Assistant for Z Trial integrates a central router, agents, and supporting services to deliver intelligent, conversational automation and insights across IBM Z environments.</p>
 <p>At the core of its architecture is the central router, which acts as the primary coordination and routing layer between agents.</p>
 <h2 id="wxa4z-lab-trial-stack-01-intro-watsonx-assistant-for-z-architecture">watsonx Assistant for Z Architecture<a class="headerlink" href="#wxa4z-lab-trial-stack-01-intro-watsonx-assistant-for-z-architecture" title="Permanent link">#</a></h2>
@@ -1422,14 +1422,14 @@
 </li>
 <li>
 <p>You should then be taken to a page with your environment details. </p>
-<p>Take note of your <code>Linux-ip</code>, the public IP address of your environment. Record this somewhere locally. </p>
-<p>Also, take note of your Linux VM's <code>Username</code> and <code>Password</code> credentials that are recorded at the top of your environment details:</p>
+<p>Take note of your <code>linux-ip</code>, the public IP address of your environment. Record this somewhere locally. </p>
+<p>Also, take note of your Linux VM's <code>Username</code> and <code>Password</code> credentials that are recorded at the top of your environment details. For example:</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../WXA4Z-LAB-TRIAL-STACK/image-5.png" data-desc-position="bottom"><img alt="alt text" src="../WXA4Z-LAB-TRIAL-STACK/image-5.png"></a></p>
 <p><em>You will need these details later</em>.</p>
 </li>
 <li>
-<p>Next, access the <strong>Red Hat Web Console</strong> by navigating to the following URL on your local machine's web browser, replacing <code>&lt;public-ip&gt;</code> with the Public IP address of your Linux VM that you recorded earlier:</p>
-<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#wxa4z-lab-trial-stack-02-env-access-__codelineno-0-1"></a>https://&lt;public-ip&gt;:9090    
+<p>Next, access the <strong>Red Hat Web Console</strong> by navigating to the following URL on your local machine's web browser, replacing <code>&lt;linux-ip&gt;</code> with the Public IP address of your Linux VM that you recorded earlier:</p>
+<div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#wxa4z-lab-trial-stack-02-env-access-__codelineno-0-1"></a>https://&lt;linux-ip&gt;:9090    
 </span></code></pre></div>
 </li>
 <li>
@@ -1513,23 +1513,23 @@
 <p>Assuming you're still viewing the <strong>Chat</strong> page of the Management Console, navigate back to the command-prompt of your Linux VM which you previously had open via web browser. </p>
 <p>Also, ensure you're current directory is <code>lite-stack</code>.</p>
 <ol>
-<li>Copy the example <code>.env</code> file in the <code>agents/zrag-external-agent/</code> directory using the following command (assuming from the <code>/deploy</code> directory:</li>
-</ol>
+<li>
+<p>Copy the example <code>.env</code> file in the <code>agents/zrag-external-agent/</code> directory using the following command (assuming from the <code>/deploy</code> directory):</p>
 <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#wxa4z-lab-trial-stack-zrag-agent-configure-__codelineno-0-1"></a>cp agents/zrag-external-agent/.env.agent.zrag-agent.example \
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#wxa4z-lab-trial-stack-zrag-agent-configure-__codelineno-0-2"></a>agents/zrag-external-agent/.env.agent.zrag-agent
 </span></code></pre></div>
-<ol start="2">
-<li>Once done, edit the <code>.env.agent.zrag-agent</code> file using <code>nano</code> or <code>vi</code> text editor. For example:</li>
-</ol>
+</li>
+<li>
+<p>Once done, edit the <code>.env.agent.zrag-agent</code> file using <code>nano</code> or <code>vi</code> text editor. For example:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#wxa4z-lab-trial-stack-zrag-agent-configure-__codelineno-1-1"></a>vi agents/zrag-external-agent/.env.agent.zrag-agent
 </span></code></pre></div>
-<p>For the <strong>zRAG Agent</strong>, most of the configuration is done already via the core services. The only required environment variable for the zRAG Agent is the <code>AGENT_AUTH_TOKEN</code> variable.</p>
-<ol start="3">
-<li>Locate the  <code>AGENT_AUTH_TOKEN</code> variable in the <code>.env.agent.zrag-agent</code> file and set a unique value (i.e. <code>zrag_auth</code>).</li>
-</ol>
+<p>For the <strong>zRAG Agent</strong>, most of the configuration is already done, including the core services. The only required environment variable for the zRAG Agent is the <code>AGENT_AUTH_TOKEN</code> variable.</p>
+</li>
+<li>
+<p>Locate the  <code>AGENT_AUTH_TOKEN</code> variable in the <code>.env.agent.zrag-agent</code> file and set a unique value (i.e. <code>zrag_auth</code>).</p>
 <div class="highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#wxa4z-lab-trial-stack-zrag-agent-configure-__codelineno-2-1"></a>AGENT_AUTH_TOKEN=zrag_auth
 </span></code></pre></div>
-<ol start="4">
+</li>
 <li>
 <p>Make note on a notepad the value you set for the <strong>zRAG Agent</strong> as this will be needed later.</p>
 </li>
@@ -1585,7 +1585,7 @@
 <p>Make the following changes to activate your agent:</p>
 <ul>
 <li><code>Connection</code>: Make sure the <strong>zRAG Retriever Connection</strong> is selected</li>
-<li><code>API Key</code>: enter the <strong>AGENT_AUTH_TOKEN</strong> value you set in the <code>Configure</code> section (i.e. zrag_auth)</li>
+<li><code>API Key</code>: enter the <strong>AGENT_AUTH_TOKEN</strong> value you set in the <strong><em><a href="#wxa4z-lab-trial-stack-zrag-agent-configure">Configure</a></em></strong> section (i.e. <code>zrag_auth</code>).</li>
 <li><code>Status</code>: Toggle the status to <strong>Active</strong></li>
 </ul>
 <p>Then click <strong>Save</strong>. </p>
@@ -1686,19 +1686,21 @@
         </script>
         </head><body><div><h1 id="configuration-of-ibm-z-omegamon-insights-agent">Configuration of IBM Z OMEGAMON Insights Agent<a class="headerlink" href="#wxa4z-lab-trial-stack-omegamon-agent-configure-configuration-of-ibm-z-omegamon-insights-agent" title="Permanent link">#</a></h1>
 <ol>
-<li>Copy the example <code>.env</code> file in the <code>agents/omegamon-insight-agent/</code> directory using the following command (assuming from the <code>/deploy</code> directory:</li>
-</ol>
+<li>
+<p>Copy the example <code>.env</code> file in the <code>agents/omegamon-insight-agent/</code> directory using the following command (assuming from the <code>/deploy</code> directory:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#wxa4z-lab-trial-stack-omegamon-agent-configure-__codelineno-0-1"></a>cp agents/omegamon-insight-agent/.env.agent.omegamon-insight.example \
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#wxa4z-lab-trial-stack-omegamon-agent-configure-__codelineno-0-2"></a>agents/omegamon-insight-agent/.env.agent.omegamon-insight
 </span></code></pre></div>
-<ol start="2">
-<li>Once done, edit the <code>.env.agent.omegamon-insight</code> file using <code>nano</code> or <code>vi</code> text editor. For example:</li>
-</ol>
+</li>
+<li>
+<p>Once done, edit the <code>.env.agent.omegamon-insight</code> file using <code>nano</code> or <code>vi</code> text editor. For example:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#wxa4z-lab-trial-stack-omegamon-agent-configure-__codelineno-1-1"></a>vi agents/omegamon-insight-agent/.env.agent.omegamon-insight
 </span></code></pre></div>
 <p>For the <strong>OMEGAMON Insights Agent</strong>, most of the configuration is done already via the core services, including the AIOps server to connect to SMU. The only required environment variable for the Agent is the <code>AGENT_AUTH_TOKEN</code> variable.</p>
-<ol start="3">
-<li>Locate the  <code>AGENT_AUTH_TOKEN</code> variable in the <code>.env.agent.omegamon-insight</code> file and set a unique value (i.e. <code>omegamon_auth</code>).</li>
+</li>
+<li>
+<p>Locate the  <code>AGENT_AUTH_TOKEN</code> variable in the <code>.env.agent.omegamon-insight</code> file and set a unique value (i.e. <code>omegamon_auth</code>).</p>
+</li>
 </ol>
 <div class="highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#wxa4z-lab-trial-stack-omegamon-agent-configure-__codelineno-2-1"></a>AGENT_AUTH_TOKEN=omegamon_auth
 </span></code></pre></div>
@@ -1773,20 +1775,23 @@
         </head><body><div><h1 id="test-the-ibm-z-omegamon-insights-agent">Test the IBM Z OMEGAMON Insights Agent<a class="headerlink" href="#wxa4z-lab-trial-stack-omegamon-agent-test-test-the-ibm-z-omegamon-insights-agent" title="Permanent link">#</a></h1>
 <p>Now that you've successfully activated the OMEGAMON Insights Agent, you can test some example queries. </p>
 <p>Firstly, <strong>navigate back to the Chat</strong> view by selecting <strong>Chat</strong> at the top. </p>
-<p>Start a new chat (by clicking on the blue icon), then begin prompting the agent with the below example queries:</p>
+<p>Start a new chat (by clicking on the blue icon), then begin prompting the agent around it's capabilities as described <strong><em><a href="#wxa4z-lab-trial-stack-omegamon-agent-overview">here</a></em></strong>.</p>
+<p>As an example to prompt about CICS resources, one could ask:</p>
 <ul>
 <li>
 <p><code>Show all my CICSPlexes</code></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../WXA4Z-LAB-TRIAL-STACK/omegamon-agent/test/_attachments/om4.png" data-desc-position="bottom"><img alt="" src="../WXA4Z-LAB-TRIAL-STACK/omegamon-agent/test/_attachments/om4.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../WXA4Z-LAB-TRIAL-STACK/omegamon-agent/image.png" data-desc-position="bottom"><img alt="alt text" src="../WXA4Z-LAB-TRIAL-STACK/omegamon-agent/image.png"></a></p>
 </li>
 <li>
-<p><code>Show all regions under CICSPlex xx</code></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../WXA4Z-LAB-TRIAL-STACK/omegamon-agent/test/_attachments/om5.png" data-desc-position="bottom"><img alt="" src="../WXA4Z-LAB-TRIAL-STACK/omegamon-agent/test/_attachments/om5.png"></a></p>
+<p><code>Show all regions for CICSPlex DEMOPLEX</code></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../WXA4Z-LAB-TRIAL-STACK/omegamon-agent/image-1.png" data-desc-position="bottom"><img alt="alt text" src="../WXA4Z-LAB-TRIAL-STACK/omegamon-agent/image-1.png"></a></p>
 </li>
 <li>
-<p><code>Show all my Db2 subsystems</code></p>
+<p><code>Get transactions for region CICSTIV3</code></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../WXA4Z-LAB-TRIAL-STACK/omegamon-agent/image-2.png" data-desc-position="bottom"><img alt="alt text" src="../WXA4Z-LAB-TRIAL-STACK/omegamon-agent/image-2.png"></a></p>
 </li>
-</ul></div></body></html></section></section>
+</ul>
+<p>Continue prompting the agent across various topics before moving on to the Upgrade Agent. </p></div></body></html></section></section>
                     <section class='print-page md-section' id='section-5' heading-number='5'>
                         <h1>Deploy Z Upgrade Agent<a class='headerlink' href='#section-5' title='Permanent link'></a>
                         </h1>
@@ -1878,16 +1883,18 @@
         </script>
         </head><body><div><h1 id="configuration-of-ibm-z-upgrade-agent">Configuration of IBM Z Upgrade Agent<a class="headerlink" href="#wxa4z-lab-trial-stack-upgrade-agent-configure-configuration-of-ibm-z-upgrade-agent" title="Permanent link">#</a></h1>
 <ol>
-<li>Copy the example <code>.env</code> file in the <code>agents/upgrade-agent/</code> directory using the following command (assuming from the <code>/deploy</code> directory:</li>
-</ol>
+<li>
+<p>Copy the example <code>.env</code> file in the <code>agents/upgrade-agent/</code> directory using the following command (assuming from the <code>/deploy</code> directory):</p>
 <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#wxa4z-lab-trial-stack-upgrade-agent-configure-__codelineno-0-1"></a>cp agents/upgrade-agent/.env.agent.upgrade-agent.example \
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#wxa4z-lab-trial-stack-upgrade-agent-configure-__codelineno-0-2"></a>agents/upgrade-agent/.env.agent.upgrade-agent
 </span></code></pre></div>
-<ol start="2">
-<li>Once done, edit the <code>.env.agent.upgrade-agent</code> file using <code>vi</code>. For example:</li>
-</ol>
+</li>
+<li>
+<p>Once done, edit the <code>.env.agent.upgrade-agent</code> file using <code>vi</code>. For example:</p>
 <div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#wxa4z-lab-trial-stack-upgrade-agent-configure-__codelineno-1-1"></a>vi agents/upgrade-agent/.env.agent.upgrade-agent
 </span></code></pre></div>
+</li>
+</ol>
 <p>For the <strong>Upgrade Agent</strong>, there are a set of environment variables that must be configured:</p>
 <ul>
 <li><code>AGENT_AUTH_TOKEN</code></li>
@@ -1904,7 +1911,7 @@
 <p>Make note on a notepad the value you set for the <strong>Upgrade Agent</strong> as this will be needed later.</p>
 </li>
 <li>
-<p>Next, locate the environment variables for <code>ZOSMF_ENDPOINT</code>, <code>ZOSMF_USERNAME</code>, and <code>ZOSMF_PASSWORD</code> and set them to the following using the <code>LAB-ZDT-ENV.txt</code> file contents which you'll need:</p>
+<p>Next, locate the environment variables for <code>ZOSMF_ENDPOINT</code>, <code>ZOSMF_USERNAME</code>, and <code>ZOSMF_PASSWORD</code> and set them to the following using the <code>LAB-ZDT-ENV.txt</code> file contents as described <a href="#wxa4z-lab-trial-stack-02-env-access-record-your-zdt-details">here</a>.</p>
 <ul>
 <li><code>ZOSMF_ENDPOINT</code>: <code>https://&lt;zdt-ip&gt;:10443/zosmf</code>, where <code>&lt;zdt-ip&gt;</code> should be replaced with the public IP of your zD&amp;T environment found in <code>LAB-ZDT-ENV.txt</code></li>
 <li><code>ZOSMF_USERNAME</code>: <code>IBMUSER</code></li>
@@ -1986,8 +1993,8 @@
 <p><strong>IMAGE</strong></p>
 </li>
 <li>
-<p>Next, locate the tile for the <strong>zRAG Agent</strong> and click on the gear icon as shown below:</p>
-<p><strong>IMAGE</strong></p>
+<p>Next, locate the tile for the <strong>IBM Z Upgrade Agent</strong> and click on the gear icon as shown below:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../WXA4Z-LAB-TRIAL-STACK/upgrade-agent/image-6.png" data-desc-position="bottom"><img alt="alt text" src="../WXA4Z-LAB-TRIAL-STACK/upgrade-agent/image-6.png"></a></p>
 </li>
 <li>
 <p>You should then see the <strong>Agent Configuration</strong> page:</p>
@@ -1995,15 +2002,15 @@
 <p>Make the following changes to activate your agent:</p>
 <ul>
 <li><code>Connection</code>: Make sure the <strong>zRAG Retriever Connection</strong> is selected</li>
-<li><code>API Key</code>: enter the <strong>AGENT_AUTH_TOKEN</strong> value you set in the <code>Configure</code> section (i.e. zrag_auth)</li>
+<li><code>API Key</code>: enter the <strong>AGENT_AUTH_TOKEN</strong> value you set in the <a href="#wxa4z-lab-trial-stack-upgrade-agent-configure">Configure</a> section (i.e. <code>upgrade_auth</code>)</li>
 <li><code>Status</code>: Toggle the status to <strong>Active</strong></li>
 </ul>
 <p>Then click <strong>Save</strong>. </p>
 <p><strong>IMAGE</strong></p>
 </li>
 <li>
-<p>After activating, you should see the <strong>zRAG Agent</strong> tile with the <strong>Active</strong> flag:</p>
-<p><strong>IMAGE</strong></p>
+<p>After activating, you should see the <strong>Upgrade Agent</strong> tile with the <strong>Active</strong> flag:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../WXA4Z-LAB-TRIAL-STACK/upgrade-agent/image-7.png" data-desc-position="bottom"><img alt="alt text" src="../WXA4Z-LAB-TRIAL-STACK/upgrade-agent/image-7.png"></a></p>
 </li>
 </ol></div></body></html></section><section class="print-page" id="wxa4z-lab-trial-stack-upgrade-agent-test" heading-number="5.4"><html><head>
         <script type="text/javascript">
@@ -2012,6 +2019,8 @@
         })
         </script>
         </head><body><div><h1 id="testing-ibm-z-upgrade-agent">Testing IBM Z Upgrade Agent<a class="headerlink" href="#wxa4z-lab-trial-stack-upgrade-agent-test-testing-ibm-z-upgrade-agent" title="Permanent link">#</a></h1>
+<p>Finally, test the capabilities of the <strong>IBM Z Upgrade Agent</strong> by referencing the full list in the <a href="#wxa4z-lab-trial-stack-upgrade-agent-overview">Overview section</a>.</p>
+<p>The example prompts below are shown only for reference. Your results may differ. </p>
 <p>Questions:
 - What are the steps to upgrade to z17?</p>
 <h3 id="wxa4z-lab-trial-stack-upgrade-agent-test-retrieve-all-software-instance"><strong>Retrieve all software instance</strong>:<a class="headerlink" href="#wxa4z-lab-trial-stack-upgrade-agent-test-retrieve-all-software-instance" title="Permanent link">#</a></h3>
@@ -2089,7 +2098,7 @@
 </li>
 <li>
 <p>In the screen that follows, enter the following connection details for your S3 bucket. </p>
-<p><em>Each of these values can be found in the <code>LAB-S3-BUCKET.txt</code> file within the <code>lite-stack</code> directory on Linux</em>:</p>
+<p>*Each of these values can be found in the <code>LAB-S3-BUCKET.txt</code> file within the <code>lite-stack</code> directory as described <a href="#wxa4z-lab-trial-stack-02-env-access-locate-your-s3-bucket-connection-details">here</a>.</p>
 <ul>
 <li><code>URL</code></li>
 <li><code>Access Key ID</code></li>
