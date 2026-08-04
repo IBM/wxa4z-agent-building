@@ -1,12 +1,21 @@
-* [Welcome and Lab Overview](./overview.md)
-* [Access Lab Environment](./access-env.md)
-* [Create connection](./03-create-connection.md)
-* [Import tools](./04-import-tools.md)
-* [Deploy agent](./05-deploy-agent.md)
-* [Test IPL Agent](./06-test-ipl-agent.md)
-* Multi-agent collaboration
-    * [Create new agent via UI](./multi-agent-create.md)
-    * [Test `db2Command` tool](./multi-agent-test-db2.md)
-    * [Enable `zRAG Agent` collaboration](./multi-agent-zrag-collab.md)
-    * [Enable `IPL Validator Agent` collaboration](./multi-agent-ipl-collab.md)
-* [Test z/OS Helper Agent](./test.md)
+* [Lab Introduction](./WXA4Z-LAB-TRIAL-STACK/01-Intro.md)
+* [Access Lab Environment](./WXA4Z-LAB-TRIAL-STACK/02-env-access.md)
+* Deploy zRAG Agent
+    * [Agent Overview](./WXA4Z-LAB-TRIAL-STACK/zrag-agent/overview.md)
+    * [Configure Agent](./WXA4Z-LAB-TRIAL-STACK/zrag-agent/configure.md)
+    * [Deploy Agent](./WXA4Z-LAB-TRIAL-STACK/zrag-agent/deploy.md)
+    * [Test Aget](./WXA4Z-LAB-TRIAL-STACK/zrag-agent/test.md)
+* Deploy OMEGAMON Insights Agent
+    * [Agent Overview](./WXA4Z-LAB-TRIAL-STACK/omegamon-agent/overview.md)
+    * [Configure Agent](./WXA4Z-LAB-TRIAL-STACK/omegamon-agent/configure.md)
+    * [Deploy Agent](./WXA4Z-LAB-TRIAL-STACK/omegamon-agent/deploy.md)
+    * [Test Aget](./WXA4Z-LAB-TRIAL-STACK/omegamon-agent/test.md)
+* Deploy Z Upgrade Agent
+    * [Agent Overview](./WXA4Z-LAB-TRIAL-STACK/upgrade-agent/overview.md)
+    * [Configure Agent](./WXA4Z-LAB-TRIAL-STACK/upgrade-agent/configure.md)
+    * [Deploy Agent](./WXA4Z-LAB-TRIAL-STACK/upgrade-agent/deploy.md)
+    * [Test Aget](./WXA4Z-LAB-TRIAL-STACK/upgrade-agent/test.md)
+* Execute Document Ingestion
+    * [Overview](./WXA4Z-LAB-TRIAL-STACK/doc-ingestion/overview.md)
+    * [Execute Ingestion](./WXA4Z-LAB-TRIAL-STACK/doc-ingestion/ingest.md)
+    * [Test Q&A](./WXA4Z-LAB-TRIAL-STACK/doc-ingestion/test.md)
