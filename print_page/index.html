@@ -1697,11 +1697,9 @@
 </li>
 <li>
 <p>Locate the  <code>AGENT_AUTH_TOKEN</code> variable in the <code>.env.agent.omegamon-insight</code> file and set a unique value (i.e. <code>omegamon_auth</code>).</p>
-</li>
-</ol>
 <div class="highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#wxa4z-lab-trial-stack-omegamon-agent-configure-__codelineno-2-1"></a>AGENT_AUTH_TOKEN=omegamon_auth
 </span></code></pre></div>
-<ol start="4">
+</li>
 <li>
 <p>Make note on a notepad the value you set for the <strong>OMEGAMON Insights Agent</strong> as this will be needed later.</p>
 </li>
@@ -1745,7 +1743,6 @@
 <ol>
 <li>
 <p>Similarly to what you did previously to active the zRAG Agent, navigate back to the <strong>Management Console</strong>, click on the <strong>Agents</strong> icon in the drop-down, and locate the tile for the <strong>IBM Z OMEGAMON Insights Agent</strong>.</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../WXA4Z-LAB-TRIAL-STACK/omegamon-agent/deploy/_attachments/om1.png" data-desc-position="bottom"><img alt="" src="../WXA4Z-LAB-TRIAL-STACK/omegamon-agent/deploy/_attachments/om1.png"></a></p>
 </li>
 <li>
 <p>Click on the gear icon, then you should see the <strong>Agent Configuration</strong> page.</p>
@@ -1757,11 +1754,11 @@
 <li><code>Status</code>: Toggle the status to <strong>Active</strong></li>
 </ul>
 <p>Then click <strong>Save</strong>. </p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../WXA4Z-LAB-TRIAL-STACK/omegamon-agent/deploy/_attachments/om2.png" data-desc-position="bottom"><img alt="" src="../WXA4Z-LAB-TRIAL-STACK/omegamon-agent/deploy/_attachments/om2.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../WXA4Z-LAB-TRIAL-STACK/omegamon-agent/image-3.png" data-desc-position="bottom"><img alt="alt text" src="../WXA4Z-LAB-TRIAL-STACK/omegamon-agent/image-3.png"></a></p>
 </li>
 <li>
 <p>After activating, you should see the <strong>IBM Z OMEGAMON Insights Agent</strong> tile with the <strong>Active</strong> flag:</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../WXA4Z-LAB-TRIAL-STACK/omegamon-agent/deploy/_attachments/om3.png" data-desc-position="bottom"><img alt="" src="../WXA4Z-LAB-TRIAL-STACK/omegamon-agent/deploy/_attachments/om3.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../WXA4Z-LAB-TRIAL-STACK/omegamon-agent/image-4.png" data-desc-position="bottom"><img alt="alt text" src="../WXA4Z-LAB-TRIAL-STACK/omegamon-agent/image-4.png"></a></p>
 </li>
 </ol></div></body></html></section><section class="print-page" id="wxa4z-lab-trial-stack-omegamon-agent-test" heading-number="4.4"><html><head>
         <script type="text/javascript">
@@ -1995,15 +1992,13 @@
 </li>
 <li>
 <p>You should then see the <strong>Agent Configuration</strong> page:</p>
-<p><strong>IMAGE</strong></p>
 <p>Make the following changes to activate your agent:</p>
 <ul>
-<li><code>Connection</code>: Make sure the <strong>zRAG Retriever Connection</strong> is selected</li>
 <li><code>API Key</code>: enter the <strong>AGENT_AUTH_TOKEN</strong> value you set in the <a href="#wxa4z-lab-trial-stack-upgrade-agent-configure">Configure</a> section (i.e. <code>upgrade_auth</code>)</li>
 <li><code>Status</code>: Toggle the status to <strong>Active</strong></li>
 </ul>
 <p>Then click <strong>Save</strong>. </p>
-<p><strong>IMAGE</strong></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../WXA4Z-LAB-TRIAL-STACK/upgrade-agent/image-8.png" data-desc-position="bottom"><img alt="alt text" src="../WXA4Z-LAB-TRIAL-STACK/upgrade-agent/image-8.png"></a></p>
 </li>
 <li>
 <p>After activating, you should see the <strong>Upgrade Agent</strong> tile with the <strong>Active</strong> flag:</p>
@@ -2018,8 +2013,6 @@
         </head><body><div><h1 id="testing-ibm-z-upgrade-agent">Testing IBM Z Upgrade Agent<a class="headerlink" href="#wxa4z-lab-trial-stack-upgrade-agent-test-testing-ibm-z-upgrade-agent" title="Permanent link">#</a></h1>
 <p>Finally, test the capabilities of the <strong>IBM Z Upgrade Agent</strong> by referencing the full list in the <a href="#wxa4z-lab-trial-stack-upgrade-agent-overview">Overview section</a>.</p>
 <p>The example prompts below are shown only for reference. Your results may differ. </p>
-<p>Questions:
-- What are the steps to upgrade to z17?</p>
 <h3 id="wxa4z-lab-trial-stack-upgrade-agent-test-retrieve-all-software-instance"><strong>Retrieve all software instance</strong>:<a class="headerlink" href="#wxa4z-lab-trial-stack-upgrade-agent-test-retrieve-all-software-instance" title="Permanent link">#</a></h3>
 <p><code>Show all software instances defined on my z/OS system</code></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../WXA4Z-LAB-TRIAL-STACK/upgrade-agent/image.png" data-desc-position="bottom"><img alt="alt text" src="../WXA4Z-LAB-TRIAL-STACK/upgrade-agent/image.png"></a></p>
@@ -2041,7 +2034,14 @@
 <h3 id="wxa4z-lab-trial-stack-upgrade-agent-test-get-refreshed-list-of-missing-fixcats"><strong>Get refreshed list of missing FIXCATS</strong><a class="headerlink" href="#wxa4z-lab-trial-stack-upgrade-agent-test-get-refreshed-list-of-missing-fixcats" title="Permanent link">#</a></h3>
 <p>For example:</p>
 <p><code>Retrieve missing fixcats for software instance IMS on system VS01_003</code></p>
-<h3 id="wxa4z-lab-trial-stack-upgrade-agent-test-receive-the-missing-ptfs-for-fixcat-xxx"><strong>Receive the missing PTFs for FIXCAT xxx</strong><a class="headerlink" href="#wxa4z-lab-trial-stack-upgrade-agent-test-receive-the-missing-ptfs-for-fixcat-xxx" title="Permanent link">#</a></h3>
+<h3 id="wxa4z-lab-trial-stack-upgrade-agent-test-acquire-any-missing-ptfs"><strong>Acquire any missing PTFs</strong><a class="headerlink" href="#wxa4z-lab-trial-stack-upgrade-agent-test-acquire-any-missing-ptfs" title="Permanent link">#</a></h3>
+<p><code>Receive missing PTFs for resolver UO05635 for software instance IMS on system VS01_003</code></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../WXA4Z-LAB-TRIAL-STACK/upgrade-agent/image-9.png" data-desc-position="bottom"><img alt="alt text" src="../WXA4Z-LAB-TRIAL-STACK/upgrade-agent/image-9.png"></a></p>
+<p><em>Confirm by entering <code>Yes</code></em></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../WXA4Z-LAB-TRIAL-STACK/upgrade-agent/image-10.png" data-desc-position="bottom"><img alt="alt text" src="../WXA4Z-LAB-TRIAL-STACK/upgrade-agent/image-10.png"></a></p>
+<h3 id="wxa4z-lab-trial-stack-upgrade-agent-test-get-status-of-ptf-job"><strong>Get status of PTF job</strong><a class="headerlink" href="#wxa4z-lab-trial-stack-upgrade-agent-test-get-status-of-ptf-job" title="Permanent link">#</a></h3>
+<p><code>get status of PTF job JOB00067</code></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../WXA4Z-LAB-TRIAL-STACK/upgrade-agent/image-11.png" data-desc-position="bottom"><img alt="alt text" src="../WXA4Z-LAB-TRIAL-STACK/upgrade-agent/image-11.png"></a></p>
 <h3 id="wxa4z-lab-trial-stack-upgrade-agent-test-ask-about-upgrade-workflow-related-queries-using-the-ingested-docs"><strong>Ask about upgrade workflow-related queries using the ingested docs</strong><a class="headerlink" href="#wxa4z-lab-trial-stack-upgrade-agent-test-ask-about-upgrade-workflow-related-queries-using-the-ingested-docs" title="Permanent link">#</a></h3>
 <p><code>What are important considerations to make when upgrading to z17?</code></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../WXA4Z-LAB-TRIAL-STACK/upgrade-agent/image-5.png" data-desc-position="bottom"><img alt="alt text" src="../WXA4Z-LAB-TRIAL-STACK/upgrade-agent/image-5.png"></a></p></div></body></html></section></section>

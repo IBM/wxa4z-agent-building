@@ -1047,8 +1047,6 @@
 <div><h1 id="testing-ibm-z-upgrade-agent">Testing IBM Z Upgrade Agent<a class="headerlink" href="#testing-ibm-z-upgrade-agent" title="Permanent link">#</a></h1>
 <p>Finally, test the capabilities of the <strong>IBM Z Upgrade Agent</strong> by referencing the full list in the <a href="../overview/">Overview section</a>.</p>
 <p>The example prompts below are shown only for reference. Your results may differ. </p>
-<p>Questions:
-- What are the steps to upgrade to z17?</p>
 <h3 id="retrieve-all-software-instance"><strong>Retrieve all software instance</strong>:<a class="headerlink" href="#retrieve-all-software-instance" title="Permanent link">#</a></h3>
 <p><code>Show all software instances defined on my z/OS system</code></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image.png" data-desc-position="bottom"><img alt="alt text" src="../image.png"></a></p>
@@ -1070,7 +1068,14 @@
 <h3 id="get-refreshed-list-of-missing-fixcats"><strong>Get refreshed list of missing FIXCATS</strong><a class="headerlink" href="#get-refreshed-list-of-missing-fixcats" title="Permanent link">#</a></h3>
 <p>For example:</p>
 <p><code>Retrieve missing fixcats for software instance IMS on system VS01_003</code></p>
-<h3 id="receive-the-missing-ptfs-for-fixcat-xxx"><strong>Receive the missing PTFs for FIXCAT xxx</strong><a class="headerlink" href="#receive-the-missing-ptfs-for-fixcat-xxx" title="Permanent link">#</a></h3>
+<h3 id="acquire-any-missing-ptfs"><strong>Acquire any missing PTFs</strong><a class="headerlink" href="#acquire-any-missing-ptfs" title="Permanent link">#</a></h3>
+<p><code>Receive missing PTFs for resolver UO05635 for software instance IMS on system VS01_003</code></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image-9.png" data-desc-position="bottom"><img alt="alt text" src="../image-9.png"></a></p>
+<p><em>Confirm by entering <code>Yes</code></em></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image-10.png" data-desc-position="bottom"><img alt="alt text" src="../image-10.png"></a></p>
+<h3 id="get-status-of-ptf-job"><strong>Get status of PTF job</strong><a class="headerlink" href="#get-status-of-ptf-job" title="Permanent link">#</a></h3>
+<p><code>get status of PTF job JOB00067</code></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image-11.png" data-desc-position="bottom"><img alt="alt text" src="../image-11.png"></a></p>
 <h3 id="ask-about-upgrade-workflow-related-queries-using-the-ingested-docs"><strong>Ask about upgrade workflow-related queries using the ingested docs</strong><a class="headerlink" href="#ask-about-upgrade-workflow-related-queries-using-the-ingested-docs" title="Permanent link">#</a></h3>
 <p><code>What are important considerations to make when upgrading to z17?</code></p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image-5.png" data-desc-position="bottom"><img alt="alt text" src="../image-5.png"></a></p></div>
