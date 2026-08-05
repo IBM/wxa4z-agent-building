@@ -4,9 +4,6 @@ Finally, test the capabilities of the **IBM Z Upgrade Agent** by referencing the
 
 The example prompts below are shown only for reference. Your results may differ. 
 
-Questions:
-- What are the steps to upgrade to z17?
-
 
 ### **Retrieve all software instance**:
 
@@ -51,9 +48,21 @@ For example:
 
 `Retrieve missing fixcats for software instance IMS on system VS01_003`
 
-### **Receive the missing PTFs for FIXCAT xxx**
+### **Acquire any missing PTFs**
 
+`Receive missing PTFs for resolver UO05635 for software instance IMS on system VS01_003`
 
+![alt text](image-9.png)
+
+*Confirm by entering `Yes`*
+
+![alt text](image-10.png)
+
+### **Get status of PTF job**
+
+`get status of PTF job JOB00067`
+
+![alt text](image-11.png)
 
 ### **Ask about upgrade workflow-related queries using the ingested docs**
 

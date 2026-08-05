@@ -17,9 +17,9 @@
 
 3. Locate the  `AGENT_AUTH_TOKEN` variable in the `.env.agent.omegamon-insight` file and set a unique value (i.e. `omegamon_auth`).
 
-   ```
-   AGENT_AUTH_TOKEN=omegamon_auth
-   ```
+    ```
+    AGENT_AUTH_TOKEN=omegamon_auth
+    ```
 
 4. Make note on a notepad the value you set for the **OMEGAMON Insights Agent** as this will be needed later.
 

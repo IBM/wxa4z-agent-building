@@ -41,7 +41,6 @@ INFO:     Uvicorn running on http://0.0.0.0:8050 (Press CTRL+C to quit)
 
 1. Similarly to what you did previously to active the zRAG Agent, navigate back to the **Management Console**, click on the **Agents** icon in the drop-down, and locate the tile for the **IBM Z OMEGAMON Insights Agent**.
 
-    ![](_attachments/om1.png)
 
 2. Click on the gear icon, then you should see the **Agent Configuration** page.
 
@@ -52,9 +51,10 @@ INFO:     Uvicorn running on http://0.0.0.0:8050 (Press CTRL+C to quit)
 
     Then click **Save**. 
 
-    ![](_attachments/om2.png)
+    ![alt text](image-3.png)
+
 
 4. After activating, you should see the **IBM Z OMEGAMON Insights Agent** tile with the **Active** flag:
    
-    ![](_attachments/om3.png)
+    ![alt text](image-4.png)
 
